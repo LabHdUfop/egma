@@ -2,7 +2,7 @@
 
 **Protocolo aberto, neutro quanto a agente, modelo e provedor, para enquadrar, planejar e auditar pesquisa acadêmica com apoio de IA.**
 
-Versão 1.0.0 · Licença MIT · LABHD UFOP
+Versão 1.1.0 · Licença MIT · LABHD UFOP
 
 > **Abstract (EN).** EGMA is an authorial protocol for framing, planning and auditing academic research with AI agents. It splits the work into a continuity context (Elephant, which holds the question, decisions, artifacts and state) and one or more isolated review contexts (Goldfish, which see only the assigned role, the authorized package and the criteria — never the elaboration conversation). It is harness-, model- and vendor-neutral, and it does not certify scientific validity, privacy or editorial approval.
 
@@ -71,7 +71,8 @@ egma/
 ├── requirements.txt               dependências do script (Python + PyMuPDF)
 └── README.md                      conteúdo e limites do pacote portátil
 EGMA_PORTATIL.md                   versão monolítica para ambientes sem pastas
-SHA256SUMS.txt                     hashes de integridade do pacote 1.0.0
+SHA256SUMS.txt                     hashes de integridade do pacote 1.1.0
+tests/                             suíte de aceitação do script (11 casos sintéticos)
 ```
 
 ## Verificação de integridade
@@ -80,21 +81,34 @@ SHA256SUMS.txt                     hashes de integridade do pacote 1.0.0
 sha256sum -c SHA256SUMS.txt      # Linux/macOS/git-bash
 ```
 
-Os hashes cobrem os 22 arquivos do pacote 1.0.0. Se algum falhar, o pacote foi alterado — não use.
+Os hashes cobrem os 22 arquivos do pacote 1.1.0. Se algum falhar, o pacote foi alterado — não use.
+
+## Testes
+
+```bash
+python tests/test_verifica_citacoes.py     # requer Python 3.9+ e PyMuPDF
+```
+
+Suíte de aceitação do `verifica_citacoes.py`: 11 casos sobre uma fixture inteiramente
+sintética (os PDFs são gerados por PyMuPDF; nenhum dado de pesquisa é usado). Cobre
+ocorrência única, repetição em páginas diferentes e na mesma página, ausência de texto,
+citação entre páginas, PDFs homônimos, caminho explícito, fonte ausente, folha impressa
+observada, offset declarado e identidade da fonte por SHA-256. Todos os 11 passam na
+1.1.0; na 1.0.0 apenas 4 passavam.
 
 ## Limites — leia antes de usar
 
 - A EGMA **não é um modelo** e **não garante** validade científica, privacidade, ausência de erro ou aprovação editorial.
 - A EGMA **não certifica** revisão independente. O isolamento depende de como o ambiente realmente opera contexto, memória e herança — verifique no seu ambiente.
 - A política de dados é do **produto, conta, plano e configuração** que você usa. Consulte [`egma/references/privacidade.md`](egma/references/privacidade.md) **antes** de enviar material inédito, protegido ou sob consentimento.
-- O script `verifica_citacoes.py` localiza trechos em PDF; não substitui a leitura da fonte nem a validação editorial.
+- O script `verifica_citacoes.py` localiza trechos em PDF; não substitui a leitura da fonte nem a validação editorial. O estado `entre_paginas` indica localização na junção de duas páginas e **exige conferência visual**: o trecho foi encontrado, mas não está verificado.
 - Protocolo inspirado na separação de contextos do Elephant–Goldfish Model, **sem vínculo oficial com seus autores**.
 
 ## Como citar
 
 Veja [`CITATION.cff`](CITATION.cff). Formato sugerido:
 
-> Freire, M. (2026). *EGMA — Elefante–Goldfish Acadêmico, v1.0.0*. Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto. https://github.com/LabHdUfop/egma
+> Freire, M. (2026). *EGMA — Elefante–Goldfish Acadêmico, v1.1.0*. Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto. https://github.com/LabHdUfop/egma
 
 ## Contribuições
 

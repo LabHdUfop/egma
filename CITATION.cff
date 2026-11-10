@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Se você usar este protocolo, cite-o conforme abaixo."
 title: "EGMA — Elefante–Goldfish Acadêmico: protocolo para enquadrar, planejar e auditar pesquisa acadêmica com agentes de IA"
 abstract: "Protocolo autoral, neutro quanto a harness, modelo e provedor, que separa um contexto de continuidade (Elefante) de contextos isolados de revisão (Goldfish) para enquadramento, planejamento e auditoria de pesquisa acadêmica assistida por agentes de IA."
-version: 1.0.0
+version: 1.1.0
 date-released: "2026-11-10"
 license: MIT
 type: software

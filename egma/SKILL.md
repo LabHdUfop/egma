@@ -3,7 +3,7 @@ name: egma
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Elefante–Goldfish Acadêmico — EGMA 1.0.0
+# Elefante–Goldfish Acadêmico — EGMA 1.1.0
 
 Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A EGMA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 

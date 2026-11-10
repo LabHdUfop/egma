@@ -2,6 +2,22 @@
 
 Não julgue mérito, método nem originalidade. Responda apenas: **uma pessoa instruída que não participou do projeto consegue entender este documento sozinha?**
 
+## Antes dos achados — as duas paráfrases (obrigatório)
+
+Definir os termos não garante que pergunta, método e conclusão se conectem. Antes de
+qualquer achado, escreva com as palavras do documento:
+
+1. **O que o estudo pergunta e defende, segundo o documento** — 3 a 5 frases.
+2. **Como o método produz essa resposta, segundo o documento** — 3 a 5 frases.
+
+Se alguma das duas for impossível, esse é o achado: localize a seção e abra achado
+de autossuficiência, em vez de inferir a resposta.
+
+A paráfrase **não é evidência empírica nem decisão sobre a pesquisa**. O Elefante
+compara a interpretação com a intenção declarada; divergência demonstra problema de
+comunicação, não necessariamente erro metodológico. Não transforme paráfrase
+imperfeita em reprovação automática.
+
 ## Procure
 
 1. Termo usado antes de ser definido.
@@ -26,6 +42,9 @@ ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
+
+PARÁFRASE 1 — O QUE O ESTUDO PERGUNTA E DEFENDE (segundo o documento): <3-5 frases>
+PARÁFRASE 2 — COMO O MÉTODO PRODUZ ESSA RESPOSTA (segundo o documento): <3-5 frases>
 
 ACHADO LI-<nn> — <ponto onde a leitura para>
 Localização: <arquivo + seção/linha>

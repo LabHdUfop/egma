@@ -1,4 +1,4 @@
-# EGMA portátil 1.0.0
+# EGMA portátil 1.1.0
 
 Skill neutra quanto a harness, modelo e provedor para enquadrar, planejar e auditar pesquisa acadêmica com memória do Elefante e revisão Goldfish em contextos separados.
 

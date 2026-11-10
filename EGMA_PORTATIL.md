@@ -3,7 +3,7 @@ name: egma
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Elefante–Goldfish Acadêmico — EGMA 1.0.0
+# Elefante–Goldfish Acadêmico — EGMA 1.1.0
 
 Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A EGMA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 
@@ -638,7 +638,7 @@ Leia os vizinhos mais próximos antes de alegar novidade. Busca encontra candida
 
 ## 7. Verificação literal por script
 
-`scripts/verifica_citacoes.py` procura trechos normalizados dentro de páginas de PDFs e devolve correspondências e páginas do arquivo. Recebe JSON de citações e, opcionalmente, offsets declarados. `ok=True` exige correspondência única; múltiplas ocorrências ficam `estado=ambigua`, sem escolha automática de página, e mantêm o código de saída de pendência.
+`scripts/verifica_citacoes.py` procura trechos normalizados em PDFs e devolve a localização, o caminho e o SHA-256 do arquivo usado. Indexa por caminho relativo, não por nome de arquivo, para que homônimos em pastas diferentes não se sobreponham. Estados por citação: `verificado`, `entre_paginas` (localizado na junção de páginas adjacentes, com `ok=False` e conferência visual pendente), `ambigua`, `nao_encontrado`, `arquivo_ausente` e `arquivo_ambiguo`. Conta ocorrências, não páginas: repetição dentro da mesma página é ambiguidade. `ok=True` exige ocorrência única dentro de uma página; o código de saída permanece de pendência enquanto houver registro não verificado.
 
 Limites:
 
@@ -808,7 +808,7 @@ Crie somente os registros necessários. Use Markdown/CSV/planilha conforme volum
 
 ```markdown
 # Estado do projeto
-- EGMA: 1.0.0
+- EGMA: 1.1.0
 - Etapa/modo:
 - Escopo autorizado:
 - Artefatos e versões:
@@ -1230,6 +1230,22 @@ Se não houver problemas sustentados, escreva `SEM ACHADOS` e descreva o escopo 
 
 Não julgue mérito, método nem originalidade. Responda apenas: **uma pessoa instruída que não participou do projeto consegue entender este documento sozinha?**
 
+## Antes dos achados — as duas paráfrases (obrigatório)
+
+Definir os termos não garante que pergunta, método e conclusão se conectem. Antes de
+qualquer achado, escreva com as palavras do documento:
+
+1. **O que o estudo pergunta e defende, segundo o documento** — 3 a 5 frases.
+2. **Como o método produz essa resposta, segundo o documento** — 3 a 5 frases.
+
+Se alguma das duas for impossível, esse é o achado: localize a seção e abra achado
+de autossuficiência, em vez de inferir a resposta.
+
+A paráfrase **não é evidência empírica nem decisão sobre a pesquisa**. O Elefante
+compara a interpretação com a intenção declarada; divergência demonstra problema de
+comunicação, não necessariamente erro metodológico. Não transforme paráfrase
+imperfeita em reprovação automática.
+
 ## Procure
 
 1. Termo usado antes de ser definido.
@@ -1255,6 +1271,9 @@ ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
 
+PARÁFRASE 1 — O QUE O ESTUDO PERGUNTA E DEFENDE (segundo o documento): <3-5 frases>
+PARÁFRASE 2 — COMO O MÉTODO PRODUZ ESSA RESPOSTA (segundo o documento): <3-5 frases>
+
 ACHADO LI-<nn> — <ponto onde a leitura para>
 Localização: <arquivo + seção/linha>
 Problema: <ponto exato e informação ausente>
@@ -1267,7 +1286,6 @@ Encaminhamento: <informação a acrescentar e onde>
 ```
 
 Se o documento se explica sozinho no escopo recebido, escreva `SEM ACHADOS` e descreva a leitura realizada.
-
 ---
 
 # APÊNDICE — `references/papeis/metodo.md`
@@ -1332,7 +1350,7 @@ Se depender de arquivo ausente, use `Certeza: indeterminado` e identifique o arq
 
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.0.0
+- **EGMA:** 1.1.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
@@ -1353,30 +1371,47 @@ Se depender de arquivo ausente, use `Certeza: indeterminado` e identifique o arq
 Copie o código abaixo para esse caminho quando precisar da verificação local. Dependência: `PyMuPDF`.
 
 ```python
-"""Verifica citações literais contra PDFs e devolve páginas do arquivo.
+"""Verifica citações literais contra PDFs e devolve a localização no arquivo.
 
 Uso:
     python scripts/verifica_citacoes.py quotes.json saida.json [offsets.json]
 
 quotes.json:
-    [{"id": "Q01", "trecho": "...", "arquivo": "opcional.pdf"}]
+    [{"id": "Q01", "trecho": "...", "arquivo": "opcional/caminho/relativo.pdf"}]
 offsets.json (opcional):
     {"arquivo.pdf": 36}
     página impressa estimada = página do PDF + offset. Use somente offset
     confirmado contra evidência independente.
 
-Dependência: PyMuPDF (import fitz).
-`ok=True` exige correspondência única. Múltiplas ocorrências ficam `estado=ambigua`,
-sem página única escolhida, e produzem código de saída de pendência.
-A correspondência textual não valida contexto, tradução ou paginação impressa.
+Dependência: PyMuPDF.
+
+Estados de saída, por citação:
+
+    verificado        ocorrência única, dentro de uma página
+    entre_paginas     localizado na junção de duas páginas adjacentes; exige
+                      conferência visual, por isso ok=False
+    ambigua           mais de uma ocorrência, sem localização única
+    nao_encontrado    o texto não ocorre nas fontes existentes
+    arquivo_ausente   a fonte declarada não existe na base
+    arquivo_ambiguo   o nome declarado existe em mais de um arquivo; exige caminho
+
+`ok=True` exige ocorrência única e dentro de uma página. Fonte ausente é distinta
+de texto ausente: confundir as duas faz uma falha de indexação passar por achado.
+Todo registro informa `caminho` e `sha256` do arquivo usado, para que o resultado
+diga qual exemplar foi lido. A correspondência textual não valida contexto,
+tradução ou paginação impressa.
 """
+import hashlib
 import json
 import os
 import re
 import sys
 import unicodedata
 
-import fitz
+try:  # PyMuPDF 1.26+ expõe `pymupdf`; versões anteriores, `fitz`.
+    import pymupdf as fitz
+except ImportError:
+    import fitz
 
 
 def norm(s: str) -> str:
@@ -1387,6 +1422,38 @@ def norm(s: str) -> str:
     s = s.replace("\n", " ")
     s = re.sub(r"[^a-z0-9 ]", " ", s.lower())
     return re.sub(r"\s+", " ", s).strip()
+
+
+def linhas(texto: str):
+    return [x.strip() for x in texto.strip().split("\n") if x.strip()]
+
+
+def artefatos_de_folha(paginas):
+    """Cabeçalhos, rodapés e números de folha: primeira/última linha das páginas.
+
+    Uma linha é artefato se for número isolado ou se repetir como borda em mais
+    da metade das páginas do documento. Serve apenas à junção entre páginas; a
+    busca dentro da página usa o texto íntegro.
+    """
+    contagem = {}
+    for texto in paginas:
+        ls = linhas(texto)
+        for l in set(ls[:1] + ls[-1:]):
+            contagem[l] = contagem.get(l, 0) + 1
+    n = max(1, len(paginas))
+    return {l for l, c in contagem.items() if l.isdigit() or (c >= 2 and c > n / 2)}
+
+
+def limpar(texto: str, artefatos) -> str:
+    return "\n".join(l for l in linhas(texto) if l not in artefatos)
+
+
+def sha256(caminho: str) -> str:
+    h = hashlib.sha256()
+    with open(caminho, "rb") as f:
+        for bloco in iter(lambda: f.read(65536), b""):
+            h.update(bloco)
+    return h.hexdigest()
 
 
 def main() -> int:
@@ -1402,53 +1469,132 @@ def main() -> int:
             offsets = json.load(f)
     base = os.path.dirname(os.path.abspath(sys.argv[1]))
 
-    docs = {}
+    # Índice por caminho relativo à base, não por basename: dois arquivos de mesmo
+    # nome em pastas diferentes são fontes distintas, e a ordem do os.walk não
+    # pode decidir qual delas prevalece.
+    brutos, limpos, impressos, hashes = {}, {}, {}, {}
     for root, _, files in os.walk(base):
         for filename in sorted(files):
-            if filename.lower().endswith(".pdf"):
-                docs[filename] = fitz.open(os.path.join(root, filename))
+            if not filename.lower().endswith(".pdf"):
+                continue
+            caminho = os.path.join(root, filename)
+            rel = os.path.relpath(caminho, base).replace(os.sep, "/")
+            doc = fitz.open(caminho)
+            try:
+                paginas = [p.get_text() for p in doc]
+            finally:
+                doc.close()
+            brutos[rel] = [norm(t) for t in paginas]
+            artefatos = artefatos_de_folha(paginas)
+            limpos[rel] = [limpar(t, artefatos) for t in paginas]
+            impressos[rel] = []
+            for texto in paginas:
+                ls = linhas(texto)
+                candidatos = ls[:1] + ls[-1:]
+                impressos[rel].append(
+                    next((int(x) for x in candidatos if x.isdigit()), None))
+            hashes[rel] = sha256(caminho)
 
-    pages = {name: [norm(p.get_text()) for p in doc] for name, doc in docs.items()}
-    printed = {}
-    for name, doc in docs.items():
-        printed[name] = []
-        for page in doc:
-            lines = [x.strip() for x in page.get_text().strip().split("\n") if x.strip()]
-            candidates = lines[:1] + lines[-1:]
-            number = next((int(x) for x in candidates if x.isdigit()), None)
-            printed[name].append(number)
+    rel_paths = sorted(brutos)
+    por_basename = {}
+    for rel in rel_paths:
+        por_basename.setdefault(os.path.basename(rel), []).append(rel)
 
     out = []
     for quote in quotes:
         needle = norm(quote["trecho"])
-        targets = [quote["arquivo"]] if quote.get("arquivo") else list(pages)
-        hits = [(name, i) for name in targets if name in pages
-                for i, page in enumerate(pages[name], start=1) if needle and needle in page]
         rec = {"id": quote["id"], "trecho": quote["trecho"][:90], "arquivo": None,
-               "pagina_pdf": None, "pagina_impressa": None, "encontrado": bool(hits),
-               "ok": len(hits) == 1, "n_hits": len(hits),
-               "estado": "verificado" if len(hits) == 1 else ("ambigua" if hits else "nao_encontrado")}
-        if len(hits) == 1:
-            name, i = hits[0]
-            rec.update(arquivo=name, pagina_pdf=i)
-            if printed[name][i - 1] is not None:
-                rec["pagina_impressa"] = printed[name][i - 1]
-            elif name in offsets:
-                rec["pagina_impressa"] = i + offsets[name]
+               "caminho": None, "sha256": None, "pagina_pdf": None, "paginas_pdf": None,
+               "pagina_impressa": None, "pagina_impressa_origem": "indeterminado",
+               "encontrado": False, "ok": False, "n_hits": 0, "n_ocorrencias": 0,
+               "estado": "nao_encontrado"}
+
+        declarado = quote.get("arquivo")
+        if declarado:
+            alvo = declarado.replace("\\", "/").lstrip("./")
+            if alvo in brutos:
+                alvos = [alvo]
+            else:
+                candidatos = por_basename.get(os.path.basename(alvo), [])
+                if len(candidatos) == 1:
+                    alvos = candidatos
+                elif candidatos:
+                    rec["estado"] = "arquivo_ambiguo"
+                    rec["candidatos"] = candidatos
+                    out.append(rec)
+                    continue
+                else:
+                    rec["estado"] = "arquivo_ausente"
+                    out.append(rec)
+                    continue
+        else:
+            alvos = rel_paths
+
+        if not needle:
+            rec["estado"] = "trecho_vazio"
+            out.append(rec)
+            continue
+
+        # Ocorrências, não pares (arquivo, página): duas vezes na mesma página
+        # também é ambiguidade, e não localização única.
+        ocorrencias = [(rel, i, pagina.count(needle))
+                       for rel in alvos
+                       for i, pagina in enumerate(brutos[rel], start=1)
+                       if needle in pagina]
+        total = sum(n for _, _, n in ocorrencias)
+        rec["n_hits"] = len(ocorrencias)
+        rec["n_ocorrencias"] = total
+
+        if total == 1:
+            rel, i, _ = ocorrencias[0]
+            rec.update(estado="verificado", ok=True, encontrado=True,
+                       arquivo=rel, caminho=rel, sha256=hashes[rel], pagina_pdf=i)
+            if impressos[rel][i - 1] is not None:
+                rec["pagina_impressa"] = impressos[rel][i - 1]
+                rec["pagina_impressa_origem"] = "observado"
+            elif rel in offsets:
+                rec["pagina_impressa"] = i + offsets[rel]
                 rec["pagina_impressa_origem"] = "offset_declarado"
-        elif hits:
-            rec["candidatos"] = hits
+            out.append(rec)
+            continue
+
+        if total > 1:
+            rec.update(estado="ambigua", encontrado=True,
+                       candidatos=[[rel, i] for rel, i, _ in ocorrencias])
+            out.append(rec)
+            continue
+
+        # Sem ocorrência dentro de uma página: tentar a junção de adjacentes,
+        # descontando cabeçalho, rodapé e número de folha.
+        juncao = [(rel, i) for rel in alvos
+                  for i in range(1, len(limpos[rel]))
+                  if needle in norm(limpos[rel][i - 1] + "\n" + limpos[rel][i])]
+        if juncao:
+            rel, i = juncao[0]
+            rec.update(estado="entre_paginas", encontrado=True, arquivo=rel,
+                       caminho=rel, sha256=hashes[rel], paginas_pdf=[i, i + 1],
+                       forma_juncao="paginas adjacentes sem cabecalho/rodape")
+            if len(juncao) > 1:
+                rec["candidatos"] = [[r, j] for r, j in juncao]
+            if all(impressos[rel][p - 1] is not None for p in (i, i + 1)):
+                rec["paginas_impressas"] = [impressos[rel][i - 1], impressos[rel][i]]
+            out.append(rec)
+            continue
+
         out.append(rec)
 
     with open(sys.argv[2], "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
     failures = [r for r in out if not r["ok"]]
-    ambiguous = [r for r in out if r["estado"] == "ambigua"]
     print(f"verificadas: {len(out) - len(failures)}/{len(out)}")
-    for rec in ambiguous:
-        print("  AMBÍGUA:", rec["id"], f"{rec['n_hits']} correspondências")
-    for rec in failures:
-        if rec["estado"] == "nao_encontrado":
+    for rec in out:
+        if rec["estado"] == "ambigua":
+            print("  AMBÍGUA:", rec["id"], f"{rec['n_ocorrencias']} ocorrências")
+        elif rec["estado"] == "entre_paginas":
+            print("  ENTRE PÁGINAS:", rec["id"], rec["paginas_pdf"], "(conferir visualmente)")
+        elif rec["estado"] in ("arquivo_ausente", "arquivo_ambiguo"):
+            print(f"  {rec['estado'].upper()}:", rec["id"])
+        elif rec["estado"] == "nao_encontrado":
             print("  FALHOU:", rec["id"], rec["trecho"][:70])
     return 1 if failures else 0
 
