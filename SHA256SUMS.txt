@@ -1,5 +1,4 @@
-SHA-256 — arquivos do pacote EGMA 1.0.0 (pasta egma/ + documento único)
-
+# SHA-256 — arquivos do pacote EGMA 1.0.0 (pasta egma/ + documento unico)
 19ca4864be08618eb478463e7061a39228dfd191d4d63b59348e4ea0ae2ef0c1  EGMA_PORTATIL.md
 23c8275b103c47d692bffafafca6423c11cd933d8b7d29000dc7a83a93716ea5  egma/README.md
 2ef79ade4d1047a11f9f5a5eca4b7fb430633900e9c320592896f1ab024f0951  egma/SKILL.md
