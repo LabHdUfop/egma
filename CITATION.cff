@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Se você usar este protocolo, cite-o conforme abaixo."
+title: "EGMA — Elefante–Goldfish Acadêmico: protocolo para enquadrar, planejar e auditar pesquisa acadêmica com agentes de IA"
+abstract: "Protocolo autoral, neutro quanto a harness, modelo e provedor, que separa um contexto de continuidade (Elefante) de contextos isolados de revisão (Goldfish) para enquadramento, planejamento e auditoria de pesquisa acadêmica assistida por agentes de IA."
+version: 1.0.0
+date-released: "2026-11-10"
+license: MIT
+type: software
+repository-code: "https://github.com/LabHdUfop/egma"
+url: "https://labhdufop.org"
+authors:
+  - family-names: "Freire"
+    given-names: "Marcelo"
+    affiliation: "Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto (LABHD UFOP)"
+keywords:
+  - pesquisa acadêmica
+  - agente de IA
+  - revisão por pares
+  - auditoria metodológica
+  - humanidades digitais
+  - reprodutibilidade

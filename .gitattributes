@@ -1,0 +1,7 @@
+# Normaliza tudo para LF no repositório e no checkout, em qualquer plataforma.
+# Sem isto, o checkout no Windows converte para CRLF e os hashes de
+# SHA256SUMS.txt deixam de bater.
+* text=auto eol=lf
+
+# Arquivo de hashes: nunca converter, senão ele não confere a si próprio.
+SHA256SUMS.txt -text

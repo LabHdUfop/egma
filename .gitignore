@@ -1,0 +1,15 @@
+# Log de agente (local, não é parte do protocolo)
+walkthrough.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Estado de projeto EGMA gerado pelo usuário
+.egm-academico/
+
+# SO
+.DS_Store
+Thumbs.db
