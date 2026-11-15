@@ -4,6 +4,8 @@
 
 Versão 1.1.0 · Licença MIT · LABHD UFOP
 
+**Idiomas:** **Português** · [English](README.en.md) · [Español](README.es.md)
+
 > **Abstract (EN).** EGMA is an authorial protocol for framing, planning and auditing academic research with AI agents. It splits the work into a continuity context (Elephant, which holds the question, decisions, artifacts and state) and one or more isolated review contexts (Goldfish, which see only the assigned role, the authorized package and the criteria — never the elaboration conversation). It is harness-, model- and vendor-neutral, and it does not certify scientific validity, privacy or editorial approval.
 
 ---
@@ -35,7 +37,7 @@ Copie `egma/` para `.egm-academico/skill/` no projeto, crie `.egm-academico/ESTA
 
 ### 3. Documento único (chat ou API sem sistema de arquivos)
 
-Forneça [`EGMA_PORTATIL.md`](EGMA_PORTATIL.md) e indique a seção necessária. Sem busca, execução, persistência ou novos contextos, as verificações dependentes dessas capacidades devem ser registradas como **indisponíveis** — não prometidas.
+Forneça [`EGMA_PORTATIL.md`](EGMA_PORTATIL.md) — ou a edição traduzida, [`EN`](EGMA_PORTATIL.en.md) · [`ES`](EGMA_PORTATIL.es.md) — e indique a seção necessária. Sem busca, execução, persistência ou novos contextos, as verificações dependentes dessas capacidades devem ser registradas como **indisponíveis** — não prometidas.
 
 **Sempre:** teste em sessão nova apenas com dados sintéticos. Um arquivo presente não comprova descoberta; um contexto novo não comprova isolamento nem privacidade.
 
@@ -71,6 +73,8 @@ egma/
 ├── requirements.txt               dependências do script (Python + PyMuPDF)
 └── README.md                      conteúdo e limites do pacote portátil
 EGMA_PORTATIL.md                   versão monolítica para ambientes sem pastas
+EGMA_PORTATIL.en.md                edição inglesa do documento único
+EGMA_PORTATIL.es.md                edição espanhola do documento único
 SHA256SUMS.txt                     hashes de integridade do pacote 1.1.0
 tests/                             suíte de aceitação do script (11 casos sintéticos)
 ```

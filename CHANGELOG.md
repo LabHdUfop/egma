@@ -2,6 +2,20 @@
 
 Todo registro segue [SemVer](https://semver.org/lang/pt-BR/): **patch** = correção sem mudar comportamento; **minor** = regra ou recurso novo retrocompatível; **major** = mudança que invalida estado ou checklist anterior.
 
+## [Não publicado]
+
+**Adicionado**
+
+- Edições em inglês e espanhol da documentação, como documentos companheiros do pacote canônico (pt-BR):
+  - `README.en.md` e `README.es.md` — tradução integral, com seletor de idiomas.
+  - `EGMA_PORTATIL.en.md` e `EGMA_PORTATIL.es.md` — documento único traduzido, com nota de fidelidade e glossário de literais.
+- `README.md` — seletor de idiomas e ponteiros para as edições traduzidas.
+
+**Notas**
+
+- Nenhuma regra do protocolo mudou: identificadores, estados, esquemas, templates e o código do script permanecem exatamente como no pacote.
+- Nenhum arquivo coberto por `SHA256SUMS.txt` foi alterado.
+
 ## [1.1.0] — 2026-11-10
 
 Corrige os defeitos de verificação de citações identificados na avaliação da proposta
