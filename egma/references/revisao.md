@@ -13,7 +13,29 @@ Registre modo, versão do objeto, pergunta/abordagem, arquivos autorizados, oper
 
 Não apresente cobertura maior que o pacote. Se um artefato central não puder ser compartilhado, o Elefante deve verificar por execução quando autorizado ou registrar o ponto como não verificável.
 
+Congele o objeto como o leitor o veria: metadados de trabalho (notas de estado, versões de rascunho, instruções internas) são **excluídos** do objeto — o que sai fica fora do pacote, não dentro dele marcado; quem monta o congelamento confere o resultado e lista no manifesto o que foi excluído.
+
 Cada revisor de primeira rodada recebe contexto separado, sem histórico de elaboração, resposta desejada ou pareceres alheios. Contexto novo deve ser confirmado na medida exposta pelo harness. Isolamento textual sem controle real de arquivos/memória é limitado. Sem isolamento, use revisão assistida.
+
+Estados — duas dimensões, declaradas separadamente e com evidência registrada:
+
+**Contexto novo** (a execução carrega histórico de elaboração?):
+
+| Estado | Evidência registrada |
+|---|---|
+| `comprovado` | sessão nova, sem histórico de elaboração — registre o produto/harness usado e o que o revisor recebeu |
+| `limitado` | histórico não controlado ou não demonstrável (ex.: memória do provedor) — descreva o que não pôde ser excluído |
+| `não verificado` | sem confirmação possível |
+
+**Isolamento de arquivos/memória** (o revisor alcança o material de elaboração?):
+
+| Estado | Evidência registrada |
+|---|---|
+| `comprovado` | separação demonstrada na medida exposta pelo harness — registre a capacidade verificada e o inventário do que ficou acessível |
+| `limitado` | acesso parcial (filesystem herdado, arquivos do projeto) ou separação apenas por instrução — descreva o acesso real |
+| `não verificado` | sem confirmação possível |
+
+Atribuição: o **revisor** declara no cabeçalho o que observou; o **Elefante** confere e registra o estado final no manifesto, a partir da evidência. Restrição textual — pedir que não leia algo — **não** sustenta `comprovado` em nenhuma das dimensões; sem evidência, o estado é `não verificado`. O estado declarado limita o que a rodada pode alegar: `comprovado` permite apresentar a verificação como cega ao histórico no escopo registrado; `limitado` e `não verificado`, não.
 
 ## 2. Papéis da rodada
 
@@ -28,7 +50,7 @@ Na completa de manuscrito, use esses papéis e acrescente as três funções bib
 
 Use **um papel por revisor**. Se o harness obrigar agrupamento, declare a revisão como limitada/assistida e descreva quais critérios foram combinados; não alegue independência entre papéis no mesmo contexto. Privacidade da rota é avaliação separada, não papel acadêmico a ser improvisado.
 
-Modelos iguais ou diferentes são escolha operacional do usuário/harness, não garantia metodológica. Diversidade não corrige pacote incompleto. Concordância não transforma alegação em fato.
+Modelos iguais ou diferentes são escolha operacional do usuário/harness, não garantia metodológica. Diversidade não corrige pacote incompleto. Concordância não transforma alegação em fato. Registre a família de cada modelo no manifesto — família é a linhagem/pesos (dois provedores servindo os mesmos pesos são a mesma família): diversidade de famílias entre elaboração e verificação é critério de força da rodada, e papéis da mesma família **podem** compartilhar erros correlacionados — declare a hipótese no consolidado, sem tratá-la como medida. A ferramenta e seus limites são registrados por rodada (`registros.md` §13); a crítica da ferramenta é parte do método.
 
 ## 3. Manifesto e pacote
 
@@ -41,7 +63,9 @@ ARQUIVOS AUTORIZADOS: <lista exaustiva>
 CONTEÚDO ESPERADO: <uma linha por arquivo/trecho>
 FONTES EXTERNAS: permitidas/proibidas + escopo
 OPERAÇÕES: leitura/busca/código permitidas ou não
-CONTEXTO NOVO: confirmado/limitado/não verificado
+CONTEXTO NOVO: comprovado/limitado/não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado/limitado/não verificado
+SONDA DE ROTA: aprovada/reprovada (data)
 MEMÓRIA E HERANÇA: <o que se sabe>
 DESTINO DO PARECER: <arquivo ou retorno>
 ```
@@ -49,6 +73,8 @@ DESTINO DO PARECER: <arquivo ou retorno>
 Instrução-base:
 
 > Leia somente o pacote indicado e fontes externas expressamente autorizadas. Não procure conversas, memórias ou pareceres alheios. Examine o objeto segundo seu papel e a abordagem declarada. Distinga erro demonstrado, suspeita verificável, informação ausente, divergência epistemológica e oportunidade. Não invente falhas nem elogios. Não altere o objeto; produza apenas o parecer no destino indicado. Declare o que leu, executou e não pôde verificar.
+
+Antes de gastar as revisões longas, sonde cada rota (executada pelo Elefante, com material sintético): identificação, quando aplicável, e leitura real de um arquivo sintético, devolvendo uma linha exata **sem variação** — este é o critério de aceite. O objeto real não entra numa rota ainda não sondada; rota que não lê arquivo não autoriza revisão que dependa de leitura. Registre no manifesto o resultado por revisor (aprovada/reprovada).
 
 EP, MD, ARG e LI seguem os oito campos de seus arquivos de papel. BI, BS e BC usam os esquemas bibliográficos específicos, com o mesmo cabeçalho de contexto/isolamento. Parecer sem achados é válido apenas quando informa o que examinou e confirma leitura dos arquivos necessários. Se `ARQUIVOS LIDOS` omitir arquivo do pacote ou a cobertura esperada ficar ausente, devolva para complementação ou reexecute; não consolide como `SEM ACHADOS`. Elogios genéricos não substituem exame dos limites declarados.
 
@@ -100,6 +126,8 @@ Toda obra nomeada por um revisor é candidata até verificação independente. V
 
 ## 7. Consolidação e contestação
 
+Analise cada parecer separadamente antes de sintetizar: registre os achados de cada revisor, confronte-os e só então consolide — não leia os pareceres como um texto único (Carter et al., 2014, p. 546).
+
 Agrupe por decisão, preserve objeções minoritárias sustentadas e atribua um estado: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR` ou `REJEITAR`.
 
 - `CORRIGIR` significa problema demonstrado e correção autorizada.
@@ -111,6 +139,8 @@ Agrupe por decisão, preserve objeções minoritárias sustentadas e atribua um 
 - O Elefante escreveu o objeto e, por isso, deve apresentar evidência tanto para aceitar quanto para rejeitar um achado.
 - Antes de contestar que um artefato não existe, abra todas as versões disponíveis — texto, CSV, planilha e exportação. Versões divergentes devem ser reconciliadas.
 - Não escolha por maioria, custo de reescrita ou preferência estética.
+
+O relato da rodada informa os denominadores do processo — revisores e papéis, estados de contexto/isolamento, achados por estado e resolução, correlação entre revisores (famílias repetidas) — e o que não foi verificado.
 
 ## 8. Rodada completa ou focal
 

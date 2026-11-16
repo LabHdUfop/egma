@@ -25,7 +25,7 @@ Obrigado pelo interesse. A EGMA é um protocolo, não um software convencional: 
 
 ## Versionamento
 
-Seguimos SemVer: **patch** (correção sem mudar comportamento), **minor** (regra ou recurso novo, retrocompatível), **major** (mudança de comportamento que invalida estado ou checklist anterior). Toda release atualiza `CHANGELOG.md` e regera `SHA256SUMS.txt`.
+Seguimos SemVer: **patch** (correção sem mudar comportamento), **minor** (regra ou recurso novo, retrocompatível), **major** (mudança de comportamento que invalida estado ou checklist anterior). Toda release atualiza `CHANGELOG.md`, regera `SHA256SUMS.txt` e confere os campos de versão declarados (`SKILL.md`, `README.md` do pacote, `templates/`, `CITATION.cff`) — o campo `EGMA:` dos templates já ficou defasado uma vez.
 
 ## Licença
 

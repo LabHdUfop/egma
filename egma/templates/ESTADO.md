@@ -1,14 +1,14 @@
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.0.0
+- **EGMA:** 1.2.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
 - **Artefatos e versões:** nenhum registrado
 - **Decisões do pesquisador:** nenhuma registrada
 - **Pendências/limites:** definir objeto e escopo
-- **Revisão:** não iniciada; isolamento não verificado
-- **Privacidade:** não avaliada; não transmitir material protegido
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada; não transmitir material protegido — após avaliação: escopo avaliado em AAAA-MM-DD
 - **Descoberta em nova sessão:** não verificada
 - **Próxima ação:** validar a instalação com dados sintéticos
 

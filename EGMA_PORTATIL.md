@@ -3,7 +3,7 @@ name: egma
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Elefante–Goldfish Acadêmico — EGMA 1.1.0
+# Elefante–Goldfish Acadêmico — EGMA 1.2.0
 
 Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A EGMA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 
@@ -22,6 +22,9 @@ Leia somente os arquivos pertinentes, além deste:
 | Instalar ou adaptar a skill e verificar descoberta em nova sessão | `references/portabilidade.md` |
 | Criar fichas, âncoras, matrizes, manifestos e índices | `references/registros.md` |
 | Diagnosticar deriva ou reconstruir estado de projeto antigo | `references/manutencao.md` |
+| Entender de onde vem cada componente | `references/fundamentos.md` |
+| Entender termos e estados do protocolo | `references/glossario.md` |
+| Atender exigências de relato e declaração de uso de IA generativa | `references/conformidade.md` |
 | Distribuir critérios aos revisores | `references/papeis/` |
 | Verificar citações literais em PDFs | `scripts/verifica_citacoes.py` |
 
@@ -61,7 +64,8 @@ Escolha a profundidade:
 
 - **Compacta:** Elefante + epistemologia/contribuição + método/dados + argumentação/evidências; acrescente leitor ingênuo em protocolo ou manuscrito.
 - **Completa:** compacta + três funções bibliográficas separadas no manuscrito — identidade, sustentação e cobertura — e verificações específicas adicionais exigidas pelo objeto, sem combiná-las num mesmo revisor.
-- **Revisão assistida:** quando não houver contexto novo ou isolamento verificável. Faça preparação, verificação por execução e crítica possível, mas marque **revisão independente pendente**. Não a denomine Goldfish concluída.
+
+Se não houver contexto novo ou isolamento verificável, não é uma profundidade: use **revisão assistida** — preparação, verificação por execução e crítica possível, com **revisão independente pendente** declarada. Não a denomine Goldfish concluída.
 
 ## 4. Continuidade e artefatos
 
@@ -98,7 +102,7 @@ Crie contextos separados quando o harness oferecer essa capacidade verificável.
 
 Não entregue resposta desejada, defesa do Elefante, conversa de elaboração ou pareceres alheios na primeira leitura. Não oculte justificativa metodológica que pertence ao próprio objeto. Restrições textuais não substituem permissões reais; registre o isolamento como comprovado, limitado ou não verificado.
 
-**Cegueira ao histórico não é anonimato, confidencialidade ou ausência de retenção.** O mesmo modelo pode exercer papéis distintos, com erros correlacionados; modelos diferentes podem diversificar erros, mas não provam independência ou qualidade. Esta skill não escolhe nem configura modelo, provedor ou plano.
+**Cegueira ao histórico não é anonimato, confidencialidade ou ausência de retenção.** O mesmo modelo pode exercer papéis distintos, com erros correlacionados; modelos diferentes podem diversificar erros, mas não provam independência ou qualidade. Registre a família no manifesto: diversidade de famílias entre elaboração e verificação é critério de força da rodada. Esta skill não escolhe nem configura modelo, provedor ou plano.
 
 Aceite parecer sem achados. Exija localização e evidência; não transforme divergência teórica, simples discordância ou conveniência do Elefante em erro demonstrado. Confira se `ARQUIVOS LIDOS` cobre todos os arquivos necessários do pacote. Parecer incompleto volta para complementação ou é reexecutado; nunca consolide a omissão como `SEM ACHADOS`. Parecer vazio ou ausente é ausência de revisão, não aprovação.
 
@@ -144,6 +148,8 @@ O fechamento informa:
 - cobertura com denominadores quando houver amostragem;
 - identidade, sustentação e cobertura bibliográfica separadamente;
 - revisão independente, limitada ou assistida;
+- correlação entre revisores, quando houver família repetida;
+- consultabilidade dos registros por artefato;
 - privacidade avaliada apenas no escopo das evidências disponíveis;
 - pendências e próxima ação.
 
@@ -452,7 +458,29 @@ Registre modo, versão do objeto, pergunta/abordagem, arquivos autorizados, oper
 
 Não apresente cobertura maior que o pacote. Se um artefato central não puder ser compartilhado, o Elefante deve verificar por execução quando autorizado ou registrar o ponto como não verificável.
 
+Congele o objeto como o leitor o veria: metadados de trabalho (notas de estado, versões de rascunho, instruções internas) são **excluídos** do objeto — o que sai fica fora do pacote, não dentro dele marcado; quem monta o congelamento confere o resultado e lista no manifesto o que foi excluído.
+
 Cada revisor de primeira rodada recebe contexto separado, sem histórico de elaboração, resposta desejada ou pareceres alheios. Contexto novo deve ser confirmado na medida exposta pelo harness. Isolamento textual sem controle real de arquivos/memória é limitado. Sem isolamento, use revisão assistida.
+
+Estados — duas dimensões, declaradas separadamente e com evidência registrada:
+
+**Contexto novo** (a execução carrega histórico de elaboração?):
+
+| Estado | Evidência registrada |
+|---|---|
+| `comprovado` | sessão nova, sem histórico de elaboração — registre o produto/harness usado e o que o revisor recebeu |
+| `limitado` | histórico não controlado ou não demonstrável (ex.: memória do provedor) — descreva o que não pôde ser excluído |
+| `não verificado` | sem confirmação possível |
+
+**Isolamento de arquivos/memória** (o revisor alcança o material de elaboração?):
+
+| Estado | Evidência registrada |
+|---|---|
+| `comprovado` | separação demonstrada na medida exposta pelo harness — registre a capacidade verificada e o inventário do que ficou acessível |
+| `limitado` | acesso parcial (filesystem herdado, arquivos do projeto) ou separação apenas por instrução — descreva o acesso real |
+| `não verificado` | sem confirmação possível |
+
+Atribuição: o **revisor** declara no cabeçalho o que observou; o **Elefante** confere e registra o estado final no manifesto, a partir da evidência. Restrição textual — pedir que não leia algo — **não** sustenta `comprovado` em nenhuma das dimensões; sem evidência, o estado é `não verificado`. O estado declarado limita o que a rodada pode alegar: `comprovado` permite apresentar a verificação como cega ao histórico no escopo registrado; `limitado` e `não verificado`, não.
 
 ## 2. Papéis da rodada
 
@@ -467,7 +495,7 @@ Na completa de manuscrito, use esses papéis e acrescente as três funções bib
 
 Use **um papel por revisor**. Se o harness obrigar agrupamento, declare a revisão como limitada/assistida e descreva quais critérios foram combinados; não alegue independência entre papéis no mesmo contexto. Privacidade da rota é avaliação separada, não papel acadêmico a ser improvisado.
 
-Modelos iguais ou diferentes são escolha operacional do usuário/harness, não garantia metodológica. Diversidade não corrige pacote incompleto. Concordância não transforma alegação em fato.
+Modelos iguais ou diferentes são escolha operacional do usuário/harness, não garantia metodológica. Diversidade não corrige pacote incompleto. Concordância não transforma alegação em fato. Registre a família de cada modelo no manifesto — família é a linhagem/pesos (dois provedores servindo os mesmos pesos são a mesma família): diversidade de famílias entre elaboração e verificação é critério de força da rodada, e papéis da mesma família **podem** compartilhar erros correlacionados — declare a hipótese no consolidado, sem tratá-la como medida. A ferramenta e seus limites são registrados por rodada (`registros.md` §13); a crítica da ferramenta é parte do método.
 
 ## 3. Manifesto e pacote
 
@@ -480,7 +508,9 @@ ARQUIVOS AUTORIZADOS: <lista exaustiva>
 CONTEÚDO ESPERADO: <uma linha por arquivo/trecho>
 FONTES EXTERNAS: permitidas/proibidas + escopo
 OPERAÇÕES: leitura/busca/código permitidas ou não
-CONTEXTO NOVO: confirmado/limitado/não verificado
+CONTEXTO NOVO: comprovado/limitado/não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado/limitado/não verificado
+SONDA DE ROTA: aprovada/reprovada (data)
 MEMÓRIA E HERANÇA: <o que se sabe>
 DESTINO DO PARECER: <arquivo ou retorno>
 ```
@@ -488,6 +518,8 @@ DESTINO DO PARECER: <arquivo ou retorno>
 Instrução-base:
 
 > Leia somente o pacote indicado e fontes externas expressamente autorizadas. Não procure conversas, memórias ou pareceres alheios. Examine o objeto segundo seu papel e a abordagem declarada. Distinga erro demonstrado, suspeita verificável, informação ausente, divergência epistemológica e oportunidade. Não invente falhas nem elogios. Não altere o objeto; produza apenas o parecer no destino indicado. Declare o que leu, executou e não pôde verificar.
+
+Antes de gastar as revisões longas, sonde cada rota (executada pelo Elefante, com material sintético): identificação, quando aplicável, e leitura real de um arquivo sintético, devolvendo uma linha exata **sem variação** — este é o critério de aceite. O objeto real não entra numa rota ainda não sondada; rota que não lê arquivo não autoriza revisão que dependa de leitura. Registre no manifesto o resultado por revisor (aprovada/reprovada).
 
 EP, MD, ARG e LI seguem os oito campos de seus arquivos de papel. BI, BS e BC usam os esquemas bibliográficos específicos, com o mesmo cabeçalho de contexto/isolamento. Parecer sem achados é válido apenas quando informa o que examinou e confirma leitura dos arquivos necessários. Se `ARQUIVOS LIDOS` omitir arquivo do pacote ou a cobertura esperada ficar ausente, devolva para complementação ou reexecute; não consolide como `SEM ACHADOS`. Elogios genéricos não substituem exame dos limites declarados.
 
@@ -539,6 +571,8 @@ Toda obra nomeada por um revisor é candidata até verificação independente. V
 
 ## 7. Consolidação e contestação
 
+Analise cada parecer separadamente antes de sintetizar: registre os achados de cada revisor, confronte-os e só então consolide — não leia os pareceres como um texto único (Carter et al., 2014, p. 546).
+
 Agrupe por decisão, preserve objeções minoritárias sustentadas e atribua um estado: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR` ou `REJEITAR`.
 
 - `CORRIGIR` significa problema demonstrado e correção autorizada.
@@ -550,6 +584,8 @@ Agrupe por decisão, preserve objeções minoritárias sustentadas e atribua um 
 - O Elefante escreveu o objeto e, por isso, deve apresentar evidência tanto para aceitar quanto para rejeitar um achado.
 - Antes de contestar que um artefato não existe, abra todas as versões disponíveis — texto, CSV, planilha e exportação. Versões divergentes devem ser reconciliadas.
 - Não escolha por maioria, custo de reescrita ou preferência estética.
+
+O relato da rodada informa os denominadores do processo — revisores e papéis, estados de contexto/isolamento, achados por estado e resolução, correlação entre revisores (famílias repetidas) — e o que não foi verificado.
 
 ## 8. Rodada completa ou focal
 
@@ -726,6 +762,28 @@ Inclua, em linguagem direta:
 
 Não chame de validado apenas porque há precedente publicado, código executável ou concordância entre modelos.
 
+## 7. Antipadrões da análise assistida por IA
+
+Onze armadilhas catalogadas por Hoda et al. (2026, pp. 5-6) — catálogo conceitual e provisório, **preprint** (arXiv:2608.27927v1; confira a versão publicada), de escopo declarado em engenharia de software. Os nomes são da fonte; a coluna «o que vigiar» é redação deste protocolo. Use como checklist de vigilância, não como critério de aprovação — e registre a conferência na linha de execução (`registros.md` §9): data, itens observados, evidência e ação.
+
+| categoria | antipadrão | o que vigiar |
+|---|---|---|
+| Impulsos perigosos | Porque podemos (*Because We Can*) | usar IA só porque está disponível, sem problema que a exija |
+| Impulsos perigosos | Espiral da produtividade (*The Productivity Spiral*) | volume crescente substituindo profundidade analítica |
+| Impulsos perigosos | Humano como padrão-ouro (*Human as Gold Standard*) | assumir a codificação humana como referência sem avaliar a qualidade dela |
+| Passos operacionais | Análise como categorização (*QDA as Categorization*) | tratar codificação como classificação mecânica, perdendo o interpretativo |
+| Passos operacionais | Deslize epistemológico (*Epistemological Slide*) | importar critérios de outro paradigma sem justificativa |
+| Passos operacionais | A caixa-preta (*The Black Box Trap*) | versões, parâmetros e prompts não documentados; percurso irreconstruível |
+| Passos operacionais | Confiança demais (*Too Much Trust*) | aceitar saída de IA como resultado, sem verificação |
+| Passos operacionais | Saída de IA como insight (*AI Output as Insight*) | tratar resumo gerado como achado analítico |
+| Falhas analíticas | Envolvimento humano baixo (*Low Human Engagement*) | não ler os dados nem acompanhar as decisões intermediárias |
+| Falhas analíticas | Pesca de resultados (*Fishing for Results*) | ajustar prompts/consultas até o resultado desejado aparecer |
+| Falhas analíticas | Análise qualitativa automatizada (*Automated QDA*) | delegar a análise inteira, sem liderança humana |
+
+Como usar: parte dos itens deixa **evidência direta** (ex.: caixa-preta — versões e prompts registrados; envolvimento humano baixo — leitura dos dados declarada; pesca de resultados — histórico de prompts); outros exigem **juízo explícito** do pesquisador (ex.: porque podemos; espiral da produtividade; deslize epistemológico) — declare o juízo, não o disfarce de evidência.
+
+Mitigações mínimas (p. 6): leia os dados; registre prompts, interações e passos intermediários; mantenha o pesquisador na liderança (*human-in-the-lead*), não apenas no circuito; registre versão, parâmetros e limites da ferramenta (`registros.md` §13). Antipadrões co-ocorrem em cascata — um sugere o outro (pp. 7, 9).
+
 ---
 
 # APÊNDICE — `references/validacao-humana-cega.md`
@@ -800,23 +858,27 @@ A amostra pode conter dados pessoais mesmo sem rótulo de grupo. Aplique `privac
 
 # Registros reutilizáveis
 
-Crie somente os registros necessários. Use Markdown/CSV/planilha conforme volume e acesso. Mantenha IDs estáveis, datas, versões e histórico. Valores desconhecidos ficam `pendente`, `não aplicável` ou `não verificado`, com motivo quando necessário.
+Crie somente os registros necessários. Use Markdown/CSV/planilha conforme volume e acesso. Mantenha IDs estáveis, datas, versões e histórico. Cada artefato tem um único registro de estado — versão, pendências e data no mesmo lugar; dois estados divergentes do mesmo artefato são defeito a resolver. Valores desconhecidos ficam `pendente`, `não aplicável` ou `não verificado`, com motivo quando necessário.
+
+Cobertura do percurso (tipologia do audit trail): os registros cobrem o contextual (estado e histórico do projeto), o metodológico (rodadas, manifestos, execução) e o analítico (matriz afirmação–fonte, decisões, correções); a resposta pessoal — reflexividade do pesquisador sobre a própria posição — fica fora do escopo do protocolo e não é substituída por registro (Rodgers; Cowles, 1993, p. 221).
 
 ## 1. `ESTADO.md`
 
 Índice mínimo do Elefante, sem dados ou hipóteses protegidas:
 
 ```markdown
-# Estado do projeto
-- EGMA: 1.1.0
-- Etapa/modo:
-- Escopo autorizado:
-- Artefatos e versões:
-- Decisões do pesquisador:
-- Pendências/limites:
-- Revisão: não iniciada | independente | limitada | assistida
-- Privacidade: escopo avaliado e data | não verificada
-- Próxima ação:
+# Estado do projeto acadêmico
+- **EGMA:** 1.2.0
+- **Criação do registro:** AAAA-MM-DD
+- **Etapa/modo:**
+- **Escopo autorizado:**
+- **Artefatos e versões:**
+- **Decisões do pesquisador:**
+- **Pendências/limites:**
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada | escopo avaliado em AAAA-MM-DD
+- **Descoberta em nova sessão:** não verificada
+- **Próxima ação:**
 ```
 
 Não redefina estado existente. Registre ausência de índice anterior sem inventar retrospecto.
@@ -839,7 +901,7 @@ Criado no G0 antes da ficha:
 - Decisões que seguem para a ficha:
 ```
 
-Em projeto anterior que já use `CONCEPTO.md`, preserve o nome e o histórico; não renomeie silenciosamente. A ficha só abre depois do gate de prontidão e das decisões necessárias.
+Em projeto anterior que já use `CONCEITO.md`, preserve o nome e o histórico; não renomeie silenciosamente. A ficha só abre depois do gate de prontidão e das decisões necessárias.
 
 ## 3. `FICHA.md`
 
@@ -898,10 +960,12 @@ Não apague a linha anterior nem dissolva correção decisiva em prosa.
 
 ## 10. Manifesto da rodada
 
-| rodada/papel | versão/hash | arquivos + conteúdo esperado | busca/operações | contexto/memória | modelo/produto sem segredos | destino | limites |
+| rodada/papel | versão/hash | arquivos + conteúdo esperado | busca/operações | contexto novo | isolamento (arquivos/memória) | modelo/família/produto sem segredos | destino | limites |
 |---|---|---|---|---|---|---|---|
 
 Preserve um parecer original por revisor. Confira `ARQUIVOS LIDOS` contra o manifesto. Não importe automaticamente esses manifestos para outros Goldfish.
+
+Registre a família do modelo quando conhecida (linhagem/pesos): diversidade de famílias entre elaboração e verificação é critério de força da rodada; papéis da mesma família podem compartilhar erros correlacionados — declare a hipótese no consolidado. Registre também o resultado da sonda de rota por revisor.
 
 ## 11. Decisões e resolução
 
@@ -912,9 +976,33 @@ Estados de achado: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR`, `
 
 ## 12. Fechamento
 
-Informe escopo/versão, materiais acessados, mudanças/decisões, operações/verificações, achados resolvidos/pendentes, cobertura com denominadores, identidade/sustentação/cobertura bibliográfica, condição de revisão, privacidade avaliada e próxima ação.
+Informe escopo/versão, materiais acessados, mudanças/decisões, operações/verificações, achados resolvidos/pendentes, cobertura com denominadores, identidade/sustentação/cobertura bibliográfica, condição de revisão, correlação entre revisores (quando houver), consultabilidade dos registros, privacidade avaliada e próxima ação. Quando o objeto for o próprio protocolo, instrumento ou método do pesquisador, declare a posição (autoria/proponente) e como ela foi tratada no desenho (rodadas independentes, verificação por execução).
 
-## 13. Exemplo sintético de achado
+## 13. Ferramenta e escolha de modelo
+
+Registre, por rodada ou etapa de análise, a ferramenta usada e seus limites (preenchido pelo Elefante; o revisor declara no parecer o que souber):
+
+| campo | conteúdo |
+|---|---|
+| ferramenta/modelo | identificador e versão |
+| provedor/rota | produto, conta/plano quando aplicável (privacidade é avaliação separada) |
+| parâmetros | configuração relevante (temperatura, limites, ferramentas habilitadas) |
+| limites conhecidos | erros documentados, cobertura de idioma, vieses registrados — com fonte; sem fonte, `não verificado` com motivo |
+| workarounds | contornos aplicados e por quê |
+
+Quando houver escolha deliberada entre alternativas, registre a razão (adequação linguística, abertura do peso, soberania dos dados, custo) — o protocolo não recomenda modelo, mas exige que a escolha registrada seja reconstruível.
+
+## 14. Trilha de execução e versões (consultabilidade)
+
+| item | conteúdo |
+|---|---|
+| retido por rodada | objeto congelado, briefings, manifesto, pareceres originais, hashes e logs de execução |
+| não retido | raciocínio interno da elaboração, conversa, memória do Elefante e material não autorizado |
+| consultabilidade | por artefato: `interna`, `consultável sob pedido` ou `publicável` (exige avaliação de privacidade concluída) — declarada no fechamento |
+
+Registrado não é publicável: a consultabilidade de cada artefato é decisão do projeto, com privacidade avaliada (`privacidade.md`) antes de qualquer publicação. A trilha registra execução e versões; o raciocínio interno da elaboração não integra o pacote.
+
+## 15. Exemplo sintético de achado
 
 ```text
 ACHADO MD-01 — Escopo da conclusão excede a seleção documentada
@@ -979,6 +1067,200 @@ Resultado esperado: índice verdadeiro e incompleto, não índice completo inven
 
 ---
 
+# APÊNDICE — `references/fundamentos.md`
+
+# Fundamentos — de onde vem cada componente
+
+A EGMA adapta tradições consolidadas ao trabalho com agentes de IA. Para cada componente: a tradição que o precede, o que ela já formulava (com localizador) e o que a EGMA adapta. As referências seguem o mapeamento do projeto de origem, conferido por leitura contra as edições consultadas (2026); **não houve nova conferência integral para esta edição** — use os localizadores como pistas verificáveis e confira na edição consultada. Referências em forma localizável ao final do arquivo.
+
+| # | Componente | Tradição | O que a tradição formulava | O que a EGMA adapta |
+|---|---|---|---|---|
+| C1 | Elefante — sessão longa com continuidade | Método como processo do pesquisador | Vigilância epistemológica e fases da pesquisa (Lopes, 2003, pp. 119, 136); memos como registro (Fragoso et al., 2011, p. 94); diário como memória material (Moura, p. 185); reflexão sobre cada operação (Bonin, 2008, p. 122) | o agente mantém a continuidade da elaboração; decisões viram registro versionado |
+| C2 | Goldfish — contexto novo, sem memória da elaboração | Independência de codificação, triangulação e trustworthiness; EGM (*Elephant–Goldfish Model*) | Independência dos codificadores (Krippendorff, 1990, p. 196); limiar pelos custos de conclusões equivocadas (p. 217); relato sistemático (Lombard et al., 2002, pp. 596-600); analisar separadamente e só então sintetizar (Carter et al., 2014, p. 546); a verificação no máximo persuade (Lincoln; Guba, 1985, p. 329); goldfish lê sem memória da elaboração (Rensin, 2026) | independência por construção de contexto; isolamento declarado (comprovado, limitado ou não verificado) |
+| C3 | Papéis de revisão, um por revisor | Divisão do trabalho crítico | Número de codificadores como item de relato (Tong et al., 2007, p. 352; Lombard et al., 2002, pp. 596-597) | papéis fixos, um por revisor, distribuídos a contextos separados |
+| C4 | Leitor ingênuo — paráfrase obrigatória | Comunicabilidade do relato; teste de compreensão do EGM | Reproduzir os métodos a partir do relato (Tong et al., 2007, p. 356); trail dos dados aos achados (Frohwirth; Karch, 2023, p. 7); teste de compreensão como portão (Rensin, 2026) | o documento só avança se um contexto limpo o entende; paráfrases obrigatórias |
+| C5 | Portões G0–G4 | Fases e decisões do projeto | Fases e instâncias da pesquisa (Lopes, 2003, pp. 119, 136); itens canônicos do projeto (Santaella, p. 152); o método não substitui o problema (Marques, 2018, p. 115) | gates entre etapas; slot crítico aberto bloqueia execução |
+| C6 | Registros — estado, rodadas, correções | Audit trail e transparência qualitativa | Tipologia do trail (Rodgers; Cowles, 1993, p. 221); "not merely a statement… visible" (Carcary, 2020, p. 167); rastrear o percurso passo a passo (Shenton, 2004, p. 72); transparência ≠ rigor (Aguinis; Solarino, 2019, p. 7 do PDF); trilhas de agente como norma emergente (Wei et al., 2025, p. 9) | registro contínuo; versões e hashes; correção que não apaga o anterior |
+| C7 | Verificação por execução | Tool criticism | Definição canônica (van Es; Schäfer, 2018, p. 26); reflexão e documentação de workarounds (Koolen et al., 2018, pp. 11, 13, 15-16); documentar o processo de decisão (Drucker, 2021, p. 2) | verificação instrumentada de citações e afirmações; a ferramenta é objeto de crítica e registro |
+| C8 | Matriz afirmação–fonte | Rastreabilidade afirmação → evidência | Evitar que o leitor precise "confiar na palavra do pesquisador" (Marques, 2018, p. 116); trail observável (Carcary, 2020; Shenton, 2004) | linha por afirmação; o que sustenta × o que não sustenta |
+| C9 | Matriz de privacidade | Ética de pesquisa e proteção de dados | O risco depende do que se faz com os dados depois (Metcalf; Crawford, 2016, p. 7); proteção de privacidade (UNESCO, 2023, p. 3); compartilhamento como processo formal; retenção/eliminação (ANPD, 2022, pp. 5, 8) | triagem antes de transmitir material a provedores de IA |
+| C10 | Princípios epistemológicos | Tradição qualitativa interpretativa | "At best persuade" (Lincoln; Guba, 1985, p. 329); critérios operacionalizados (Shenton, 2004, p. 63); não há análise melhor ou pior fora do desenho (Caregnato, 2006, p. 684) | disciplina de estados; epistemologia antes do rigor |
+| C11 | Origem e declaração | EGM — *Elephant–Goldfish Model* (Rensin; Apache-2.0) | mecanismo completo: documento de desenho antes da execução, contexto novo, teste de compreensão, julgamento humano final | transposição à pesquisa acadêmica; crédito e escopo declarados |
+| C12 | Contraste com o campo | Vizinhos: sistemas multiagente, avaliação de IAG, simulação, normas de relato | taxonomia, normas de relato e simulação ocupam o espaço em volta | a EGMA é protocolo de processo do pesquisador — o que ela não é está delimitado no `README` |
+
+## Notas transversais
+
+- A verificação **persuade, não compele** (Lincoln; Guba, 1985, p. 329); a EGMA não promete garantia — promete disciplina.
+- O parentesco mais próximo e a diferença: Koolen et al. (2018) propõem reflexão e documentação sobre a própria ferramenta; a EGMA produz independência por construção de contexto. O confronto adversarial entre sistemas de análise, proposto como trabalho futuro por Sankaranarayanan et al. (2025, p. 6), é o mecanismo central aqui.
+- A EGMA deve se apresentar como disciplina flexível, não como receituário (Lopes, 2003, p. 98).
+- O checklist de antipadrões de análise assistida (`medidas-computacionais.md` §7) vem de Hoda et al. (2026) — catálogo conceitual e provisório, preprint (arXiv:2608.27927v1).
+
+## Referências
+
+AGUINIS, H.; SOLARINO, A. M. Transparency and replicability in qualitative research: the case of interviews with elite informants. *Strategic Management Journal*, v. 40, n. 8, p. 1291-1315, 2019. DOI: 10.1002/smj.3015.
+
+ANPD — AUTORIDADE NACIONAL DE PROTEÇÃO DE DADOS. *A LGPD e o tratamento de dados pessoais para fins acadêmicos e para a realização de estudos por órgão de pesquisa*. Brasília: ANPD, 2022. (Texto para Discussão, n. 1/2022).
+
+BONIN, J. A. Explorações sobre práticas metodológicas na pesquisa em comunicação. *Revista FAMECOS*, Porto Alegre, n. 37, p. 121-127, dez. 2008.
+
+CARCARY, M. The research audit trail: methodological guidance for application in practice. *Electronic Journal of Business Research Methods*, v. 18, n. 2, p. 166-177, 2020.
+
+CAREGNATO, R. C. A.; MUTTI, R. Pesquisa qualitativa: análise de discurso versus análise de conteúdo. *Texto & Contexto — Enfermagem*, v. 15, n. 4, p. 679-684, 2006.
+
+CARTER, N. et al. The use of triangulation in qualitative research. *Oncology Nursing Forum*, v. 41, n. 5, p. 545-547, 2014. DOI: 10.1188/14.ONF.545-547.
+
+DRUCKER, J. *The Digital Humanities Coursebook: An Introduction to Digital Methods for Research and Scholarship*. London: Routledge, 2021.
+
+FRAGOSO, S.; RECUERO, R.; AMARAL, A. *Métodos de pesquisa para internet*. Porto Alegre: Sulina, 2011.
+
+FROHWIRTH, L.; KARCH, A. *A Transparency Checklist for Qualitative Research*. 2023. (working paper)
+
+HODA, R.; SEAMAN, C.; GOMES, V.; SPÍNOLA, R. Antipatterns in AI-assisted qualitative data analysis: a catalog of temptations and pitfalls for software engineering researchers. arXiv:2608.27927, 2026.
+
+KOOLEN, M.; VAN GORP, J.; VAN OSSENBRUGGEN, J. Toward a model for digital tool criticism. *Digital Scholarship in the Humanities*, 2018. DOI: 10.1093/llc/fqy048.
+
+KRIPPENDORFF, K. *Metodología de análisis de contenido: Teoría y práctica*. Barcelona: Paidós, 1990.
+
+LINCOLN, Y. S.; GUBA, E. G. *Naturalistic Inquiry*. Newbury Park: Sage, 1985.
+
+LOMBARD, M.; SNYDER-DUCH, J.; BRACKEN, C. C. Content analysis in mass communication: assessment and reporting of intercoder reliability. *Human Communication Research*, v. 28, n. 4, p. 587-604, 2002.
+
+LOPES, M. I. V. de. *Pesquisa em comunicação*. 8. ed. São Paulo: Loyola, 2003.
+
+MARQUES, F. P. J. 1989, o ano que não terminou. *Comunicação e Sociedade*, v. 33, p. 107-128, 2018. DOI: 10.17231/comsoc.33(2018).2909.
+
+METCALF, J.; CRAWFORD, K. Where are human subjects in Big Data research? The emerging ethics divide. *Big Data & Society*, v. 3, n. 1, 2016. DOI: 10.1177/2053951716650211.
+
+MOURA, C. P. de (org.). *Pesquisa em comunicação: metodologias e práticas acadêmicas*. Porto Alegre: EDIPUCRS, 2016.
+
+RENSIN, D. *Elephants, Goldfish and the New Golden Age of Software Engineering*. Medium: Google Research, 27 abr. 2026.
+
+RODGERS, B. L.; COWLES, K. V. The qualitative research audit trail: a complex collection of documentation. *Research in Nursing & Health*, v. 16, p. 219-226, 1993.
+
+SANKARANARAYANAN, S. et al. *Automating Thematic Analysis with Multi-Agent LLM Systems*. OSF Preprints, 2025.
+
+SANTAELLA, L. *Comunicação e pesquisa: projetos para mestrado e doutorado*. São Paulo: Hacker Editores, 2001.
+
+SHENTON, A. K. Strategies for ensuring trustworthiness in qualitative research projects. *Education for Information*, v. 22, n. 2, p. 63-75, 2004.
+
+TONG, A.; SAINSBURY, P.; CRAIG, J. Consolidated criteria for reporting qualitative research (COREQ): a 32-item checklist for interviews and focus groups. *International Journal for Quality in Health Care*, v. 19, n. 6, p. 349-357, 2007.
+
+UNESCO. *Guidance for Generative AI in Education and Research*. Paris: UNESCO, 2023.
+
+VAN ES, K. F.; WIERINGA, M. A.; SCHÄFER, M. T. Tool criticism: from digital methods to digital methodology. In: *Proceedings of the 2nd International Conference on Web Studies (WS.2 2018)*. New York: ACM, 2018. p. 24-27.
+
+WEI, J. et al. From AI for science to agentic science: a survey on autonomous scientific discovery. arXiv:2508.14111, 2025.
+
+---
+
+# APÊNDICE — `references/glossario.md`
+
+# Glossário de termos e estados
+
+Termos do protocolo, em uma linha cada. Onde há definição completa, o arquivo indicado prevalece.
+
+## Papéis e contextos
+
+| Termo | Definição |
+|---|---|
+| **Elefante** | O agente que mantém a continuidade do projeto e produz o material; o contexto de elaboração. |
+| **Goldfish** | Revisor em contexto separado, sem histórico de elaboração; revisão do próprio Elefante não é independente. |
+| **Contexto novo** | Execução de revisão sem histórico de elaboração, resposta desejada ou pareceres alheios; estados: `comprovado`, `limitado`, `não verificado` (`revisao.md` §1). |
+| **Isolamento de arquivos/memória** | Controle real do que o revisor acessa; mesma escala do contexto novo. |
+| **Família de modelo** | Linhagem/pesos do modelo — dois provedores servindo os mesmos pesos são a mesma família. Papéis da mesma família **podem** compartilhar erros correlacionados (hipótese a declarar, não medida); diversidade de famílias entre elaboração e verificação é critério de força da rodada. |
+| **Revisão assistida** | Preparação e verificação sem contexto novo verificável; não se denomina Goldfish concluída e deixa `revisão independente pendente`. |
+| **Sonda de rota** | Verificação prévia da rota do revisor (identificação + leitura de arquivo sintético com linha devolvida sem variação), feita pelo Elefante antes de rodada longa; resultado por revisor no manifesto. |
+| **Rodada** | Revisores e papéis sobre uma versão congelada; profundidades compacta e completa; tipos completa ou focal. |
+| **Parecer** | Produto do revisor no esquema do seu papel; o achado é sua unidade. |
+| **Objeto congelado** | Versão imutável examinada, com hash quando disponível; metadados de trabalho ficam fora. |
+| **Manifesto da rodada** | Registro por revisor: papel, versão, arquivos, contexto, modelo/família, destino (`registros.md` §10). |
+
+## Achados e estados
+
+| Termo | Definição |
+|---|---|
+| **Achado** | Problema apontado por um revisor, com localização, evidência e encaminhamento. |
+| **Encaminhamento** | `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR` ou `REJEITAR` (`SKILL.md` §7). |
+| **Resolução** | `resolvido`, `parcialmente resolvido`, `não resolvido` ou `não verificável`. |
+| **Consolidação** | Agregação dos pareceres por decisão, preservando objeções minoritárias; não decide por votação. |
+| **Bloco de correções** | Registro permanente de cada correção: valor anterior, valor novo, origem e impacto (`registros.md` §9). |
+| **Verificação por execução** | Reexecutar a operação (contas, filtros, citações, código) em vez de aceitar a alegação. |
+
+## Projeto e registros
+
+| Termo | Definição |
+|---|---|
+| **Portões G0–G4** | Etapas com aprovação explícita: G0 pitch (`CONCEITO.md`), G1 enquadramento (`FICHA.md`), G2 protocolo (`ANCORAS.md`), G3 piloto, G4 manuscrito/fechamento (`SKILL.md` §5). |
+| **Ficha mínima** | Resumo factual entregue ao revisor: pergunta, abordagem, etapa e restrições. |
+| **FICHA.md** | Identificação do projeto: problema, pergunta, universo, fontes, análise, ética e pendências. |
+| **Âncora / slot** | Linha de `ANCORAS.md` por escolha ou procedimento; slot `fechada`, `pendente` ou `inédita a confirmar`; resolvido como `ancorada`, `análoga` ou `inédita`. |
+| **Matriz afirmação–fonte** | Uma linha por afirmação: o que a fonte sustenta e o que não sustenta (`registros.md` §8). |
+| **DRIFT** | Diagnóstico de divergência entre estado, plano, texto, referências e rotas reais (`manutencao.md`). |
+| **BOOTSTRAP** | Reconstrução de estado para projeto anterior à EGMA, sem retroagir nem inventar. |
+| **Artifact-first** | Entregável longo vai para arquivo; no chat, caminho e pontos decisivos. |
+| **Registro de estado** | Único por artefato: versão, pendências e data no mesmo lugar. |
+| **Trilha de execução e versões** | O que o protocolo retém por rodada: objeto, briefings, manifesto, pareceres, hashes e logs; não inclui o raciocínio interno da elaboração (`registros.md` §14). |
+| **Consultabilidade** | Por artefato: `interna`, `consultável sob pedido` ou `publicável` (exige avaliação de privacidade concluída); declarada no fechamento (`registros.md` §14). |
+| **Tipologia do percurso** | Cobertura do *audit trail*: contextual, metodológica e analítica; a resposta pessoal (reflexividade) fica fora do escopo (`registros.md`, intro). |
+
+## Bibliografia, medidas e privacidade
+
+| Termo | Definição |
+|---|---|
+| **Identidade bibliográfica** | A obra existe e está corretamente identificada: `confirmada`, `divergente`, `ambígua`, `não localizada` ou `não verificada`. |
+| **Sustentação** | O conteúdo consultado sustenta a afirmação: `sustentada`, `parcialmente sustentada`, `incompatível` ou `não verificável com acesso disponível`. |
+| **Cobertura** | A seleção cobre fundamentos, contrapontos e atualizações pertinentes. |
+| **Acesso** | Profundidade do consultado: `integral`, `capítulo/seção`, `resumo`, `metadados` ou `sem acesso`. |
+| **Instrumento** | Classificação da medida computacional: `medida direta`, `triagem` ou `descarte`. |
+| **Validação humana cega** | Codificação humana sem rótulo de hipótese, com concordância por dimensão quando exigida (`validacao-humana-cega.md`). |
+| **Estados de privacidade** | Adequação da rota ao material: `compatível — escopo evidenciado`, `condicionado`, `incompatível` ou `não verificável` (`privacidade.md` §4). |
+
+Definições completas: arquivos de `references/` indicados em cada linha.
+
+---
+
+# APÊNDICE — `references/conformidade.md`
+
+# Conformidade — dos registros às exigências de relato
+
+> **Este arquivo não certifica conformidade.** Ele indica correspondências entre os registros do protocolo e exigências de relato e declaração em vigor; a conferência é do pesquisador, contra a norma aplicável ao seu contexto.
+
+## 1. Aplicabilidade e correspondências
+
+As normas citadas são datadas e têm escopo próprio — a do CNPq é administrativa e vincula o fomento (pesquisa apoiada pelo CNPq); fora desse escopo, use-a como referência. Confira a redação vigente ao usar.
+
+| Artefato do protocolo | Exigência que ajuda a atender |
+|---|---|
+| Matriz de privacidade (etapa × material × rota × retenção) | Declaração de uso de IA generativa — ferramenta e finalidade (CNPq, 2026, p. 5); sigilo de material de avaliação (p. 4) |
+| Manifestos de rodada (modelo/família, contexto, destino) | Itens de contexto e sessão das extensões de relato qualitativo com LLM (COREQ+LLM; Sarvestan et al., 2025; Fehring et al., 2026) |
+| Registros de execução, bloco de correções, versões e hashes | Trilha do agente — uso de ferramentas e passos intermediários (Wei et al., 2025, p. 9); o protocolo não retém o raciocínio interno da elaboração |
+| Fechamento com denominadores | Relato quantificado do processo (revisores, achados, resolução) |
+| Registro da ferramenta e da escolha do modelo (`registros.md` §13) | Justificativa do uso de IA e dos limites conhecidos |
+| Decisão sobre consultabilidade dos registros | Dados e registros como produtos citáveis (CNPq, 2026, p. 5) |
+
+## 2. Declaração de uso de IA generativa (modelo)
+
+```text
+Declaração de uso de inteligência artificial generativa
+- Ferramenta(s), versão(ões) e provedor(es): <...>
+- Finalidade e fases: <...>
+- Material transmitido e rota: <remissão à matriz de privacidade>
+- Mediação humana: <onde e como o pesquisador decidiu>
+- Registros disponíveis: <onde estão>
+```
+
+## 3. Regras duras
+
+- **Material de terceiros em avaliação**: a Portaria CNPq nº 2.664/2026 (art. 9º, I, «e») veda «a inserção de projetos de pesquisa de terceiros em ferramentas de IAG para elaboração de pareceres científicos»; para pareceristas, resguardar o sigilo das informações e dos pareceres a que tiverem acesso (p. 4). Trate o material como classe própria na triagem, antes de qualquer transmissão.
+- **Privacidade, confidencialidade e propriedade intelectual** dos insumos e resultados: aplicar `privacidade.md` antes de transmitir. O texto para discussão da CAPES (Brasil, A., 2025, pp. 10-11) recomenda preservá-las — é registro do debate, não norma.
+- **Instrumentos** — registre `conferida em <data>` ao usar; norma alterada abre linha no bloco de correções e reavaliação:
+  - **CNPq** — *Portaria nº 2.664, de 6 de março de 2026* (Política de Integridade na Atividade Científica): declaração de uso de IAG; vedação de pareceres de terceiros; dados e registros como produtos citáveis.
+  - **CAPES** — *A inteligência artificial na pesquisa e no fomento: desafios e oportunidades* (Texto para Discussão, 2025; opiniões do autor).
+  - **ANPD** — *A LGPD e o tratamento de dados pessoais para fins acadêmicos e para a realização de estudos por órgão de pesquisa* (Texto para Discussão nº 1/2022; caráter preliminar).
+  - **UNESCO** — *Guidance for Generative AI in Education and Research* (2023).
+
+---
+
 # APÊNDICE — `references/papeis/argumentacao.md`
 
 # Papel — argumentação e evidências
@@ -1007,8 +1289,8 @@ Você é revisor Goldfish em contexto separado. Leia apenas o pacote autorizado 
 
 ```text
 PAPEL: argumentacao | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1051,8 +1333,8 @@ Comece com:
 
 ```text
 PAPEL: bibliografia-cobertura | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1099,8 +1381,8 @@ Comece com:
 
 ```text
 PAPEL: bibliografia-identidade | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1145,8 +1427,8 @@ Comece com:
 
 ```text
 PAPEL: bibliografia-sustentacao | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1203,8 +1485,8 @@ Você é revisor Goldfish em contexto separado. Não viu a conversa de elaboraç
 
 ```text
 PAPEL: epistemologia | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1246,6 +1528,11 @@ compara a interpretação com a intenção declarada; divergência demonstra pro
 comunicação, não necessariamente erro metodológico. Não transforme paráfrase
 imperfeita em reprovação automática.
 
+O veredito não fica com quem escreveu: a paráfrase é o resultado registrado da rodada.
+Se ela não reconstrói o percurso — o que o estudo pergunta e como o método produz a
+resposta —, a pendência permanece aberta e o material retorna à elaboração. O registro
+é do resultado da leitura, não uma opinião de mérito do revisor.
+
 ## Procure
 
 1. Termo usado antes de ser definido.
@@ -1265,8 +1552,8 @@ imperfeita em reprovação automática.
 
 ```text
 PAPEL: leitor-ingenuo | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1325,8 +1612,8 @@ Você é revisor Goldfish em contexto separado. Leia apenas o pacote autorizado.
 
 ```text
 PAPEL: metodo | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <artefatos/verificações ausentes>
@@ -1350,15 +1637,15 @@ Se depender de arquivo ausente, use `Certeza: indeterminado` e identifique o arq
 
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.1.0
+- **EGMA:** 1.2.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
 - **Artefatos e versões:** nenhum registrado
 - **Decisões do pesquisador:** nenhuma registrada
 - **Pendências/limites:** definir objeto e escopo
-- **Revisão:** não iniciada; isolamento não verificado
-- **Privacidade:** não avaliada; não transmitir material protegido
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada; não transmitir material protegido — após avaliação: escopo avaliado em AAAA-MM-DD
 - **Descoberta em nova sessão:** não verificada
 - **Próxima ação:** validar a instalação com dados sintéticos
 

@@ -3,7 +3,7 @@ name: egma
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Elefante–Goldfish Acadêmico — EGMA 1.1.0
+# Elefante–Goldfish Acadêmico — EGMA 1.2.0
 
 Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A EGMA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 
@@ -22,6 +22,9 @@ Leia somente os arquivos pertinentes, além deste:
 | Instalar ou adaptar a skill e verificar descoberta em nova sessão | `references/portabilidade.md` |
 | Criar fichas, âncoras, matrizes, manifestos e índices | `references/registros.md` |
 | Diagnosticar deriva ou reconstruir estado de projeto antigo | `references/manutencao.md` |
+| Entender de onde vem cada componente | `references/fundamentos.md` |
+| Entender termos e estados do protocolo | `references/glossario.md` |
+| Atender exigências de relato e declaração de uso de IA generativa | `references/conformidade.md` |
 | Distribuir critérios aos revisores | `references/papeis/` |
 | Verificar citações literais em PDFs | `scripts/verifica_citacoes.py` |
 
@@ -61,7 +64,8 @@ Escolha a profundidade:
 
 - **Compacta:** Elefante + epistemologia/contribuição + método/dados + argumentação/evidências; acrescente leitor ingênuo em protocolo ou manuscrito.
 - **Completa:** compacta + três funções bibliográficas separadas no manuscrito — identidade, sustentação e cobertura — e verificações específicas adicionais exigidas pelo objeto, sem combiná-las num mesmo revisor.
-- **Revisão assistida:** quando não houver contexto novo ou isolamento verificável. Faça preparação, verificação por execução e crítica possível, mas marque **revisão independente pendente**. Não a denomine Goldfish concluída.
+
+Se não houver contexto novo ou isolamento verificável, não é uma profundidade: use **revisão assistida** — preparação, verificação por execução e crítica possível, com **revisão independente pendente** declarada. Não a denomine Goldfish concluída.
 
 ## 4. Continuidade e artefatos
 
@@ -98,7 +102,7 @@ Crie contextos separados quando o harness oferecer essa capacidade verificável.
 
 Não entregue resposta desejada, defesa do Elefante, conversa de elaboração ou pareceres alheios na primeira leitura. Não oculte justificativa metodológica que pertence ao próprio objeto. Restrições textuais não substituem permissões reais; registre o isolamento como comprovado, limitado ou não verificado.
 
-**Cegueira ao histórico não é anonimato, confidencialidade ou ausência de retenção.** O mesmo modelo pode exercer papéis distintos, com erros correlacionados; modelos diferentes podem diversificar erros, mas não provam independência ou qualidade. Esta skill não escolhe nem configura modelo, provedor ou plano.
+**Cegueira ao histórico não é anonimato, confidencialidade ou ausência de retenção.** O mesmo modelo pode exercer papéis distintos, com erros correlacionados; modelos diferentes podem diversificar erros, mas não provam independência ou qualidade. Registre a família no manifesto: diversidade de famílias entre elaboração e verificação é critério de força da rodada. Esta skill não escolhe nem configura modelo, provedor ou plano.
 
 Aceite parecer sem achados. Exija localização e evidência; não transforme divergência teórica, simples discordância ou conveniência do Elefante em erro demonstrado. Confira se `ARQUIVOS LIDOS` cobre todos os arquivos necessários do pacote. Parecer incompleto volta para complementação ou é reexecutado; nunca consolide a omissão como `SEM ACHADOS`. Parecer vazio ou ausente é ausência de revisão, não aprovação.
 
@@ -144,6 +148,8 @@ O fechamento informa:
 - cobertura com denominadores quando houver amostragem;
 - identidade, sustentação e cobertura bibliográfica separadamente;
 - revisão independente, limitada ou assistida;
+- correlação entre revisores, quando houver família repetida;
+- consultabilidade dos registros por artefato;
 - privacidade avaliada apenas no escopo das evidências disponíveis;
 - pendências e próxima ação.
 

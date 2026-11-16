@@ -1,22 +1,26 @@
 # Registros reutilizáveis
 
-Crie somente os registros necessários. Use Markdown/CSV/planilha conforme volume e acesso. Mantenha IDs estáveis, datas, versões e histórico. Valores desconhecidos ficam `pendente`, `não aplicável` ou `não verificado`, com motivo quando necessário.
+Crie somente os registros necessários. Use Markdown/CSV/planilha conforme volume e acesso. Mantenha IDs estáveis, datas, versões e histórico. Cada artefato tem um único registro de estado — versão, pendências e data no mesmo lugar; dois estados divergentes do mesmo artefato são defeito a resolver. Valores desconhecidos ficam `pendente`, `não aplicável` ou `não verificado`, com motivo quando necessário.
+
+Cobertura do percurso (tipologia do audit trail): os registros cobrem o contextual (estado e histórico do projeto), o metodológico (rodadas, manifestos, execução) e o analítico (matriz afirmação–fonte, decisões, correções); a resposta pessoal — reflexividade do pesquisador sobre a própria posição — fica fora do escopo do protocolo e não é substituída por registro (Rodgers; Cowles, 1993, p. 221).
 
 ## 1. `ESTADO.md`
 
 Índice mínimo do Elefante, sem dados ou hipóteses protegidas:
 
 ```markdown
-# Estado do projeto
-- EGMA: 1.0.0
-- Etapa/modo:
-- Escopo autorizado:
-- Artefatos e versões:
-- Decisões do pesquisador:
-- Pendências/limites:
-- Revisão: não iniciada | independente | limitada | assistida
-- Privacidade: escopo avaliado e data | não verificada
-- Próxima ação:
+# Estado do projeto acadêmico
+- **EGMA:** 1.2.0
+- **Criação do registro:** AAAA-MM-DD
+- **Etapa/modo:**
+- **Escopo autorizado:**
+- **Artefatos e versões:**
+- **Decisões do pesquisador:**
+- **Pendências/limites:**
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada | escopo avaliado em AAAA-MM-DD
+- **Descoberta em nova sessão:** não verificada
+- **Próxima ação:**
 ```
 
 Não redefina estado existente. Registre ausência de índice anterior sem inventar retrospecto.
@@ -39,7 +43,7 @@ Criado no G0 antes da ficha:
 - Decisões que seguem para a ficha:
 ```
 
-Em projeto anterior que já use `CONCEPTO.md`, preserve o nome e o histórico; não renomeie silenciosamente. A ficha só abre depois do gate de prontidão e das decisões necessárias.
+Em projeto anterior que já use `CONCEITO.md`, preserve o nome e o histórico; não renomeie silenciosamente. A ficha só abre depois do gate de prontidão e das decisões necessárias.
 
 ## 3. `FICHA.md`
 
@@ -98,10 +102,12 @@ Não apague a linha anterior nem dissolva correção decisiva em prosa.
 
 ## 10. Manifesto da rodada
 
-| rodada/papel | versão/hash | arquivos + conteúdo esperado | busca/operações | contexto/memória | modelo/produto sem segredos | destino | limites |
+| rodada/papel | versão/hash | arquivos + conteúdo esperado | busca/operações | contexto novo | isolamento (arquivos/memória) | modelo/família/produto sem segredos | destino | limites |
 |---|---|---|---|---|---|---|---|
 
 Preserve um parecer original por revisor. Confira `ARQUIVOS LIDOS` contra o manifesto. Não importe automaticamente esses manifestos para outros Goldfish.
+
+Registre a família do modelo quando conhecida (linhagem/pesos): diversidade de famílias entre elaboração e verificação é critério de força da rodada; papéis da mesma família podem compartilhar erros correlacionados — declare a hipótese no consolidado. Registre também o resultado da sonda de rota por revisor.
 
 ## 11. Decisões e resolução
 
@@ -112,9 +118,33 @@ Estados de achado: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR`, `
 
 ## 12. Fechamento
 
-Informe escopo/versão, materiais acessados, mudanças/decisões, operações/verificações, achados resolvidos/pendentes, cobertura com denominadores, identidade/sustentação/cobertura bibliográfica, condição de revisão, privacidade avaliada e próxima ação.
+Informe escopo/versão, materiais acessados, mudanças/decisões, operações/verificações, achados resolvidos/pendentes, cobertura com denominadores, identidade/sustentação/cobertura bibliográfica, condição de revisão, correlação entre revisores (quando houver), consultabilidade dos registros, privacidade avaliada e próxima ação. Quando o objeto for o próprio protocolo, instrumento ou método do pesquisador, declare a posição (autoria/proponente) e como ela foi tratada no desenho (rodadas independentes, verificação por execução).
 
-## 13. Exemplo sintético de achado
+## 13. Ferramenta e escolha de modelo
+
+Registre, por rodada ou etapa de análise, a ferramenta usada e seus limites (preenchido pelo Elefante; o revisor declara no parecer o que souber):
+
+| campo | conteúdo |
+|---|---|
+| ferramenta/modelo | identificador e versão |
+| provedor/rota | produto, conta/plano quando aplicável (privacidade é avaliação separada) |
+| parâmetros | configuração relevante (temperatura, limites, ferramentas habilitadas) |
+| limites conhecidos | erros documentados, cobertura de idioma, vieses registrados — com fonte; sem fonte, `não verificado` com motivo |
+| workarounds | contornos aplicados e por quê |
+
+Quando houver escolha deliberada entre alternativas, registre a razão (adequação linguística, abertura do peso, soberania dos dados, custo) — o protocolo não recomenda modelo, mas exige que a escolha registrada seja reconstruível.
+
+## 14. Trilha de execução e versões (consultabilidade)
+
+| item | conteúdo |
+|---|---|
+| retido por rodada | objeto congelado, briefings, manifesto, pareceres originais, hashes e logs de execução |
+| não retido | raciocínio interno da elaboração, conversa, memória do Elefante e material não autorizado |
+| consultabilidade | por artefato: `interna`, `consultável sob pedido` ou `publicável` (exige avaliação de privacidade concluída) — declarada no fechamento |
+
+Registrado não é publicável: a consultabilidade de cada artefato é decisão do projeto, com privacidade avaliada (`privacidade.md`) antes de qualquer publicação. A trilha registra execução e versões; o raciocínio interno da elaboração não integra o pacote.
+
+## 15. Exemplo sintético de achado
 
 ```text
 ACHADO MD-01 — Escopo da conclusão excede a seleção documentada

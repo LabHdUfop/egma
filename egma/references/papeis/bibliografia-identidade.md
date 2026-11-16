@@ -18,8 +18,8 @@ Comece com:
 
 ```text
 PAPEL: bibliografia-identidade | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>

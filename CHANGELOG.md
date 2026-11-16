@@ -2,19 +2,40 @@
 
 Todo registro segue [SemVer](https://semver.org/lang/pt-BR/): **patch** = correção sem mudar comportamento; **minor** = regra ou recurso novo retrocompatível; **major** = mudança que invalida estado ou checklist anterior.
 
-## [Não publicado]
+## [1.2.0] — 2026-11-16
 
 **Adicionado**
 
+- Glossário de termos e estados (`references/glossario.md`).
+- Critérios de decisão dos estados de contexto/isolamento, com evidência mínima (`references/revisao.md` §1).
+- Portão da paráfrase no papel de leitor ingênuo: o veredito é resultado registrado da rodada, não do autor.
+- Família do modelo no manifesto; diversidade de famílias entre elaboração e verificação como critério de força da rodada.
+- Higiene do congelamento e sonda de rota antes de rodadas longas (`references/revisao.md`).
+- Registro de estado único por artefato (`references/registros.md`).
+- Fundamentos: de onde vem cada componente, com as fontes (`references/fundamentos.md`).
+- Conformidade: dos registros às exigências de relato + modelo de declaração de uso de IA generativa (`references/conformidade.md`).
+- Ferramenta e escolha de modelo registradas (`references/registros.md` §13); tipologia do percurso no intro de `registros.md`.
+- Análise separada antes da síntese e relato da rodada com denominadores (`references/revisao.md` §7).
+- Antipadrões da análise assistida por IA como checklist (`references/medidas-computacionais.md` §7).
+- Trilha de execução e versões, com consultabilidade dos registros (`references/registros.md` §14).
+- Declaração de posição quando o objeto é o instrumento do pesquisador (fechamento, `registros.md` §12).
+- README: o que a EGMA não é; frentes abertas.
+- `CONTRIBUTING.md` — a conferência de campos de versão entra no checklist de release.
 - Edições em inglês e espanhol da documentação, como documentos companheiros do pacote canônico (pt-BR):
   - `README.en.md` e `README.es.md` — tradução integral, com seletor de idiomas.
   - `EGMA_PORTATIL.en.md` e `EGMA_PORTATIL.es.md` — documento único traduzido, com nota de fidelidade e glossário de literais.
-- `README.md` — seletor de idiomas e ponteiros para as edições traduzidas.
+- `README.md` (raiz) — seletor de idiomas e ponteiros para as edições traduzidas.
+
+**Corrigido**
+
+- Campo `EGMA:` de `templates/ESTADO.md` e `references/registros.md` declarava `1.0.0`; passa a acompanhar a versão da edição.
+- Terminologia dos estados nos esquemas dos papéis: `confirmado` → `comprovado`, alinhada ao núcleo.
 
 **Notas**
 
-- Nenhuma regra do protocolo mudou: identificadores, estados, esquemas, templates e o código do script permanecem exatamente como no pacote.
-- Nenhum arquivo coberto por `SHA256SUMS.txt` foi alterado.
+- As edições EN/ES são documentos companheiros e não entram no `SHA256SUMS.txt`; a edição 1.2 altera arquivos cobertos pelo manifesto, que será regerado no release da 1.2.0 (25 arquivos).
+- Nenhuma regra de privacidade, portabilidade ou do verificador de citações mudou de comportamento.
+- As edições EN/ES permanecem na versão anterior até a sincronização com a 1.2.0 (passada seguinte).
 
 ## [1.1.0] — 2026-11-10
 

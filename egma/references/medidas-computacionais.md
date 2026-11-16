@@ -68,3 +68,25 @@ Inclua, em linguagem direta:
 8. mudanças posteriores ao plano e respectiva âncora.
 
 Não chame de validado apenas porque há precedente publicado, código executável ou concordância entre modelos.
+
+## 7. Antipadrões da análise assistida por IA
+
+Onze armadilhas catalogadas por Hoda et al. (2026, pp. 5-6) — catálogo conceitual e provisório, **preprint** (arXiv:2608.27927v1; confira a versão publicada), de escopo declarado em engenharia de software. Os nomes são da fonte; a coluna «o que vigiar» é redação deste protocolo. Use como checklist de vigilância, não como critério de aprovação — e registre a conferência na linha de execução (`registros.md` §9): data, itens observados, evidência e ação.
+
+| categoria | antipadrão | o que vigiar |
+|---|---|---|
+| Impulsos perigosos | Porque podemos (*Because We Can*) | usar IA só porque está disponível, sem problema que a exija |
+| Impulsos perigosos | Espiral da produtividade (*The Productivity Spiral*) | volume crescente substituindo profundidade analítica |
+| Impulsos perigosos | Humano como padrão-ouro (*Human as Gold Standard*) | assumir a codificação humana como referência sem avaliar a qualidade dela |
+| Passos operacionais | Análise como categorização (*QDA as Categorization*) | tratar codificação como classificação mecânica, perdendo o interpretativo |
+| Passos operacionais | Deslize epistemológico (*Epistemological Slide*) | importar critérios de outro paradigma sem justificativa |
+| Passos operacionais | A caixa-preta (*The Black Box Trap*) | versões, parâmetros e prompts não documentados; percurso irreconstruível |
+| Passos operacionais | Confiança demais (*Too Much Trust*) | aceitar saída de IA como resultado, sem verificação |
+| Passos operacionais | Saída de IA como insight (*AI Output as Insight*) | tratar resumo gerado como achado analítico |
+| Falhas analíticas | Envolvimento humano baixo (*Low Human Engagement*) | não ler os dados nem acompanhar as decisões intermediárias |
+| Falhas analíticas | Pesca de resultados (*Fishing for Results*) | ajustar prompts/consultas até o resultado desejado aparecer |
+| Falhas analíticas | Análise qualitativa automatizada (*Automated QDA*) | delegar a análise inteira, sem liderança humana |
+
+Como usar: parte dos itens deixa **evidência direta** (ex.: caixa-preta — versões e prompts registrados; envolvimento humano baixo — leitura dos dados declarada; pesca de resultados — histórico de prompts); outros exigem **juízo explícito** do pesquisador (ex.: porque podemos; espiral da produtividade; deslize epistemológico) — declare o juízo, não o disfarce de evidência.
+
+Mitigações mínimas (p. 6): leia os dados; registre prompts, interações e passos intermediários; mantenha o pesquisador na liderança (*human-in-the-lead*), não apenas no circuito; registre versão, parâmetros e limites da ferramenta (`registros.md` §13). Antipadrões co-ocorrem em cascata — um sugere o outro (pp. 7, 9).

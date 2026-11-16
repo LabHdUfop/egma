@@ -18,6 +18,11 @@ compara a interpretação com a intenção declarada; divergência demonstra pro
 comunicação, não necessariamente erro metodológico. Não transforme paráfrase
 imperfeita em reprovação automática.
 
+O veredito não fica com quem escreveu: a paráfrase é o resultado registrado da rodada.
+Se ela não reconstrói o percurso — o que o estudo pergunta e como o método produz a
+resposta —, a pendência permanece aberta e o material retorna à elaboração. O registro
+é do resultado da leitura, não uma opinião de mérito do revisor.
+
 ## Procure
 
 1. Termo usado antes de ser definido.
@@ -37,8 +42,8 @@ imperfeita em reprovação automática.
 
 ```text
 PAPEL: leitor-ingenuo | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>

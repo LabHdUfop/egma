@@ -2,7 +2,7 @@
 
 **Protocolo aberto, neutro quanto a agente, modelo e provedor, para enquadrar, planejar e auditar pesquisa acadêmica com apoio de IA.**
 
-Versão 1.1.0 · Licença MIT · LABHD UFOP
+Versão 1.2.0 · Licença MIT · LABHD UFOP
 
 **Idiomas:** **Português** · [English](README.en.md) · [Español](README.es.md)
 
@@ -65,6 +65,9 @@ egma/
 │   ├── validacao-humana-cega.md   validação humana cega de medidas interpretativas
 │   ├── registros.md               fichas, âncoras, matrizes, manifestos e índices
 │   ├── manutencao.md              deriva e reconstrução de estado
+│   ├── fundamentos.md             de onde vem cada componente (tradição → adaptação)
+│   ├── glossario.md               termos e estados do protocolo
+│   ├── conformidade.md            registros → exigências de relato e declaração
 │   ├── portabilidade.md           instalação e verificação
 │   └── papeis/                    rubricas fixas de revisão (método, epistemologia,
 │                                  argumentação, leitor ingênuo, bibliografia)
@@ -75,7 +78,7 @@ egma/
 EGMA_PORTATIL.md                   versão monolítica para ambientes sem pastas
 EGMA_PORTATIL.en.md                edição inglesa do documento único
 EGMA_PORTATIL.es.md                edição espanhola do documento único
-SHA256SUMS.txt                     hashes de integridade do pacote 1.1.0
+SHA256SUMS.txt                     hashes de integridade do pacote 1.2.0
 tests/                             suíte de aceitação do script (11 casos sintéticos)
 ```
 
@@ -85,7 +88,7 @@ tests/                             suíte de aceitação do script (11 casos sin
 sha256sum -c SHA256SUMS.txt      # Linux/macOS/git-bash
 ```
 
-Os hashes cobrem os 22 arquivos do pacote 1.1.0. Se algum falhar, o pacote foi alterado — não use.
+Os hashes cobrem os 25 arquivos do pacote 1.2.0. Se algum falhar, o pacote foi alterado — não use.
 
 ## Testes
 
@@ -98,7 +101,7 @@ sintética (os PDFs são gerados por PyMuPDF; nenhum dado de pesquisa é usado).
 ocorrência única, repetição em páginas diferentes e na mesma página, ausência de texto,
 citação entre páginas, PDFs homônimos, caminho explícito, fonte ausente, folha impressa
 observada, offset declarado e identidade da fonte por SHA-256. Todos os 11 passam na
-1.1.0; na 1.0.0 apenas 4 passavam.
+1.2.0 (como na 1.1.0); na 1.0.0 apenas 4 passavam.
 
 ## Limites — leia antes de usar
 
@@ -112,7 +115,7 @@ observada, offset declarado e identidade da fonte por SHA-256. Todos os 11 passa
 
 Veja [`CITATION.cff`](CITATION.cff). Formato sugerido:
 
-> Freire, M. (2026). *EGMA — Elefante–Goldfish Acadêmico, v1.1.0*. Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto. https://github.com/LabHdUfop/egma
+> Freire, M. (2026). *EGMA — Elefante–Goldfish Acadêmico, v1.2.0*. Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto. https://github.com/LabHdUfop/egma
 
 ## Contribuições
 

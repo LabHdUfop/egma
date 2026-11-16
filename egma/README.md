@@ -1,13 +1,13 @@
-# EGMA portátil 1.1.0
+# EGMA portátil 1.2.0
 
-Skill neutra quanto a harness, modelo e provedor para enquadrar, planejar e auditar pesquisa acadêmica com memória do Elefante e revisão Goldfish em contextos separados.
+**EGMA (Elefante–Goldfish Acadêmico)** é uma skill neutra quanto a harness, modelo e provedor para enquadrar, planejar e auditar pesquisa acadêmica com memória do Elefante e revisão Goldfish em contextos separados.
 
 Apresentação, instalação passo a passo e licença: [`../README.md`](../README.md).
 
 ## Conteúdo
 
 - `SKILL.md`: núcleo operacional e seleção de modo/etapa.
-- `references/`: privacidade, projeto, revisão, bibliografia, medidas, validação, registros, manutenção e portabilidade.
+- `references/`: privacidade, projeto, revisão, bibliografia, medidas, validação, registros, manutenção, fundamentos, glossário, conformidade e portabilidade.
 - `references/papeis/`: rubricas fixas de revisão.
 - `scripts/verifica_citacoes.py`: conferência auxiliar de citações em PDF.
 - `templates/ESTADO.md`: índice inicial mínimo.
@@ -22,14 +22,25 @@ Apresentação, instalação passo a passo e licença: [`../README.md`](../READM
 
 ## O que mudou nesta edição
 
-- Consolida o protocolo portátil anterior e os acréscimos da skill atual: leitor ingênuo, DRIFT, BOOTSTRAP, artifact-first, contestação, lastro contínuo, medidas computacionais, validação humana e corpus cedido.
-- Remove comandos, caminhos pessoais, ferramentas específicas e telemetria de um harness.
-- Remove recomendações de modelos/provedores ZDR e qualquer roteamento de inferência.
-- Substitui escolha de rota por avaliação aplicável ao produto, conta, plano, configuração e cadeia de ferramentas realmente usados, inclusive em assinaturas.
-- Adiciona rubricas bibliográficas separadas para identidade, sustentação e cobertura.
+- **1.2.0** — glossário de termos e estados (`references/glossario.md`); fundamentos (de onde vem cada componente) e conformidade (relato e declaração de uso de IA) como referências novas; critérios de decisão dos estados de contexto/isolamento, com evidência mínima; portão da paráfrase (o veredito não fica com o autor); família do modelo no manifesto, com diversidade de famílias como critério de força da rodada; higiene do congelamento; sonda de rota antes de rodadas longas; registro de estado único por artefato; ferramenta e escolha de modelo registradas; análise separada antes da síntese; antipadrões de análise assistida como checklist (catálogo provisório); trilha de execução e consultabilidade (não retém o raciocínio da elaboração); campo de versão dos templates corrigido.
+- **Base consolidada** — leitor ingênuo, DRIFT, BOOTSTRAP, artifact-first, contestação, lastro contínuo, medidas computacionais, validação humana e corpus cedido; neutro quanto a harness, modelo e provedor; sem recomendações de modelos/provedores nem roteamento de inferência; rubricas bibliográficas separadas para identidade, sustentação e cobertura.
+
+## O que a EGMA não é
+
+- **Não é automação da pesquisa**: as decisões são do pesquisador; o protocolo organiza, registra e verifica.
+- **Não é taxonomia nem método de análise**: disciplina o processo, sem substituir o desenho do estudo.
+- **Não é norma de relato**: complementa checklists de relato (ver `references/conformidade.md`), sem os substituir.
+- **Não é simulação de revisão por pares**: as rodadas preparam o material para a avaliação real, e não a substituem.
 
 ## Limites
 
 A EGMA não é um modelo, não garante validade científica ou privacidade e não certifica revisão independente. A política de dados precisa ser verificada no ambiente real. Consulte `references/privacidade.md` antes de usar material inédito ou protegido.
+
+## Frentes abertas
+
+- **Avaliação sistemática**: desenhos que comparem percursos com e sem os dispositivos do protocolo, medindo o que ele entrega e o que custa.
+- **Extensão a outros campos**: a migração para outros domínios é, ela mesma, uma forma de verificação.
+- **Matriz de privacidade**: amadurecimento contínuo, acompanhando provedores, normas e retenção.
+- **Consultabilidade dos registros**: política de publicação dos registros (`registros.md` §14).
 
 O script requer Python e PyMuPDF (`requirements.txt`). Sua saída auxilia localização de trechos; não substitui leitura da fonte nem validação editorial.
