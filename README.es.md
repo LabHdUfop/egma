@@ -2,7 +2,7 @@
 
 **Protocolo abierto, neutro respecto de agente, modelo y proveedor, para encuadrar, planificar y auditar investigación académica con apoyo de IA.**
 
-Versión 1.1.0 · Licencia MIT · LABHD UFOP
+Versión 1.2.0 · Licencia MIT · LABHD UFOP
 
 **Idiomas:** [Português](README.md) · [English](README.en.md) · **Español**
 
@@ -67,6 +67,9 @@ egma/
 │   ├── validacao-humana-cega.md   validación humana ciega de medidas interpretativas
 │   ├── registros.md               fichas, anclas, matrices, manifiestos e índices
 │   ├── manutencao.md              deriva y reconstrucción de estado
+│   ├── fundamentos.md             de dónde viene cada componente (tradición → adaptación)
+│   ├── glossario.md               términos y estados del protocolo
+│   ├── conformidade.md            registros → exigencias de reporte y declaración
 │   ├── portabilidade.md           instalación y verificación
 │   └── papeis/                    rúbricas fijas de revisión (método, epistemología,
 │                                  argumentación, lector ingenuo, bibliografía)
@@ -77,7 +80,7 @@ egma/
 EGMA_PORTATIL.md                   versión monolítica para entornos sin carpetas
 EGMA_PORTATIL.en.md                edición inglesa del documento único
 EGMA_PORTATIL.es.md                edición española del documento único
-SHA256SUMS.txt                     hashes de integridad del paquete 1.1.0
+SHA256SUMS.txt                     hashes de integridad del paquete 1.2.0
 tests/                             suite de aceptación del script (11 casos sintéticos)
 ```
 
@@ -87,7 +90,7 @@ tests/                             suite de aceptación del script (11 casos sin
 sha256sum -c SHA256SUMS.txt      # Linux/macOS/git-bash
 ```
 
-Los hashes cubren los 22 archivos del paquete 1.1.0. Si alguno falla, el paquete fue alterado — no lo use.
+Los hashes cubren los 25 archivos del paquete 1.2.0. Si alguno falla, el paquete fue alterado — no lo use.
 
 ## Pruebas
 
@@ -95,7 +98,7 @@ Los hashes cubren los 22 archivos del paquete 1.1.0. Si alguno falla, el paquete
 python tests/test_verifica_citacoes.py     # requiere Python 3.9+ y PyMuPDF
 ```
 
-Suite de aceptación de `verifica_citacoes.py`: 11 casos sobre una fixture totalmente sintética (los PDF los genera PyMuPDF; no se usa ningún dato de investigación). Cubre ocurrencia única, repetición en páginas distintas y en la misma página, ausencia de texto, cita entre páginas, PDF homónimos, ruta explícita, fuente ausente, página impresa observada, offset declarado e identidad de la fuente por SHA-256. Los 11 pasan en la 1.1.0; en la 1.0.0 solo pasaban 4.
+Suite de aceptación de `verifica_citacoes.py`: 11 casos sobre una fixture totalmente sintética (los PDF los genera PyMuPDF; no se usa ningún dato de investigación). Cubre ocurrencia única, repetición en páginas distintas y en la misma página, ausencia de texto, cita entre páginas, PDF homónimos, ruta explícita, fuente ausente, página impresa observada, offset declarado e identidad de la fuente por SHA-256. Los 11 pasan en la 1.2.0 (como en la 1.1.0); en la 1.0.0 solo pasaban 4.
 
 ## Límites — leer antes de usar
 
@@ -109,7 +112,7 @@ Suite de aceptación de `verifica_citacoes.py`: 11 casos sobre una fixture total
 
 Vea [`CITATION.cff`](CITATION.cff). Formato sugerido:
 
-> Freire, M. (2026). *EGMA — Elefante–Goldfish Acadêmico, v1.1.0*. Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto. https://github.com/LabHdUfop/egma
+> Freire, M. (2026). *EGMA — Elefante–Goldfish Acadêmico, v1.2.0*. Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto. https://github.com/LabHdUfop/egma
 
 ## Contribuciones
 

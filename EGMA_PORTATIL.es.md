@@ -3,7 +3,7 @@ name: egma
 description: Encuadra, planifica y audita investigación académica con revisión en contextos aislados.
 ---
 
-# Elefante–Goldfish Académico — EGMA 1.1.0
+# Elefante–Goldfish Académico — EGMA 1.2.0
 
 Protocolo autoral inspirado en la separación de contextos del Elephant–Goldfish Model, sin vínculo oficial con sus autores. La EGMA organiza el trabajo y las verificaciones; no garantiza validez científica, privacidad, ausencia de error ni aprobación editorial. Responda en el idioma del usuario.
 
@@ -24,6 +24,9 @@ Lea solamente los archivos pertinentes, además de este:
 | Instalar o adaptar la skill y verificar el descubrimiento en una sesión nueva | `references/portabilidade.md` |
 | Crear fichas, anclas, matrices, manifiestos e índices | `references/registros.md` |
 | Diagnosticar deriva o reconstruir el estado de un proyecto antiguo | `references/manutencao.md` |
+| Entender de dónde viene cada componente | `references/fundamentos.md` |
+| Entender términos y estados del protocolo | `references/glossario.md` |
+| Atender exigencias de reporte y declaración de uso de IA generativa | `references/conformidade.md` |
 | Distribuir criterios a los revisores | `references/papeis/` |
 | Verificar citas literales en PDFs | `scripts/verifica_citacoes.py` |
 
@@ -63,7 +66,8 @@ Elija la profundidad:
 
 - **Compacta:** Elefante + epistemología/contribución + método/datos + argumentación/evidencias; añada lector ingenuo en protocolo o manuscrito.
 - **Completa:** compacta + tres funciones bibliográficas separadas en el manuscrito — identidad, sustento y cobertura — y verificaciones específicas adicionales exigidas por el objeto, sin combinarlas en un mismo revisor.
-- **Revisión asistida:** cuando no haya contexto nuevo o aislamiento verificable. Haga preparación, verificación por ejecución y crítica posible, pero marque **revisión independiente pendiente**. No la denomine Goldfish concluida.
+
+Si no hay contexto nuevo o aislamiento verificable, no es una profundidad: use **revisión asistida** — preparación, verificación por ejecución y crítica posible, con **revisión independiente pendiente** declarada. No la denomine Goldfish concluida.
 
 ## 4. Continuidad y artefactos
 
@@ -100,7 +104,7 @@ Cree contextos separados cuando el harness ofrezca esa capacidad verificable. En
 
 No entregue la respuesta deseada, la defensa del Elefante, la conversación de elaboración o informes de revisión ajenos en la primera lectura. No oculte la justificación metodológica que pertenece al propio objeto. Las restricciones textuales no sustituyen los permisos reales; registre el aislamiento como comprobado, limitado o no verificado.
 
-**La ceguera al historial no es anonimato, confidencialidad o ausencia de retención.** El mismo modelo puede ejercer papeles distintos, con errores correlacionados; modelos diferentes pueden diversificar errores, pero no prueban independencia o calidad. Esta skill no elige ni configura modelo, proveedor o plan.
+**La ceguera al historial no es anonimato, confidencialidad o ausencia de retención.** El mismo modelo puede ejercer papeles distintos, con errores correlacionados; modelos diferentes pueden diversificar errores, pero no prueban independencia o calidad. Registre la familia en el manifiesto: la diversidad de familias entre elaboración y verificación es criterio de fuerza de la ronda. Esta skill no elige ni configura modelo, proveedor o plan.
 
 Acepte un informe de revisión sin hallazgos. Exija localización y evidencia; no transforme una divergencia teórica, una simple discordancia o la conveniencia del Elefante en un error demostrado. Verifique si `ARQUIVOS LIDOS` cubre todos los archivos necesarios del paquete. Un informe de revisión incompleto vuelve para complementación o se reejecuta; nunca consolide la omisión como `SEM ACHADOS`. Un informe de revisión vacío o ausente es ausencia de revisión, no aprobación.
 
@@ -146,6 +150,8 @@ El cierre informa:
 - cobertura con denominadores cuando haya muestreo;
 - identidad, sustento y cobertura bibliográfica por separado;
 - revisión independiente, limitada o asistida;
+- correlación entre revisores, cuando haya familia repetida;
+- consultabilidad de los registros por artefacto;
 - privacidad evaluada solo en el alcance de las evidencias disponibles;
 - pendientes y próxima acción.
 
@@ -161,7 +167,7 @@ Las rutas citadas en el núcleo corresponden a las secciones homónimas de abajo
 
 # Nota sobre esta edición
 
-Esta es la edición española de la versión de documento único de EGMA. El paquete canónico — `egma/`, `EGMA_PORTATIL.md` y todos los nombres de archivo citados — permanece en portugués brasileño, y esta traducción es un documento complementario: el protocolo es idéntico y solo cambia el idioma de exposición.
+Esta es la edición española de la versión de documento único de EGMA. El paquete canónico — `egma/`, `EGMA_PORTATIL.md` y todos los nombres de archivo citados — permanece en portugués brasileño, y esta traducción es un documento complementario: el protocolo es idéntico y solo cambia el idioma de exposición. Esta edición está sincronizada con la versión 1.2.0.
 
 **Convención de fidelidad.** La prosa explicativa está traducida. Todo lo que debe escribirse, copiarse o coincidir queda exactamente como se distribuye en el paquete portugués: nombres de archivo (`ESTADO.md`, `ANCORAS.md`, `references/…`), comandos, esquemas de registro e informe y plantillas (incluido el apéndice `templates/ESTADO.md`), el código del script y los estados literales de abajo. Cuando el texto muestra un token en portugués entre backticks, ese es el token que debe usarse.
 
@@ -180,6 +186,8 @@ Esta es la edición española de la versión de documento único de EGMA. El paq
 | `SEM ACHADOS` | sin hallazgos |
 | `verificado` / `entre_paginas` / `ambigua` / `nao_encontrado` / `arquivo_ausente` / `arquivo_ambiguo` | verificado / entre páginas / ambigua / no encontrado / archivo ausente / archivo ambiguo |
 | `observado` / `offset_declarado` / `indeterminado` | observado / offset declarado / indeterminado |
+| `comprovado` / `limitado` / `não verificado` | comprobado / limitado / no verificado (estados de contexto nuevo y aislamiento) |
+| `interna` / `consultável sob pedido` / `publicável` | interna / consultable a pedido / publicable (consultabilidad de los registros) |
 
 Edición en portugués: [`EGMA_PORTATIL.md`](EGMA_PORTATIL.md) · Edición en inglés: [`EGMA_PORTATIL.en.md`](EGMA_PORTATIL.en.md)
 
@@ -478,7 +486,29 @@ Registre modo, versión del objeto, pregunta/enfoque, archivos autorizados, oper
 
 No presente una cobertura mayor que el paquete. Si un artefacto central no puede compartirse, el Elefante debe verificar por ejecución cuando esté autorizado o registrar el punto como no verificable.
 
+Congele el objeto como lo vería el lector: los metadatos de trabajo (notas de estado, versiones de borrador, instrucciones internas) quedan **excluidos** del objeto — lo que sale queda fuera del paquete, no dentro de él marcado; quien monta el congelamiento verifica el resultado y enumera en el manifiesto lo que fue excluido.
+
 Cada revisor de la primera ronda recibe un contexto separado, sin historial de elaboración, respuesta deseada ni informes de revisión ajenos. El contexto nuevo debe confirmarse en la medida expuesta por el harness. El aislamiento textual sin control real de archivos/memoria es limitado. Sin aislamiento, use revisión asistida.
+
+Estados — dos dimensiones, declaradas por separado y con evidencia registrada:
+
+**Contexto nuevo** (¿la ejecución carga historial de elaboración?):
+
+| Estado | Evidencia registrada |
+|---|---|
+| `comprovado` | sesión nueva, sin historial de elaboración — registre el producto/harness usado y lo que recibió el revisor |
+| `limitado` | historial no controlado o no demostrable (p. ej., memoria del proveedor) — describa lo que no pudo excluirse |
+| `não verificado` | sin confirmación posible |
+
+**Aislamiento de archivos/memoria** (¿el revisor alcanza el material de elaboración?):
+
+| Estado | Evidencia registrada |
+|---|---|
+| `comprovado` | separación demostrada en la medida expuesta por el harness — registre la capacidad verificada y el inventario de lo que quedó accesible |
+| `limitado` | acceso parcial (filesystem heredado, archivos del proyecto) o separación solo por instrucción — describa el acceso real |
+| `não verificado` | sin confirmación posible |
+
+Atribución: el **revisor** declara en el encabezado lo que observó; el **Elefante** verifica y registra el estado final en el manifiesto, a partir de la evidencia. La restricción textual — pedir que no lea algo — **no** sustenta `comprovado` en ninguna de las dimensiones; sin evidencia, el estado es `não verificado`. El estado declarado limita lo que la ronda puede alegar: `comprovado` permite presentar la verificación como ciega al historial en el alcance registrado; `limitado` y `não verificado`, no.
 
 ## 2. Roles de la ronda
 
@@ -493,7 +523,7 @@ En la completa de manuscrito, use esos roles y añada las tres funciones bibliog
 
 Use **un rol por revisor**. Si el harness obliga a agrupar, declare la revisión como limitada/asistida y describa qué criterios se combinaron; no alegue independencia entre roles en el mismo contexto. La privacidad de la ruta es una evaluación separada, no un rol académico que deba improvisarse.
 
-Modelos iguales o diferentes son una elección operativa del usuario/harness, no una garantía metodológica. La diversidad no corrige un paquete incompleto. La concordancia no transforma una alegación en un hecho.
+Modelos iguales o diferentes son una elección operativa del usuario/harness, no una garantía metodológica. La diversidad no corrige un paquete incompleto. La concordancia no transforma una alegación en un hecho. Registre la familia de cada modelo en el manifiesto — familia es el linaje/pesos (dos proveedores sirviendo los mismos pesos son la misma familia): la diversidad de familias entre elaboración y verificación es criterio de fuerza de la ronda, y los papeles de la misma familia **pueden** compartir errores correlacionados — declare la hipótesis en el consolidado, sin tratarla como medida. La herramienta y sus límites se registran por ronda (`registros.md` §13); la crítica de la herramienta es parte del método.
 
 ## 3. Manifiesto y paquete
 
@@ -506,7 +536,9 @@ ARQUIVOS AUTORIZADOS: <lista exaustiva>
 CONTEÚDO ESPERADO: <uma linha por arquivo/trecho>
 FONTES EXTERNAS: permitidas/proibidas + escopo
 OPERAÇÕES: leitura/busca/código permitidas ou não
-CONTEXTO NOVO: confirmado/limitado/não verificado
+CONTEXTO NOVO: comprovado/limitado/não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado/limitado/não verificado
+SONDA DE ROTA: aprovada/reprovada (data)
 MEMÓRIA E HERANÇA: <o que se sabe>
 DESTINO DO PARECER: <arquivo ou retorno>
 ```
@@ -514,6 +546,8 @@ DESTINO DO PARECER: <arquivo ou retorno>
 Instrucción base:
 
 > Lea solamente el paquete indicado y las fuentes externas expresamente autorizadas. No busque conversaciones, memorias ni informes de revisión ajenos. Examine el objeto según su rol y el enfoque declarado. Distinga error demostrado, sospecha verificable, información ausente, divergencia epistemológica y oportunidad. No invente fallas ni elogios. No altere el objeto; produzca solo el informe de revisión en el destino indicado. Declare lo que leyó, ejecutó y no pudo verificar.
+
+Antes de gastar las revisiones largas, sondee cada ruta (ejecutada por el Elefante, con material sintético): identificación, cuando sea aplicable, y lectura real de un archivo sintético, devolviendo una línea exacta **sin variación** — este es el criterio de aceptación. El objeto real no entra en una ruta aún no sondeada; una ruta que no lee archivos no autoriza una revisión que dependa de lectura. Registre en el manifiesto el resultado por revisor (aprobada/reprobada).
 
 EP, MD, ARG y LI siguen los ocho campos de sus archivos de rol. BI, BS y BC usan los esquemas bibliográficos específicos, con el mismo encabezado de contexto/aislamiento. Un informe de revisión sin hallazgos es válido solo cuando informa lo que examinó y confirma la lectura de los archivos necesarios. Si `ARQUIVOS LIDOS` omite un archivo del paquete o la cobertura esperada queda ausente, devuélvalo para complementación o reejecute; no consolide como `SEM ACHADOS`. Los elogios genéricos no sustituyen el examen de los límites declarados.
 
@@ -565,6 +599,8 @@ Toda obra nombrada por un revisor es candidata hasta la verificación independie
 
 ## 7. Consolidación y contestación
 
+Analice cada informe de revisión por separado antes de sintetizar: registre los hallazgos de cada revisor, confróntelos y solo entonces consolide — no lea los informes de revisión como un texto único (Carter et al., 2014, p. 546).
+
 Agrupe por decisión, preserve las objeciones minoritarias sostenidas y asigne un estado: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR` o `REJEITAR`.
 
 - `CORRIGIR` significa problema demostrado y corrección autorizada.
@@ -576,6 +612,8 @@ Agrupe por decisión, preserve las objeciones minoritarias sostenidas y asigne u
 - El Elefante escribió el objeto y, por eso, debe presentar evidencia tanto para aceptar como para rechazar un hallazgo.
 - Antes de contestar que un artefacto no existe, abra todas las versiones disponibles — texto, CSV, hoja de cálculo y exportación. Las versiones divergentes deben reconciliarse.
 - No elija por mayoría, costo de reescritura o preferencia estética.
+
+El relato de la ronda informa los denominadores del proceso — revisores y papeles, estados de contexto/aislamiento, hallazgos por estado y resolución, correlación entre revisores (familias repetidas) — y lo que no fue verificado.
 
 ## 8. Ronda completa o focal
 
@@ -752,6 +790,28 @@ Incluya, en lenguaje directo:
 
 No la llame validada solo porque hay un precedente publicado, código ejecutable o concordancia entre modelos.
 
+## 7. Antipatrones del análisis asistido por IA
+
+Once trampas catalogadas por Hoda et al. (2026, pp. 5-6) — catálogo conceptual y provisorio, **preprint** (arXiv:2608.27927v1; confirme la versión publicada), de alcance declarado en ingeniería de software. Los nombres son de la fuente; la columna «qué vigilar» es redacción de este protocolo. Úselo como checklist de vigilancia, no como criterio de aprobación — y registre la verificación en la línea de ejecución (`registros.md` §9): fecha, ítems observados, evidencia y acción.
+
+| categoría | antipatrón | qué vigilar |
+|---|---|---|
+| Impulsos peligrosos | Porque podemos (*Because We Can*) | usar IA solo porque está disponible, sin un problema que la exija |
+| Impulsos peligrosos | Espiral de la productividad (*The Productivity Spiral*) | volumen creciente que sustituye profundidad analítica |
+| Impulsos peligrosos | Humano como patrón oro (*Human as Gold Standard*) | asumir la codificación humana como referencia sin evaluar su calidad |
+| Pasos operativos | Análisis como categorización (*QDA as Categorization*) | tratar la codificación como clasificación mecánica, perdiendo lo interpretativo |
+| Pasos operativos | Deslizamiento epistemológico (*Epistemological Slide*) | importar criterios de otro paradigma sin justificación |
+| Pasos operativos | La caja negra (*The Black Box Trap*) | versiones, parámetros y prompts no documentados; recorrido irreconstruible |
+| Pasos operativos | Confianza excesiva (*Too Much Trust*) | aceptar la salida de IA como resultado, sin verificación |
+| Pasos operativos | Salida de IA como insight (*AI Output as Insight*) | tratar un resumen generado como hallazgo analítico |
+| Fallas analíticas | Baja implicación humana (*Low Human Engagement*) | no leer los datos ni acompañar las decisiones intermedias |
+| Fallas analíticas | Pesca de resultados (*Fishing for Results*) | ajustar prompts/consultas hasta que aparezca el resultado deseado |
+| Fallas analíticas | Análisis cualitativo automatizado (*Automated QDA*) | delegar el análisis entero, sin liderazgo humano |
+
+Cómo usar: parte de los ítems deja **evidencia directa** (p. ej.: caja negra — versiones y prompts registrados; baja implicación humana — lectura de los datos declarada; pesca de resultados — historial de prompts); otros exigen **juicio explícito** del investigador (p. ej.: porque podemos; espiral de la productividad; deslizamiento epistemológico) — declare el juicio, no lo disfrace de evidencia.
+
+Mitigaciones mínimas (p. 6): lea los datos; registre prompts, interacciones y pasos intermedios; mantenga al investigador en el liderazgo (*human-in-the-lead*), no solo en el circuito; registre versión, parámetros y límites de la herramienta (`registros.md` §13). Los antipatrones coocurren en cascada — uno sugiere al otro (pp. 7, 9).
+
 ---
 
 # APÉNDICE — `references/validacao-humana-cega.md`
@@ -826,23 +886,27 @@ La muestra puede contener datos personales incluso sin etiqueta de grupo. Apliqu
 
 # Registros reutilizables
 
-Cree solo los registros necesarios. Use Markdown/CSV/hoja de cálculo según el volumen y el acceso. Mantenga IDs estables, fechas, versiones e historial. Los valores desconocidos quedan `pendente`, `não aplicável` o `não verificado`, con motivo cuando sea necesario.
+Cree solo los registros necesarios. Use Markdown/CSV/hoja de cálculo según el volumen y el acceso. Mantenga IDs estables, fechas, versiones e historial. Cada artefacto tiene un único registro de estado — versión, pendientes y fecha en el mismo lugar; dos estados divergentes del mismo artefacto son un defecto a resolver. Los valores desconocidos quedan `pendente`, `não aplicável` o `não verificado`, con motivo cuando sea necesario.
+
+Cobertura del recorrido (tipología del audit trail): los registros cubren lo contextual (estado e historial del proyecto), lo metodológico (rondas, manifiestos, ejecución) y lo analítico (matriz afirmación–fuente, decisiones, correcciones); la respuesta personal — reflexividad del investigador sobre su propia posición — queda fuera del alcance del protocolo y no es sustituida por registro (Rodgers; Cowles, 1993, p. 221).
 
 ## 1. `ESTADO.md`
 
 Índice mínimo del Elefante, sin datos ni hipótesis protegidas:
 
 ```markdown
-# Estado do projeto
-- EGMA: 1.1.0
-- Etapa/modo:
-- Escopo autorizado:
-- Artefatos e versões:
-- Decisões do pesquisador:
-- Pendências/limites:
-- Revisão: não iniciada | independente | limitada | assistida
-- Privacidade: escopo avaliado e data | não verificada
-- Próxima ação:
+# Estado do projeto acadêmico
+- **EGMA:** 1.2.0
+- **Criação do registro:** AAAA-MM-DD
+- **Etapa/modo:**
+- **Escopo autorizado:**
+- **Artefatos e versões:**
+- **Decisões do pesquisador:**
+- **Pendências/limites:**
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada | escopo avaliado em AAAA-MM-DD
+- **Descoberta em nova sessão:** não verificada
+- **Próxima ação:**
 ```
 
 No redefina el estado existente. Registre la ausencia de un índice anterior sin inventar una retrospectiva.
@@ -865,7 +929,7 @@ Creado en el G0 antes de la ficha:
 - Decisões que seguem para a ficha:
 ```
 
-En un proyecto anterior que ya use `CONCEPTO.md`, preserve el nombre y el historial; no lo renombre en silencio. La ficha solo se abre después de la puerta de preparación y de las decisiones necesarias.
+En un proyecto anterior que ya use `CONCEITO.md`, preserve el nombre y el historial; no lo renombre en silencio. La ficha solo se abre después de la puerta de preparación y de las decisiones necesarias.
 
 ## 3. `FICHA.md`
 
@@ -924,10 +988,12 @@ No borre la fila anterior ni disuelva una corrección decisiva en prosa.
 
 ## 10. Manifiesto de la ronda
 
-| ronda/papel | versión/hash | archivos + contenido esperado | búsqueda/operaciones | contexto/memoria | modelo/producto sin secretos | destino | límites |
+| ronda/papel | versión/hash | archivos + contenido esperado | búsqueda/operaciones | contexto nuevo | aislamiento (archivos/memoria) | modelo/familia/producto sin secretos | destino | límites |
 |---|---|---|---|---|---|---|---|
 
 Preserve un informe de revisión original por revisor. Verifique `ARQUIVOS LIDOS` contra el manifiesto. No importe automáticamente esos manifiestos a otros Goldfish.
+
+Registre la familia del modelo cuando se conozca (linaje/pesos): la diversidad de familias entre elaboración y verificación es criterio de fuerza de la ronda; los papeles de la misma familia pueden compartir errores correlacionados — declare la hipótesis en el consolidado. Registre también el resultado de la sonda de ruta por revisor.
 
 ## 11. Decisiones y resolución
 
@@ -938,9 +1004,33 @@ Estados de hallazgo: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR`,
 
 ## 12. Cierre
 
-Informe alcance/versión, materiales accedidos, cambios/decisiones, operaciones/verificaciones, hallazgos resueltos/pendientes, cobertura con denominadores, identidad/sustento/cobertura bibliográfica, condición de revisión, privacidad evaluada y próxima acción.
+Informe alcance/versión, materiales accedidos, cambios/decisiones, operaciones/verificaciones, hallazgos resueltos/pendientes, cobertura con denominadores, identidad/sustento/cobertura bibliográfica, condición de revisión, correlación entre revisores (cuando la haya), consultabilidad de los registros, privacidad evaluada y próxima acción. Cuando el objeto sea el propio protocolo, instrumento o método del investigador, declare la posición (autoría/proponente) y cómo fue tratada en el diseño (rondas independientes, verificación por ejecución).
 
-## 13. Ejemplo sintético de hallazgo
+## 13. Herramienta y elección de modelo
+
+Registre, por ronda o etapa de análisis, la herramienta usada y sus límites (lo completa el Elefante; el revisor declara en el informe de revisión lo que sepa):
+
+| campo | contenido |
+|---|---|
+| herramienta/modelo | identificador y versión |
+| proveedor/ruta | producto, cuenta/plan cuando sea aplicable (la privacidad es evaluación separada) |
+| parámetros | configuración relevante (temperatura, límites, herramientas habilitadas) |
+| límites conocidos | errores documentados, cobertura de idioma, sesgos registrados — con fuente; sin fuente, `não verificado` con motivo |
+| workarounds | contornos aplicados y por qué |
+
+Cuando haya una elección deliberada entre alternativas, registre la razón (adecuación lingüística, apertura del peso, soberanía de los datos, costo) — el protocolo no recomienda modelo, pero exige que la elección registrada sea reconstruible.
+
+## 14. Rastro de ejecución y versiones (consultabilidad)
+
+| item | contenido |
+|---|---|
+| retenido por ronda | objeto congelado, briefings, manifiesto, informes de revisión originales, hashes y logs de ejecución |
+| no retenido | razonamiento interno de la elaboración, conversación, memoria del Elefante y material no autorizado |
+| consultabilidad | por artefacto: `interna`, `consultável sob pedido` o `publicável` (exige evaluación de privacidad concluida) — declarada en el cierre |
+
+Registrado no es publicable: la consultabilidad de cada artefacto es decisión del proyecto, con privacidad evaluada (`privacidade.md`) antes de cualquier publicación. El rastro registra ejecución y versiones; el razonamiento interno de la elaboración no integra el paquete.
+
+## 15. Ejemplo sintético de hallazgo
 
 ```text
 ACHADO MD-01 — Escopo da conclusão excede a seleção documentada
@@ -1005,6 +1095,200 @@ Resultado esperado: un índice verdadero e incompleto, no un índice completo in
 
 ---
 
+# APÉNDICE — `references/fundamentos.md`
+
+# Fundamentos — de dónde viene cada componente
+
+La EGMA adapta tradiciones consolidadas al trabajo con agentes de IA. Para cada componente: la tradición que lo precede, lo que ella ya formulaba (con localizador) y lo que la EGMA adapta. Las referencias siguen el mapeo del proyecto de origen, cotejado por lectura contra las ediciones consultadas (2026); **no hubo nueva verificación integral para esta edición** — use los localizadores como pistas verificables y verifique en la edición consultada. Referencias en forma localizable al final del archivo.
+
+| # | Componente | Tradición | Lo que la tradición formulaba | Lo que la EGMA adapta |
+|---|---|---|---|---|
+| C1 | Elefante — sesión larga con continuidad | Método como proceso del investigador | Vigilancia epistemológica y fases de la investigación (Lopes, 2003, pp. 119, 136); memos como registro (Fragoso et al., 2011, p. 94); diario como memoria material (Moura, p. 185); reflexión sobre cada operación (Bonin, 2008, p. 122) | el agente mantiene la continuidad de la elaboración; las decisiones se vuelven registro versionado |
+| C2 | Goldfish — contexto nuevo, sin memoria de la elaboración | Independencia de codificación, triangulación y trustworthiness; EGM (*Elephant–Goldfish Model*) | Independencia de los codificadores (Krippendorff, 1990, p. 196); umbral por los costos de conclusiones equivocadas (p. 217); reporte sistemático (Lombard et al., 2002, pp. 596-600); analizar por separado y solo entonces sintetizar (Carter et al., 2014, p. 546); la verificación a lo sumo persuade (Lincoln; Guba, 1985, p. 329); goldfish lee sin memoria de la elaboración (Rensin, 2026) | independencia por construcción de contexto; aislamiento declarado (comprobado, limitado o no verificado) |
+| C3 | Papeles de revisión, uno por revisor | División del trabajo crítico | Número de codificadores como ítem de reporte (Tong et al., 2007, p. 352; Lombard et al., 2002, pp. 596-597) | papeles fijos, uno por revisor, distribuidos a contextos separados |
+| C4 | Lector ingenuo — paráfrasis obligatoria | Comunicabilidad del reporte; prueba de comprensión del EGM | Reproducir los métodos a partir del reporte (Tong et al., 2007, p. 356); trail de los datos a los hallazgos (Frohwirth; Karch, 2023, p. 7); prueba de comprensión como puerta (Rensin, 2026) | el documento solo avanza si un contexto limpio lo entiende; paráfrasis obligatorias |
+| C5 | Puertas G0–G4 | Fases y decisiones del proyecto | Fases e instancias de la investigación (Lopes, 2003, pp. 119, 136); ítems canónicos del proyecto (Santaella, p. 152); el método no sustituye el problema (Marques, 2018, p. 115) | puertas entre etapas; un slot crítico abierto bloquea la ejecución |
+| C6 | Registros — estado, rondas, correcciones | Audit trail y transparencia cualitativa | Tipología del trail (Rodgers; Cowles, 1993, p. 221); "not merely a statement… visible" (Carcary, 2020, p. 167); rastrear el recorrido paso a paso (Shenton, 2004, p. 72); transparencia ≠ rigor (Aguinis; Solarino, 2019, p. 7 del PDF); rastros de agente como norma emergente (Wei et al., 2025, p. 9) | registro continuo; versiones y hashes; corrección que no borra lo anterior |
+| C7 | Verificación por ejecución | Tool criticism | Definición canónica (van Es; Schäfer, 2018, p. 26); reflexión y documentación de workarounds (Koolen et al., 2018, pp. 11, 13, 15-16); documentar el proceso de decisión (Drucker, 2021, p. 2) | verificación instrumentada de citas y afirmaciones; la herramienta es objeto de crítica y registro |
+| C8 | Matriz afirmación–fuente | Rastreabilidad afirmación → evidencia | Evitar que el lector necesite “confiar en la palabra del investigador” (Marques, 2018, p. 116); trail observable (Carcary, 2020; Shenton, 2004) | línea por afirmación; lo que sustenta × lo que no sustenta |
+| C9 | Matriz de privacidad | Ética de investigación y protección de datos | El riesgo depende de lo que se hace con los datos después (Metcalf; Crawford, 2016, p. 7); protección de la privacidad (UNESCO, 2023, p. 3); compartición como proceso formal; retención/eliminación (ANPD, 2022, pp. 5, 8) | triaje antes de transmitir material a proveedores de IA |
+| C10 | Principios epistemológicos | Tradición cualitativa interpretativa | "At best persuade" (Lincoln; Guba, 1985, p. 329); criterios operacionalizados (Shenton, 2004, p. 63); no hay análisis mejor o peor fuera del diseño (Caregnato, 2006, p. 684) | disciplina de estados; epistemología antes del rigor |
+| C11 | Origen y declaración | EGM — *Elephant–Goldfish Model* (Rensin; Apache-2.0) | mecanismo completo: documento de diseño antes de la ejecución, contexto nuevo, prueba de comprensión, juicio humano final | transposición a la investigación académica; crédito y alcance declarados |
+| C12 | Contraste con el campo | Vecinos: sistemas multiagente, evaluación de IAG, simulación, normas de reporte | taxonomía, normas de reporte y simulación ocupan el espacio alrededor | la EGMA es un protocolo de proceso del investigador — lo que ella no es está delimitado en el `README` |
+
+## Notas transversales
+
+- La verificación **persuade, no compele** (Lincoln; Guba, 1985, p. 329); la EGMA no promete garantía — promete disciplina.
+- El parentesco más cercano y la diferencia: Koolen et al. (2018) proponen reflexión y documentación sobre la propia herramienta; la EGMA produce independencia por construcción de contexto. La confrontación adversarial entre sistemas de análisis, propuesta como trabajo futuro por Sankaranarayanan et al. (2025, p. 6), es el mecanismo central aquí.
+- La EGMA debe presentarse como disciplina flexible, no como recetario (Lopes, 2003, p. 98).
+- El checklist de antipatrones del análisis asistido (`medidas-computacionais.md` §7) viene de Hoda et al. (2026) — catálogo conceptual y provisional, preprint (arXiv:2608.27927v1).
+
+## Referências
+
+AGUINIS, H.; SOLARINO, A. M. Transparency and replicability in qualitative research: the case of interviews with elite informants. *Strategic Management Journal*, v. 40, n. 8, p. 1291-1315, 2019. DOI: 10.1002/smj.3015.
+
+ANPD — AUTORIDADE NACIONAL DE PROTEÇÃO DE DADOS. *A LGPD e o tratamento de dados pessoais para fins acadêmicos e para a realização de estudos por órgão de pesquisa*. Brasília: ANPD, 2022. (Texto para Discussão, n. 1/2022).
+
+BONIN, J. A. Explorações sobre práticas metodológicas na pesquisa em comunicação. *Revista FAMECOS*, Porto Alegre, n. 37, p. 121-127, dez. 2008.
+
+CARCARY, M. The research audit trail: methodological guidance for application in practice. *Electronic Journal of Business Research Methods*, v. 18, n. 2, p. 166-177, 2020.
+
+CAREGNATO, R. C. A.; MUTTI, R. Pesquisa qualitativa: análise de discurso versus análise de conteúdo. *Texto & Contexto — Enfermagem*, v. 15, n. 4, p. 679-684, 2006.
+
+CARTER, N. et al. The use of triangulation in qualitative research. *Oncology Nursing Forum*, v. 41, n. 5, p. 545-547, 2014. DOI: 10.1188/14.ONF.545-547.
+
+DRUCKER, J. *The Digital Humanities Coursebook: An Introduction to Digital Methods for Research and Scholarship*. London: Routledge, 2021.
+
+FRAGOSO, S.; RECUERO, R.; AMARAL, A. *Métodos de pesquisa para internet*. Porto Alegre: Sulina, 2011.
+
+FROHWIRTH, L.; KARCH, A. *A Transparency Checklist for Qualitative Research*. 2023. (working paper)
+
+HODA, R.; SEAMAN, C.; GOMES, V.; SPÍNOLA, R. Antipatterns in AI-assisted qualitative data analysis: a catalog of temptations and pitfalls for software engineering researchers. arXiv:2608.27927, 2026.
+
+KOOLEN, M.; VAN GORP, J.; VAN OSSENBRUGGEN, J. Toward a model for digital tool criticism. *Digital Scholarship in the Humanities*, 2018. DOI: 10.1093/llc/fqy048.
+
+KRIPPENDORFF, K. *Metodología de análisis de contenido: Teoría y práctica*. Barcelona: Paidós, 1990.
+
+LINCOLN, Y. S.; GUBA, E. G. *Naturalistic Inquiry*. Newbury Park: Sage, 1985.
+
+LOMBARD, M.; SNYDER-DUCH, J.; BRACKEN, C. C. Content analysis in mass communication: assessment and reporting of intercoder reliability. *Human Communication Research*, v. 28, n. 4, p. 587-604, 2002.
+
+LOPES, M. I. V. de. *Pesquisa em comunicação*. 8. ed. São Paulo: Loyola, 2003.
+
+MARQUES, F. P. J. 1989, o ano que não terminou. *Comunicação e Sociedade*, v. 33, p. 107-128, 2018. DOI: 10.17231/comsoc.33(2018).2909.
+
+METCALF, J.; CRAWFORD, K. Where are human subjects in Big Data research? The emerging ethics divide. *Big Data & Society*, v. 3, n. 1, 2016. DOI: 10.1177/2053951716650211.
+
+MOURA, C. P. de (org.). *Pesquisa em comunicação: metodologias e práticas acadêmicas*. Porto Alegre: EDIPUCRS, 2016.
+
+RENSIN, D. *Elephants, Goldfish and the New Golden Age of Software Engineering*. Medium: Google Research, 27 abr. 2026.
+
+RODGERS, B. L.; COWLES, K. V. The qualitative research audit trail: a complex collection of documentation. *Research in Nursing & Health*, v. 16, p. 219-226, 1993.
+
+SANKARANARAYANAN, S. et al. *Automating Thematic Analysis with Multi-Agent LLM Systems*. OSF Preprints, 2025.
+
+SANTAELLA, L. *Comunicação e pesquisa: projetos para mestrado e doutorado*. São Paulo: Hacker Editores, 2001.
+
+SHENTON, A. K. Strategies for ensuring trustworthiness in qualitative research projects. *Education for Information*, v. 22, n. 2, p. 63-75, 2004.
+
+TONG, A.; SAINSBURY, P.; CRAIG, J. Consolidated criteria for reporting qualitative research (COREQ): a 32-item checklist for interviews and focus groups. *International Journal for Quality in Health Care*, v. 19, n. 6, p. 349-357, 2007.
+
+UNESCO. *Guidance for Generative AI in Education and Research*. Paris: UNESCO, 2023.
+
+VAN ES, K. F.; WIERINGA, M. A.; SCHÄFER, M. T. Tool criticism: from digital methods to digital methodology. In: *Proceedings of the 2nd International Conference on Web Studies (WS.2 2018)*. New York: ACM, 2018. p. 24-27.
+
+WEI, J. et al. From AI for science to agentic science: a survey on autonomous scientific discovery. arXiv:2508.14111, 2025.
+
+---
+
+# APÉNDICE — `references/glossario.md`
+
+# Glosario de términos y estados
+
+Términos del protocolo, en una línea cada uno. Donde hay definición completa, prevalece el archivo indicado.
+
+## Papeles y contextos
+
+| Término | Definición |
+|---|---|
+| **Elefante** | El agente que mantiene la continuidad del proyecto y produce el material; el contexto de elaboración. |
+| **Goldfish** | Revisor en contexto separado, sin historial de elaboración; la revisión del propio Elefante no es independiente. |
+| **Contexto nuevo** | Ejecución de revisión sin historial de elaboración, respuesta deseada ni informes de revisión ajenos; estados: `comprovado`, `limitado`, `não verificado` (`revisao.md` §1). |
+| **Aislamiento de archivos/memoria** | Control real de lo que el revisor accede; misma escala del contexto nuevo. |
+| **Familia de modelo** | Linaje/pesos del modelo — dos proveedores que sirven los mismos pesos son la misma familia. Papeles de la misma familia **pueden** compartir errores correlacionados (hipótesis a declarar, no medida); la diversidad de familias entre elaboración y verificación es criterio de fuerza de la ronda. |
+| **Revisión asistida** | Preparación y verificación sin contexto nuevo verificable; no se denomina Goldfish concluida y deja `revisão independente pendente`. |
+| **Sonda de ruta** | Verificación previa de la ruta del revisor (identificación + lectura de un archivo sintético con una línea devuelta sin variación), hecha por el Elefante antes de una ronda larga; resultado por revisor en el manifiesto. |
+| **Ronda** | Revisores y papeles sobre una versión congelada; profundidades compacta y completa; tipos completa o focal. |
+| **Informe de revisión** | Producto del revisor en el esquema de su papel; el hallazgo es su unidad. |
+| **Objeto congelado** | Versión inmutable examinada, con hash cuando esté disponible; los metadatos de trabajo quedan fuera. |
+| **Manifiesto de la ronda** | Registro por revisor: papel, versión, archivos, contexto, modelo/familia, destino (`registros.md` §10). |
+
+## Hallazgos y estados
+
+| Término | Definición |
+|---|---|
+| **Hallazgo** | Problema señalado por un revisor, con localización, evidencia y encaminamiento. |
+| **Encaminamiento** | `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR` o `REJEITAR` (`SKILL.md` §7). |
+| **Resolución** | `resolvido`, `parcialmente resolvido`, `não resolvido` o `não verificável`. |
+| **Consolidación** | Agregación de los informes de revisión por decisión, preservando objeciones minoritarias; no decide por votación. |
+| **Bloque de correcciones** | Registro permanente de cada corrección: valor anterior, valor nuevo, origen e impacto (`registros.md` §9). |
+| **Verificación por ejecución** | Reejecutar la operación (cuentas, filtros, citas, código) en vez de aceptar la alegación. |
+
+## Proyecto y registros
+
+| Término | Definición |
+|---|---|
+| **Puertas G0–G4** | Etapas con aprobación explícita: G0 pitch (`CONCEITO.md`), G1 encuadre (`FICHA.md`), G2 protocolo (`ANCORAS.md`), G3 piloto, G4 manuscrito/cierre (`SKILL.md` §5). |
+| **Ficha mínima** | Resumen factual entregado al revisor: pregunta, enfoque, etapa y restricciones. |
+| **FICHA.md** | Identificación del proyecto: problema, pregunta, universo, fuentes, análisis, ética y pendientes. |
+| **Ancla / slot** | Línea de `ANCORAS.md` por elección o procedimiento; slot `fechada`, `pendente` o `inédita a confirmar`; resuelto como `ancorada`, `análoga` o `inédita`. |
+| **Matriz afirmación–fuente** | Una línea por afirmación: lo que la fuente sustenta y lo que no sustenta (`registros.md` §8). |
+| **DRIFT** | Diagnóstico de divergencia entre estado, plan, texto, referencias y rutas reales (`manutencao.md`). |
+| **BOOTSTRAP** | Reconstrucción de estado para un proyecto anterior a la EGMA, sin retroactuar ni inventar. |
+| **Artifact-first** | El entregable largo va a archivo; en el chat, la ruta y los puntos decisivos. |
+| **Registro de estado** | Único por artefacto: versión, pendientes y fecha en el mismo lugar. |
+| **Rastro de ejecución y versiones** | Lo que el protocolo retiene por ronda: objeto, briefings, manifiesto, informes de revisión, hashes y logs; no incluye el razonamiento interno de la elaboración (`registros.md` §14). |
+| **Consultabilidad** | Por artefacto: `interna`, `consultável sob pedido` o `publicável` (exige evaluación de privacidad concluida); declarada en el cierre (`registros.md` §14). |
+| **Tipología del recorrido** | Cobertura del *audit trail*: contextual, metodológica y analítica; la respuesta personal (reflexividad) queda fuera del alcance (`registros.md`, introducción). |
+
+## Bibliografía, medidas y privacidad
+
+| Término | Definición |
+|---|---|
+| **Identidad bibliográfica** | La obra existe y está correctamente identificada: `confirmada`, `divergente`, `ambígua`, `não localizada` o `não verificada`. |
+| **Sustento** | El contenido consultado sustenta la afirmación: `sustentada`, `parcialmente sustentada`, `incompatível` o `não verificável com acesso disponível`. |
+| **Cobertura** | La selección cubre fundamentos, contrapuntos y actualizaciones pertinentes. |
+| **Acceso** | Profundidad de lo consultado: `integral`, `capítulo/seção`, `resumo`, `metadados` o `sem acesso`. |
+| **Instrumento** | Clasificación de la medida computacional: `medida direta`, `triagem` o `descarte`. |
+| **Validación humana ciega** | Codificación humana sin rótulo de hipótesis, con concordancia por dimensión cuando se exija (`validacao-humana-cega.md`). |
+| **Estados de privacidad** | Adecuación de la ruta al material: `compatível — escopo evidenciado`, `condicionado`, `incompatível` o `não verificável` (`privacidade.md` §4). |
+
+Definiciones completas: archivos de `references/` indicados en cada línea.
+
+---
+
+# APÉNDICE — `references/conformidade.md`
+
+# Conformidad — de los registros a las exigencias de reporte
+
+> **Este archivo no certifica conformidad.** Indica correspondencias entre los registros del protocolo y exigencias de reporte y declaración vigentes; la conferencia es del investigador, contra la norma aplicable a su contexto.
+
+## 1. Aplicabilidad y correspondencias
+
+Las normas citadas están datadas y tienen alcance propio — la del CNPq es administrativa y vincula el fomento (investigación apoyada por el CNPq); fuera de ese alcance, úsela como referencia. Confiera la redacción vigente al usarla.
+
+| Artefacto del protocolo | Exigencia que ayuda a atender |
+|---|---|
+| Matriz de privacidad (etapa × material × ruta × retención) | Declaración de uso de IA generativa — herramienta y finalidad (CNPq, 2026, p. 5); sigilo de material de evaluación (p. 4) |
+| Manifiestos de ronda (modelo/familia, contexto, destino) | Ítems de contexto y sesión de las extensiones de reporte cualitativo con LLM (COREQ+LLM; Sarvestan et al., 2025; Fehring et al., 2026) |
+| Registros de ejecución, bloque de correcciones, versiones y hashes | Rastro del agente — uso de herramientas y pasos intermedios (Wei et al., 2025, p. 9); el protocolo no retiene el razonamiento interno de la elaboración |
+| Cierre con denominadores | Reporte cuantificado del proceso (revisores, hallazgos, resolución) |
+| Registro de la herramienta y de la elección del modelo (`registros.md` §13) | Justificación del uso de IA y de los límites conocidos |
+| Decisión sobre la consultabilidad de los registros | Datos y registros como productos citables (CNPq, 2026, p. 5) |
+
+## 2. Declaración de uso de IA generativa (modelo)
+
+```text
+Declaração de uso de inteligência artificial generativa
+- Ferramenta(s), versão(ões) e provedor(es): <...>
+- Finalidade e fases: <...>
+- Material transmitido e rota: <remissão à matriz de privacidade>
+- Mediação humana: <onde e como o pesquisador decidiu>
+- Registros disponíveis: <onde estão>
+```
+
+## 3. Reglas duras
+
+- **Material de terceros en evaluación**: la Portaria CNPq nº 2.664/2026 (art. 9º, I, «e») prohíbe «a inserção de projetos de pesquisa de terceiros em ferramentas de IAG para elaboração de pareceres científicos» [la inserción de proyectos de investigación de terceros en herramientas de IAG para la elaboración de informes de revisión científicos]; para los evaluadores, resguardar el sigilo de las informaciones y de los informes de revisión a los que tengan acceso (p. 4). Trate el material como clase propia en el triaje, antes de cualquier transmisión.
+- **Privacidad, confidencialidad y propiedad intelectual** de los insumos y resultados: aplicar `privacidade.md` antes de transmitir. El texto para discusión de la CAPES (Brasil, A., 2025, pp. 10-11) recomienda preservarlas — es registro del debate, no norma.
+- **Instrumentos** — registre `conferida em <data>` al usar; norma modificada abre una línea en el bloque de correcciones y reevaluación:
+  - **CNPq** — *Portaria nº 2.664, de 6 de março de 2026* (Política de Integridade na Atividade Científica): declaración de uso de IAG; prohibición de informes de revisión de terceros; datos y registros como productos citables.
+  - **CAPES** — *A inteligência artificial na pesquisa e no fomento: desafios e oportunidades* (Texto para Discussão, 2025; opiniones del autor).
+  - **ANPD** — *A LGPD e o tratamento de dados pessoais para fins acadêmicos e para a realização de estudos por órgão de pesquisa* (Texto para Discussão nº 1/2022; carácter preliminar).
+  - **UNESCO** — *Guidance for Generative AI in Education and Research* (2023).
+
+---
+
 # APÉNDICE — `references/papeis/argumentacao.md`
 
 # Papel — argumentación y evidencias
@@ -1033,8 +1317,8 @@ Usted actúa como revisor Goldfish en un contexto separado. Lea únicamente el p
 
 ```text
 PAPEL: argumentacao | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1077,8 +1361,8 @@ Comience con:
 
 ```text
 PAPEL: bibliografia-cobertura | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1125,8 +1409,8 @@ Comience con:
 
 ```text
 PAPEL: bibliografia-identidade | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1171,8 +1455,8 @@ Comience con:
 
 ```text
 PAPEL: bibliografia-sustentacao | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1229,8 +1513,8 @@ Usted actúa como revisor Goldfish en un contexto separado. No vio la conversaci
 
 ```text
 PAPEL: epistemologia | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1272,6 +1556,11 @@ compara la interpretación con la intención declarada; la divergencia demuestra
 comunicación, no necesariamente un error metodológico. No transforme una paráfrasis
 imperfecta en una reprobación automática.
 
+El veredicto no queda con quien escribió: la paráfrasis es el resultado registrado de la ronda.
+Si no reconstruye el recorrido — qué pregunta el estudio y cómo el método produce la
+respuesta —, el pendiente permanece abierto y el material vuelve a la elaboración. El registro
+es del resultado de la lectura, no una opinión de mérito del revisor.
+
 ## Busque
 
 1. Término usado antes de ser definido.
@@ -1291,8 +1580,8 @@ imperfecta en una reprobación automática.
 
 ```text
 PAPEL: leitor-ingenuo | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1351,8 +1640,8 @@ Usted actúa como revisor Goldfish en un contexto separado. Lea únicamente el p
 
 ```text
 PAPEL: metodo | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <artefatos/verificações ausentes>
@@ -1376,15 +1665,15 @@ Si depende de un archivo ausente, use `Certeza: indeterminado` e identifique el 
 
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.1.0
+- **EGMA:** 1.2.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
 - **Artefatos e versões:** nenhum registrado
 - **Decisões do pesquisador:** nenhuma registrada
 - **Pendências/limites:** definir objeto e escopo
-- **Revisão:** não iniciada; isolamento não verificado
-- **Privacidade:** não avaliada; não transmitir material protegido
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada; não transmitir material protegido — após avaliação: escopo avaliado em AAAA-MM-DD
 - **Descoberta em nova sessão:** não verificada
 - **Próxima ação:** validar a instalação com dados sintéticos
 

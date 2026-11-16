@@ -3,7 +3,7 @@ name: egma
 description: Frames, plans and audits academic research with review in isolated contexts.
 ---
 
-# Elephant–Goldfish Academic — EGMA 1.1.0
+# Elephant–Goldfish Academic — EGMA 1.2.0
 
 Authorial protocol inspired by the context separation of the Elephant–Goldfish Model, with no official affiliation with its authors. EGMA organizes work and verifications; it does not guarantee scientific validity, privacy, absence of error or editorial approval. Respond in the user's language.
 
@@ -24,6 +24,9 @@ Read only the pertinent files, in addition to this one:
 | Installing or adapting the skill and verifying discovery in a new session | `references/portabilidade.md` |
 | Creating briefs, anchors, matrices, manifests and indexes | `references/registros.md` |
 | Diagnosing drift or reconstructing the state of an old project | `references/manutencao.md` |
+| Understanding where each component comes from | `references/fundamentos.md` |
+| Understanding terms and states of the protocol | `references/glossario.md` |
+| Meeting reporting and generative AI use declaration requirements | `references/conformidade.md` |
 | Distributing criteria to reviewers | `references/papeis/` |
 | Verifying literal citations in PDFs | `scripts/verifica_citacoes.py` |
 
@@ -63,7 +66,8 @@ Choose the depth:
 
 - **Compact:** Elephant + epistemology/contribution + method/data + argumentation/evidence; add the naïve reader for a protocol or manuscript.
 - **Complete:** compact + three separate bibliographic functions in the manuscript — identity, support and coverage — and additional specific verifications required by the object, without combining them in the same reviewer.
-- **Assisted review:** when there is no fresh context or verifiable isolation. Do the preparation, verification by execution and possible critique, but mark **independent review pending**. Do not call it a completed Goldfish.
+
+If there is no fresh context or verifiable isolation, it is not a depth: use **assisted review** — preparation, verification by execution and possible critique, with **independent review pending** declared. Do not call it a completed Goldfish.
 
 ## 4. Continuity and artifacts
 
@@ -100,7 +104,7 @@ Create separate contexts when the harness offers that verifiable capability. Del
 
 Do not deliver the desired answer, the Elephant's defense, the elaboration conversation or others' review reports on the first reading. Do not hide methodological justification that belongs to the object itself. Textual restrictions do not replace real permissions; record the isolation as proven, limited or not verified.
 
-**Blindness to history is not anonymity, confidentiality or absence of retention.** The same model can perform distinct roles, with correlated errors; different models can diversify errors, but do not prove independence or quality. This skill does not choose or configure model, provider or plan.
+**Blindness to history is not anonymity, confidentiality or absence of retention.** The same model can perform distinct roles, with correlated errors; different models can diversify errors, but do not prove independence or quality. Record the family in the manifest: family diversity between elaboration and verification is a criterion of strength of the round. This skill does not choose or configure model, provider or plan.
 
 Accept a review report with no findings. Demand location and evidence; do not turn theoretical divergence, simple disagreement or the Elephant's convenience into a demonstrated error. Check whether `ARQUIVOS LIDOS` covers all the necessary files of the package. An incomplete review report goes back for completion or is re-executed; never consolidate the omission as `SEM ACHADOS`. An empty or absent review report is absence of review, not approval.
 
@@ -146,6 +150,8 @@ The closing reports:
 - coverage with denominators when there is sampling;
 - bibliographic identity, support and coverage separately;
 - independent, limited or assisted review;
+- correlation between reviewers, when there is a repeated family;
+- consultability of records per artifact;
 - privacy assessed only within the scope of the available evidence;
 - open items and next action.
 
@@ -161,7 +167,7 @@ The paths cited in the core correspond to the same-named sections below. In a Go
 
 # Note on this edition
 
-This is the English edition of the EGMA single-document version. The canonical package — `egma/`, `EGMA_PORTATIL.md` and every file name cited throughout — remains in Brazilian Portuguese, and this translation is a companion document: the protocol is identical, and only the language of exposition changes.
+This is the English edition of the EGMA single-document version. The canonical package — `egma/`, `EGMA_PORTATIL.md` and every file name cited throughout — remains in Brazilian Portuguese, and this translation is a companion document: the protocol is identical, and only the language of exposition changes. This edition is synced with version 1.2.0.
 
 **Fidelity convention.** Explanatory prose is translated. Everything that must be typed, copied or matched stays exactly as shipped in the Portuguese package: file names (`ESTADO.md`, `ANCORAS.md`, `references/…`), commands, record and report schemas and templates (including the `templates/ESTADO.md` appendix), the script's source code, and the literal states below. When the text shows a Portuguese token in backticks, that is the token to use.
 
@@ -180,6 +186,8 @@ This is the English edition of the EGMA single-document version. The canonical p
 | `SEM ACHADOS` | no findings |
 | `verificado` / `entre_paginas` / `ambigua` / `nao_encontrado` / `arquivo_ausente` / `arquivo_ambiguo` | verified / across pages / ambiguous / not found / file missing / ambiguous file |
 | `observado` / `offset_declarado` / `indeterminado` | observed / declared offset / indeterminate |
+| `comprovado` / `limitado` / `não verificado` | proven / limited / not verified (new-context and isolation states) |
+| `interna` / `consultável sob pedido` / `publicável` | internal / consultable on request / publishable (record consultability) |
 
 Portuguese edition: [`EGMA_PORTATIL.md`](EGMA_PORTATIL.md) · Spanish edition: [`EGMA_PORTATIL.es.md`](EGMA_PORTATIL.es.md)
 
@@ -478,7 +486,29 @@ Record mode, object version, question/approach, authorized files, permitted oper
 
 Do not present coverage greater than the package. If a central artifact cannot be shared, the Elephant must verify by execution when authorized or record the point as not verifiable.
 
+Freeze the object as the reader would see it: working metadata (state notes, draft versions, internal instructions) are **excluded** from the object — what goes out stays out of the package, not inside it marked; whoever assembles the freeze checks the result and lists in the manifest what was excluded.
+
 Each first-round reviewer receives a separate context, without elaboration history, desired answer or other reviewers' reports. Fresh context must be confirmed to the extent exposed by the harness. Textual isolation without real control of files/memory is limited. Without isolation, use assisted review.
+
+States — two dimensions, declared separately and with recorded evidence:
+
+**Fresh context** (does the execution carry the elaboration history?):
+
+| State | Recorded evidence |
+|---|---|
+| `comprovado` | new session, without elaboration history — record the product/harness used and what the reviewer received |
+| `limitado` | history not controlled or not demonstrable (e.g. provider memory) — describe what could not be excluded |
+| `não verificado` | no possible confirmation |
+
+**File/memory isolation** (does the reviewer reach the elaboration material?):
+
+| State | Recorded evidence |
+|---|---|
+| `comprovado` | separation demonstrated to the extent exposed by the harness — record the verified capability and the inventory of what remained accessible |
+| `limitado` | partial access (inherited filesystem, project files) or separation by instruction only — describe the actual access |
+| `não verificado` | no possible confirmation |
+
+Attribution: the **reviewer** declares in the header what was observed; the **Elephant** checks and records the final state in the manifest, from the evidence. A textual restriction — asking not to read something — does **not** sustain `comprovado` in either dimension; without evidence, the state is `não verificado`. The declared state limits what the round can claim: `comprovado` allows presenting the verification as blind to history within the recorded scope; `limitado` and `não verificado`, do not.
 
 ## 2. Round roles
 
@@ -493,7 +523,7 @@ In the full manuscript round, use these roles and add the three bibliographic fu
 
 Use **one role per reviewer**. If the harness forces grouping, declare the review as limited/assisted and describe which criteria were combined; do not claim independence between roles in the same context. Route privacy is a separate evaluation, not an academic role to be improvised.
 
-Identical or different models are an operational choice of the user/harness, not a methodological guarantee. Diversity does not correct an incomplete package. Agreement does not turn a claim into fact.
+Identical or different models are an operational choice of the user/harness, not a methodological guarantee. Diversity does not correct an incomplete package. Agreement does not turn a claim into fact. Record the family of each model in the manifest — family is the lineage/weights (two providers serving the same weights are the same family): family diversity between elaboration and verification is a criterion of strength of the round, and roles of the same family **may** share correlated errors — declare the hypothesis in the consolidation, without treating it as a measurement. The tool and its limits are recorded per round (`registros.md` §13); criticism of the tool is part of the method.
 
 ## 3. Manifest and package
 
@@ -506,7 +536,9 @@ ARQUIVOS AUTORIZADOS: <lista exaustiva>
 CONTEÚDO ESPERADO: <uma linha por arquivo/trecho>
 FONTES EXTERNAS: permitidas/proibidas + escopo
 OPERAÇÕES: leitura/busca/código permitidas ou não
-CONTEXTO NOVO: confirmado/limitado/não verificado
+CONTEXTO NOVO: comprovado/limitado/não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado/limitado/não verificado
+SONDA DE ROTA: aprovada/reprovada (data)
 MEMÓRIA E HERANÇA: <o que se sabe>
 DESTINO DO PARECER: <arquivo ou retorno>
 ```
@@ -514,6 +546,8 @@ DESTINO DO PARECER: <arquivo ou retorno>
 Base instruction:
 
 > Read only the indicated package and expressly authorized external sources. Do not seek conversations, memories or other reviewers' reports. Examine the object according to your role and the declared approach. Distinguish demonstrated error, verifiable suspicion, missing information, epistemological divergence and opportunity. Do not invent flaws or praise. Do not alter the object; produce only the review report at the indicated destination. Declare what you read, executed and could not verify.
+
+Before spending the long reviews, probe each route (performed by the Elephant, with synthetic material): identification, when applicable, and a real reading of a synthetic file, returning an exact line **without variation** — this is the acceptance criterion. The real object does not enter a route not yet probed; a route that does not read a file does not authorize a review that depends on reading. Record the result per reviewer in the manifest (passed/failed).
 
 EP, MD, ARG and LI follow the eight fields of their role files. BI, BS and BC use the specific bibliographic schemas, with the same context/isolation header. A review report without findings is valid only when it states what it examined and confirms reading of the necessary files. If `ARQUIVOS LIDOS` omits a file from the package or the expected coverage is missing, return it for completion or re-execute; do not consolidate as `SEM ACHADOS`. Generic praise does not replace examination of the declared limits.
 
@@ -565,6 +599,8 @@ Every work named by a reviewer is a candidate until independent verification. Ve
 
 ## 7. Consolidation and contestation
 
+Analyze each review report separately before synthesizing: record each reviewer's findings, confront them and only then consolidate — do not read the review reports as a single text (Carter et al., 2014, p. 546).
+
 Group by decision, preserve sustained minority objections and assign a state: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR` or `REJEITAR`.
 
 - `CORRIGIR` means a demonstrated problem and an authorized correction.
@@ -576,6 +612,8 @@ Group by decision, preserve sustained minority objections and assign a state: `C
 - The Elephant wrote the object and, therefore, must present evidence both to accept and to reject a finding.
 - Before contesting that an artifact does not exist, open all available versions — text, CSV, spreadsheet and export. Divergent versions must be reconciled.
 - Do not choose by majority, rewriting cost or aesthetic preference.
+
+The round report informs the denominators of the process — reviewers and roles, context/isolation states, findings by state and resolution, correlation between reviewers (repeated families) — and what was not verified.
 
 ## 8. Full or focused round
 
@@ -752,6 +790,28 @@ Include, in direct language:
 
 Do not call it validated merely because there is a published precedent, executable code or agreement between models.
 
+## 7. Antipatterns of AI-assisted analysis
+
+Eleven pitfalls catalogued by Hoda et al. (2026, pp. 5-6) — conceptual and provisional catalog, **preprint** (arXiv:2608.27927v1; check the published version), with declared scope in software engineering. The names are from the source; the “what to watch” column is this protocol's wording. Use it as a vigilance checklist, not as an approval criterion — and record the check in the execution line (`registros.md` §9): date, items observed, evidence and action.
+
+| category | antipattern | what to watch |
+|---|---|---|
+| Dangerous impulses | Because We Can | using AI just because it is available, without a problem that requires it |
+| Dangerous impulses | The Productivity Spiral | growing volume replacing analytical depth |
+| Dangerous impulses | Human as Gold Standard | assuming human coding as the reference without assessing its quality |
+| Operational steps | QDA as Categorization | treating coding as mechanical classification, losing the interpretive |
+| Operational steps | Epistemological Slide | importing criteria from another paradigm without justification |
+| Operational steps | The Black Box Trap | undocumented versions, parameters and prompts; irreconstructible path |
+| Operational steps | Too Much Trust | accepting AI output as a result, without verification |
+| Operational steps | AI Output as Insight | treating a generated summary as an analytical finding |
+| Analytical failures | Low Human Engagement | not reading the data nor following intermediate decisions |
+| Analytical failures | Fishing for Results | adjusting prompts/queries until the desired result appears |
+| Analytical failures | Automated QDA | delegating the entire analysis, without human leadership |
+
+How to use: some of the items leave **direct evidence** (e.g. black box — versions and prompts recorded; low human engagement — declared reading of the data; fishing for results — prompt history); others require the researcher's **explicit judgment** (e.g. because we can; productivity spiral; epistemological slide) — declare the judgment, do not disguise it as evidence.
+
+Minimum mitigations (p. 6): read the data; record prompts, interactions and intermediate steps; keep the researcher in the lead (*human-in-the-lead*), not merely in the loop; record the tool's version, parameters and limits (`registros.md` §13). Antipatterns co-occur in cascade — one suggests the other (pp. 7, 9).
+
 ---
 
 # APPENDIX — `references/validacao-humana-cega.md`
@@ -826,23 +886,27 @@ The sample may contain personal data even without a group label. Apply `privacid
 
 # Reusable records
 
-Create only the necessary records. Use Markdown/CSV/spreadsheet according to volume and access. Keep stable IDs, dates, versions and history. Unknown values remain `pendente`, `não aplicável` or `não verificado`, with a reason when necessary.
+Create only the necessary records. Use Markdown/CSV/spreadsheet according to volume and access. Keep stable IDs, dates, versions and history. Each artifact has a single state record — version, open items and date in the same place; two divergent states of the same artifact are a defect to resolve. Unknown values remain `pendente`, `não aplicável` or `não verificado`, with a reason when necessary.
+
+Trail coverage (audit trail typology): the records cover the contextual (project state and history), the methodological (rounds, manifests, execution) and the analytical (claim–source matrix, decisions, corrections); the personal response — the researcher's reflexivity about their own position — stays outside the protocol's scope and is not replaced by a record (Rodgers; Cowles, 1993, p. 221).
 
 ## 1. `ESTADO.md`
 
 Minimum Elephant index, without protected data or hypotheses:
 
 ```markdown
-# Estado do projeto
-- EGMA: 1.1.0
-- Etapa/modo:
-- Escopo autorizado:
-- Artefatos e versões:
-- Decisões do pesquisador:
-- Pendências/limites:
-- Revisão: não iniciada | independente | limitada | assistida
-- Privacidade: escopo avaliado e data | não verificada
-- Próxima ação:
+# Estado do projeto acadêmico
+- **EGMA:** 1.2.0
+- **Criação do registro:** AAAA-MM-DD
+- **Etapa/modo:**
+- **Escopo autorizado:**
+- **Artefatos e versões:**
+- **Decisões do pesquisador:**
+- **Pendências/limites:**
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada | escopo avaliado em AAAA-MM-DD
+- **Descoberta em nova sessão:** não verificada
+- **Próxima ação:**
 ```
 
 Do not redefine existing state. Record the absence of a previous index without inventing retrospect.
@@ -865,7 +929,7 @@ Created at G0 before the brief:
 - Decisões que seguem para a ficha:
 ```
 
-In a previous project that already uses `CONCEPTO.md`, preserve the name and the history; do not rename silently. The brief only opens after the readiness gate and the necessary decisions.
+In a previous project that already uses `CONCEITO.md`, preserve the name and the history; do not rename silently. The brief only opens after the readiness gate and the necessary decisions.
 
 ## 3. `FICHA.md`
 
@@ -924,10 +988,12 @@ Do not delete the previous row nor dissolve a decisive correction into prose.
 
 ## 10. Round manifest
 
-| round/role | version/hash | files + expected content | search/operations | context/memory | model/product without secrets | destination | limits |
+| round/role | version/hash | files + expected content | search/operations | fresh context | isolation (files/memory) | model/family/product without secrets | destination | limits |
 |---|---|---|---|---|---|---|---|
 
 Preserve one original review report per reviewer. Check `ARQUIVOS LIDOS` against the manifest. Do not automatically import these manifests into other Goldfish.
+
+Record the model family when known (lineage/weights): family diversity between elaboration and verification is a criterion of strength of the round; roles of the same family may share correlated errors — declare the hypothesis in the consolidation. Also record the route probe result per reviewer.
 
 ## 11. Decisions and resolution
 
@@ -938,9 +1004,33 @@ Finding states: `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR`, `REJ
 
 ## 12. Closure
 
-Report scope/version, materials accessed, changes/decisions, operations/verifications, resolved/pending findings, coverage with denominators, bibliographic identity/grounding/coverage, review condition, assessed privacy and next action.
+Report scope/version, materials accessed, changes/decisions, operations/verifications, resolved/pending findings, coverage with denominators, bibliographic identity/support/coverage, review condition, correlation between reviewers (when applicable), consultability of records, assessed privacy and next action. When the object is the researcher's own protocol, instrument or method, declare the position (authorship/proponent) and how it was handled in the design (independent rounds, verification by execution).
 
-## 13. Synthetic finding example
+## 13. Tool and model choice
+
+Record, per round or analysis stage, the tool used and its limits (filled in by the Elephant; the reviewer declares in the review report what they know):
+
+| field | content |
+|---|---|
+| tool/model | identifier and version |
+| provider/route | product, account/plan when applicable (privacy is a separate assessment) |
+| parameters | relevant configuration (temperature, limits, enabled tools) |
+| known limits | documented errors, language coverage, recorded biases — with source; without source, `não verificado` with a reason |
+| workarounds | workarounds applied and why |
+
+When there is a deliberate choice among alternatives, record the reason (linguistic adequacy, weight openness, data sovereignty, cost) — the protocol does not recommend a model, but requires that the recorded choice be reconstructible.
+
+## 14. Execution and version trail (consultability)
+
+| item | content |
+|---|---|
+| retained per round | frozen object, briefings, manifest, original review reports, hashes and execution logs |
+| not retained | internal reasoning of the elaboration, conversation, the Elephant's memory and unauthorized material |
+| consultability | per artifact: `interna`, `consultável sob pedido` or `publicável` (requires completed privacy assessment) — declared at closing |
+
+Recorded is not publishable: the consultability of each artifact is a project decision, with privacy assessed (`privacidade.md`) before any publication. The trail records execution and versions; the internal reasoning of the elaboration is not part of the package.
+
+## 15. Synthetic finding example
 
 ```text
 ACHADO MD-01 — Escopo da conclusão excede a seleção documentada
@@ -1005,6 +1095,200 @@ Expected result: a true and incomplete index, not a complete invented index. If 
 
 ---
 
+# APPENDIX — `references/fundamentos.md`
+
+# Fundamentals — where each component comes from
+
+EGMA adapts consolidated traditions to work with AI agents. For each component: the tradition that precedes it, what that tradition already formulated (with locator) and what EGMA adapts. The references follow the mapping of the originating project, checked by reading against the editions consulted (2026); **there was no new full check for this edition** — use the locators as verifiable leads and check in the edition consulted. References in locatable form at the end of the file.
+
+| # | Component | Tradition | What the tradition formulated | What EGMA adapts |
+|---|---|---|---|---|
+| C1 | Elephant — long session with continuity | Method as the researcher's process | Epistemological vigilance and phases of research (Lopes, 2003, pp. 119, 136); memos as record (Fragoso et al., 2011, p. 94); diary as material memory (Moura, p. 185); reflection on each operation (Bonin, 2008, p. 122) | the agent maintains the continuity of the elaboration; decisions become a versioned record |
+| C2 | Goldfish — fresh context, without memory of the elaboration | Coding independence, triangulation and trustworthiness; EGM (*Elephant–Goldfish Model*) | Coder independence (Krippendorff, 1990, p. 196); threshold by the costs of mistaken conclusions (p. 217); systematic reporting (Lombard et al., 2002, pp. 596-600); analyze separately and only then synthesize (Carter et al., 2014, p. 546); verification at most persuades (Lincoln; Guba, 1985, p. 329); the goldfish reads without memory of the elaboration (Rensin, 2026) | independence by construction of context; declared isolation (proven, limited or not verified) |
+| C3 | Review roles, one per reviewer | Division of critical work | Number of coders as a reporting item (Tong et al., 2007, p. 352; Lombard et al., 2002, pp. 596-597) | fixed roles, one per reviewer, distributed to separate contexts |
+| C4 | Naïve reader — mandatory paraphrase | Communicability of the report; EGM comprehension test | Reproducing the methods from the report (Tong et al., 2007, p. 356); trail from data to findings (Frohwirth; Karch, 2023, p. 7); comprehension test as a gate (Rensin, 2026) | the document only advances if a clean context understands it; mandatory paraphrases |
+| C5 | Gates G0–G4 | Phases and decisions of the project | Phases and instances of research (Lopes, 2003, pp. 119, 136); canonical items of the project (Santaella, p. 152); the method does not replace the problem (Marques, 2018, p. 115) | gates between stages; an open critical slot blocks execution |
+| C6 | Records — state, rounds, corrections | Audit trail and qualitative transparency | Trail typology (Rodgers; Cowles, 1993, p. 221); "not merely a statement… visible" (Carcary, 2020, p. 167); tracking the trajectory step by step (Shenton, 2004, p. 72); transparency ≠ rigor (Aguinis; Solarino, 2019, p. 7 of the PDF); agent trails as an emerging norm (Wei et al., 2025, p. 9) | continuous record; versions and hashes; a correction that does not erase the previous one |
+| C7 | Verification by execution | Tool criticism | Canonical definition (van Es; Schäfer, 2018, p. 26); reflection and documentation of workarounds (Koolen et al., 2018, pp. 11, 13, 15-16); documenting the decision process (Drucker, 2021, p. 2) | instrumented verification of citations and claims; the tool is an object of criticism and record |
+| C8 | Claim–source matrix | Claim → evidence traceability | Preventing the reader from having to "trust the researcher's word" (Marques, 2018, p. 116); observable trail (Carcary, 2020; Shenton, 2004) | one row per claim; what it supports × what it does not support |
+| C9 | Privacy matrix | Research ethics and data protection | The risk depends on what is done with the data afterwards (Metcalf; Crawford, 2016, p. 7); privacy protection (UNESCO, 2023, p. 3); sharing as a formal process; retention/deletion (ANPD, 2022, pp. 5, 8) | triage before transmitting material to AI providers |
+| C10 | Epistemological principles | Interpretive qualitative tradition | "At best persuade" (Lincoln; Guba, 1985, p. 329); operationalized criteria (Shenton, 2004, p. 63); there is no better or worse analysis outside the design (Caregnato, 2006, p. 684) | discipline of states; epistemology before rigor |
+| C11 | Origin and declaration | EGM — *Elephant–Goldfish Model* (Rensin; Apache-2.0) | complete mechanism: design document before execution, fresh context, comprehension test, final human judgment | transposition to academic research; credit and scope declared |
+| C12 | Contrast with the field | Neighbors: multi-agent systems, generative AI evaluation, simulation, reporting norms | taxonomy, reporting norms and simulation occupy the surrounding space | EGMA is a process protocol for the researcher — what it is not is delimited in the `README` |
+
+## Cross-cutting notes
+
+- Verification **persuades, it does not compel** (Lincoln; Guba, 1985, p. 329); EGMA does not promise a guarantee — it promises discipline.
+- The closest kinship and the difference: Koolen et al. (2018) propose reflection on and documentation of the tool itself; EGMA produces independence by construction of context. The adversarial confrontation between analysis systems, proposed as future work by Sankaranarayanan et al. (2025, p. 6), is the central mechanism here.
+- EGMA must present itself as a flexible discipline, not as a recipe (Lopes, 2003, p. 98).
+- The checklist of antipatterns of assisted analysis (`medidas-computacionais.md` §7) comes from Hoda et al. (2026) — a conceptual and provisional catalog, preprint (arXiv:2608.27927v1).
+
+## Referências
+
+AGUINIS, H.; SOLARINO, A. M. Transparency and replicability in qualitative research: the case of interviews with elite informants. *Strategic Management Journal*, v. 40, n. 8, p. 1291-1315, 2019. DOI: 10.1002/smj.3015.
+
+ANPD — AUTORIDADE NACIONAL DE PROTEÇÃO DE DADOS. *A LGPD e o tratamento de dados pessoais para fins acadêmicos e para a realização de estudos por órgão de pesquisa*. Brasília: ANPD, 2022. (Texto para Discussão, n. 1/2022).
+
+BONIN, J. A. Explorações sobre práticas metodológicas na pesquisa em comunicação. *Revista FAMECOS*, Porto Alegre, n. 37, p. 121-127, dez. 2008.
+
+CARCARY, M. The research audit trail: methodological guidance for application in practice. *Electronic Journal of Business Research Methods*, v. 18, n. 2, p. 166-177, 2020.
+
+CAREGNATO, R. C. A.; MUTTI, R. Pesquisa qualitativa: análise de discurso versus análise de conteúdo. *Texto & Contexto — Enfermagem*, v. 15, n. 4, p. 679-684, 2006.
+
+CARTER, N. et al. The use of triangulation in qualitative research. *Oncology Nursing Forum*, v. 41, n. 5, p. 545-547, 2014. DOI: 10.1188/14.ONF.545-547.
+
+DRUCKER, J. *The Digital Humanities Coursebook: An Introduction to Digital Methods for Research and Scholarship*. London: Routledge, 2021.
+
+FRAGOSO, S.; RECUERO, R.; AMARAL, A. *Métodos de pesquisa para internet*. Porto Alegre: Sulina, 2011.
+
+FROHWIRTH, L.; KARCH, A. *A Transparency Checklist for Qualitative Research*. 2023. (working paper)
+
+HODA, R.; SEAMAN, C.; GOMES, V.; SPÍNOLA, R. Antipatterns in AI-assisted qualitative data analysis: a catalog of temptations and pitfalls for software engineering researchers. arXiv:2608.27927, 2026.
+
+KOOLEN, M.; VAN GORP, J.; VAN OSSENBRUGGEN, J. Toward a model for digital tool criticism. *Digital Scholarship in the Humanities*, 2018. DOI: 10.1093/llc/fqy048.
+
+KRIPPENDORFF, K. *Metodología de análisis de contenido: Teoría y práctica*. Barcelona: Paidós, 1990.
+
+LINCOLN, Y. S.; GUBA, E. G. *Naturalistic Inquiry*. Newbury Park: Sage, 1985.
+
+LOMBARD, M.; SNYDER-DUCH, J.; BRACKEN, C. C. Content analysis in mass communication: assessment and reporting of intercoder reliability. *Human Communication Research*, v. 28, n. 4, p. 587-604, 2002.
+
+LOPES, M. I. V. de. *Pesquisa em comunicação*. 8. ed. São Paulo: Loyola, 2003.
+
+MARQUES, F. P. J. 1989, o ano que não terminou. *Comunicação e Sociedade*, v. 33, p. 107-128, 2018. DOI: 10.17231/comsoc.33(2018).2909.
+
+METCALF, J.; CRAWFORD, K. Where are human subjects in Big Data research? The emerging ethics divide. *Big Data & Society*, v. 3, n. 1, 2016. DOI: 10.1177/2053951716650211.
+
+MOURA, C. P. de (org.). *Pesquisa em comunicação: metodologias e práticas acadêmicas*. Porto Alegre: EDIPUCRS, 2016.
+
+RENSIN, D. *Elephants, Goldfish and the New Golden Age of Software Engineering*. Medium: Google Research, 27 abr. 2026.
+
+RODGERS, B. L.; COWLES, K. V. The qualitative research audit trail: a complex collection of documentation. *Research in Nursing & Health*, v. 16, p. 219-226, 1993.
+
+SANKARANARAYANAN, S. et al. *Automating Thematic Analysis with Multi-Agent LLM Systems*. OSF Preprints, 2025.
+
+SANTAELLA, L. *Comunicação e pesquisa: projetos para mestrado e doutorado*. São Paulo: Hacker Editores, 2001.
+
+SHENTON, A. K. Strategies for ensuring trustworthiness in qualitative research projects. *Education for Information*, v. 22, n. 2, p. 63-75, 2004.
+
+TONG, A.; SAINSBURY, P.; CRAIG, J. Consolidated criteria for reporting qualitative research (COREQ): a 32-item checklist for interviews and focus groups. *International Journal for Quality in Health Care*, v. 19, n. 6, p. 349-357, 2007.
+
+UNESCO. *Guidance for Generative AI in Education and Research*. Paris: UNESCO, 2023.
+
+VAN ES, K. F.; WIERINGA, M. A.; SCHÄFER, M. T. Tool criticism: from digital methods to digital methodology. In: *Proceedings of the 2nd International Conference on Web Studies (WS.2 2018)*. New York: ACM, 2018. p. 24-27.
+
+WEI, J. et al. From AI for science to agentic science: a survey on autonomous scientific discovery. arXiv:2508.14111, 2025.
+
+---
+
+# APPENDIX — `references/glossario.md`
+
+# Glossary of terms and states
+
+Protocol terms, one line each. Where there is a complete definition, the indicated file prevails.
+
+## Roles and contexts
+
+| Term | Definition |
+|---|---|
+| **Elephant** | The agent that maintains the project's continuity and produces the material; the elaboration context. |
+| **Goldfish** | Reviewer in a separate context, without elaboration history; a review by the Elephant itself is not independent. |
+| **Fresh context** | Review execution without elaboration history, desired answer or others' review reports; states: `comprovado`, `limitado`, `não verificado` (`revisao.md` §1). |
+| **File/memory isolation** | Real control of what the reviewer accesses; same scale as fresh context. |
+| **Model family** | Lineage/weights of the model — two providers serving the same weights are the same family. Roles of the same family **can** share correlated errors (a hypothesis to declare, not a measurement); diversity of families between elaboration and verification is a strength criterion of the round. |
+| **Assisted review** | Preparation and verification without a verifiable fresh context; it is not called a completed Goldfish and leaves `revisão independente pendente`. |
+| **Route probe** | Prior verification of the reviewer's route (identification + reading of a synthetic file with the line returned without variation), performed by the Elephant before a long round; result per reviewer in the manifest. |
+| **Round** | Reviewers and roles over a frozen version; depths compact and complete; types full or focused. |
+| **Review report** | The reviewer's product in the schema of their role; the finding is its unit. |
+| **Frozen object** | Immutable version examined, with hash when available; working metadata stays out. |
+| **Round manifest** | Record per reviewer: role, version, files, context, model/family, destination (`registros.md` §10). |
+
+## Findings and states
+
+| Term | Definition |
+|---|---|
+| **Finding** | Problem pointed out by a reviewer, with location, evidence and recommended action. |
+| **Recommended action** | `CORRIGIR`, `VERIFICAR`, `CONTESTAR`, `ESCALONAR`, `ADIAR` or `REJEITAR` (`SKILL.md` §7). |
+| **Resolution** | `resolvido`, `parcialmente resolvido`, `não resolvido` or `não verificável`. |
+| **Consolidation** | Aggregation of review reports by decision, preserving minority objections; it does not decide by voting. |
+| **Block of corrections** | Permanent record of each correction: previous value, new value, origin and impact (`registros.md` §9). |
+| **Verification by execution** | Re-execute the operation (counts, filters, citations, code) instead of accepting the claim. |
+
+## Project and records
+
+| Term | Definition |
+|---|---|
+| **Gates G0–G4** | Stages with explicit approval: G0 pitch (`CONCEITO.md`), G1 framing (`FICHA.md`), G2 protocol (`ANCORAS.md`), G3 pilot, G4 manuscript/closing (`SKILL.md` §5). |
+| **Minimal brief** | Factual summary delivered to the reviewer: question, approach, stage and restrictions. |
+| **FICHA.md** | Project identification: problem, question, universe, sources, analysis, ethics and open items. |
+| **Anchor / slot** | A row of `ANCORAS.md` per choice or procedure; slot `fechada`, `pendente` or `inédita a confirmar`; resolved as `ancorada`, `análoga` or `inédita`. |
+| **Claim–source matrix** | One row per claim: what the source supports and what it does not support (`registros.md` §8). |
+| **DRIFT** | Diagnosis of divergence between state, plan, text, references and actual routes (`manutencao.md`). |
+| **BOOTSTRAP** | State reconstruction for a project prior to EGMA, without retroacting or inventing. |
+| **Artifact-first** | A long deliverable goes into a file; in chat, the path and the decisive points. |
+| **State record** | One per artifact: version, open items and date in the same place. |
+| **Execution and version trail** | What the protocol retains per round: object, briefings, manifest, review reports, hashes and logs; it does not include the internal reasoning of the elaboration (`registros.md` §14). |
+| **Consultability** | Per artifact: `interna`, `consultável sob pedido` or `publicável` (requires a completed privacy assessment); declared at closure (`registros.md` §14). |
+| **Trajectory typology** | Coverage of the *audit trail*: contextual, methodological and analytical; the personal response (reflexivity) is out of scope (`registros.md`, intro). |
+
+## Bibliography, measures and privacy
+
+| Term | Definition |
+|---|---|
+| **Bibliographic identity** | The work exists and is correctly identified: `confirmada`, `divergente`, `ambígua`, `não localizada` or `não verificada`. |
+| **Support** | The content consulted supports the claim: `sustentada`, `parcialmente sustentada`, `incompatível` or `não verificável com acesso disponível`. |
+| **Coverage** | The selection covers pertinent fundamentals, counterpoints and updates. |
+| **Access** | Depth of what was consulted: `integral`, `capítulo/seção`, `resumo`, `metadados` or `sem acesso`. |
+| **Instrument** | Classification of the computational measure: `medida direta`, `triagem` or `descarte`. |
+| **Blind human validation** | Human coding without a hypothesis label, with agreement per dimension when required (`validacao-humana-cega.md`). |
+| **Privacy states** | Adequacy of the route to the material: `compatível — escopo evidenciado`, `condicionado`, `incompatível` or `não verificável` (`privacidade.md` §4). |
+
+Complete definitions: `references/` files indicated in each line.
+
+---
+
+# APPENDIX — `references/conformidade.md`
+
+# Conformity — from records to reporting requirements
+
+> **This file does not certify conformity.** It indicates correspondences between the protocol's records and reporting and declaration requirements in force; the check is the researcher's, against the standard applicable to their context.
+
+## 1. Applicability and correspondences
+
+The standards cited are dated and have their own scope — the CNPq one is administrative and binds funding (research supported by CNPq); outside that scope, use it as a reference. Check the wording in force when using it.
+
+| Protocol artifact | Requirement it helps to meet |
+|---|---|
+| Privacy matrix (stage × material × route × retention) | Declaration of generative AI use — tool and purpose (CNPq, 2026, p. 5); confidentiality of assessment material (p. 4) |
+| Round manifests (model/family, context, destination) | Context and session items of the qualitative reporting extensions with LLM (COREQ+LLM; Sarvestan et al., 2025; Fehring et al., 2026) |
+| Execution records, block of corrections, versions and hashes | Agent trail — tool use and intermediate steps (Wei et al., 2025, p. 9); the protocol does not retain the internal reasoning of the elaboration |
+| Closure with denominators | Quantified report of the process (reviewers, findings, resolution) |
+| Record of the tool and of the model choice (`registros.md` §13) | Justification of AI use and of known limits |
+| Decision on the consultability of the records | Data and records as citable products (CNPq, 2026, p. 5) |
+
+## 2. Declaration of generative AI use (template)
+
+```text
+Declaração de uso de inteligência artificial generativa
+- Ferramenta(s), versão(ões) e provedor(es): <...>
+- Finalidade e fases: <...>
+- Material transmitido e rota: <remissão à matriz de privacidade>
+- Mediação humana: <onde e como o pesquisador decidiu>
+- Registros disponíveis: <onde estão>
+```
+
+## 3. Hard rules
+
+- **Third-party material under assessment**: CNPq Ordinance No. 2.664/2026 (art. 9º, I, «e») prohibits «a inserção de projetos de pesquisa de terceiros em ferramentas de IAG para elaboração de pareceres científicos» [the insertion of third-party research projects into generative AI tools for the preparation of scientific review reports]; for reviewers, safeguard the confidentiality of the information and of the review reports to which they have access (p. 4). Treat the material as its own class in the triage, before any transmission.
+- **Privacy, confidentiality and intellectual property** of the inputs and results: apply `privacidade.md` before transmitting. The CAPES discussion paper (Brasil, A., 2025, pp. 10-11) recommends preserving them — it is a record of the debate, not a standard.
+- **Instruments** — record `conferida em <data>` when using; an amended standard opens a line in the block of corrections and reassessment:
+  - **CNPq** — *Portaria nº 2.664, de 6 de março de 2026* [Ordinance No. 2.664 of March 6, 2026] (Política de Integridade na Atividade Científica [Research Integrity Policy]): declaration of generative AI use; prohibition of third-party review reports; data and records as citable products.
+  - **CAPES** — *A inteligência artificial na pesquisa e no fomento: desafios e oportunidades* [Artificial intelligence in research and funding: challenges and opportunities] (Discussion Paper, 2025; author's opinions).
+  - **ANPD** — *A LGPD e o tratamento de dados pessoais para fins acadêmicos e para a realização de estudos por órgão de pesquisa* [The LGPD and the processing of personal data for academic purposes and for studies by research bodies] (Discussion Paper No. 1/2022; preliminary nature).
+  - **UNESCO** — *Guidance for Generative AI in Education and Research* (2023).
+
+---
+
 # APPENDIX — `references/papeis/argumentacao.md`
 
 # Role — argumentation and evidence
@@ -1033,8 +1317,8 @@ You are a Goldfish reviewer in a separate context. Read only the authorized pack
 
 ```text
 PAPEL: argumentacao | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1077,8 +1361,8 @@ Begin with:
 
 ```text
 PAPEL: bibliografia-cobertura | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1125,8 +1409,8 @@ Begin with:
 
 ```text
 PAPEL: bibliografia-identidade | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1171,8 +1455,8 @@ Begin with:
 
 ```text
 PAPEL: bibliografia-sustentacao | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1229,8 +1513,8 @@ You are a Goldfish reviewer in a separate context. You did not see the elaborati
 
 ```text
 PAPEL: epistemologia | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1272,6 +1556,11 @@ compares the interpretation with the declared intention; divergence demonstrates
 communication, not necessarily a methodological error. Do not turn an imperfect
 paraphrase into automatic rejection.
 
+The verdict does not rest with whoever wrote it: the paraphrase is the round's recorded result.
+If it does not reconstruct the path — what the study asks and how the method produces the
+answer —, the open item remains open and the material returns to elaboration. The record
+is of the result of the reading, not a merit opinion from the reviewer.
+
 ## Look for
 
 1. A term used before it is defined.
@@ -1291,8 +1580,8 @@ paraphrase into automatic rejection.
 
 ```text
 PAPEL: leitor-ingenuo | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <o que não pôde ser examinado>
@@ -1351,8 +1640,8 @@ You are a Goldfish reviewer in a separate context. Read only the authorized pack
 
 ```text
 PAPEL: metodo | MODELO/PRODUTO: <se conhecido>
-CONTEXTO NOVO: confirmado | limitado | não verificado
-ISOLAMENTO DE ARQUIVOS/MEMÓRIA: confirmado | limitado | não verificado
+CONTEXTO NOVO: comprovado | limitado | não verificado
+ISOLAMENTO DE ARQUIVOS/MEMÓRIA: comprovado | limitado | não verificado
 ARQUIVOS LIDOS: <lista>
 OPERAÇÕES E FONTES: <realmente realizadas>
 LIMITES: <artefatos/verificações ausentes>
@@ -1376,15 +1665,15 @@ If it depends on a missing file, use `Certeza: indeterminado` and identify the f
 
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.1.0
+- **EGMA:** 1.2.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
 - **Artefatos e versões:** nenhum registrado
 - **Decisões do pesquisador:** nenhuma registrada
 - **Pendências/limites:** definir objeto e escopo
-- **Revisão:** não iniciada; isolamento não verificado
-- **Privacidade:** não avaliada; não transmitir material protegido
+- **Revisão:** não iniciada | independente | limitada | assistida; isolamento: comprovado | limitado | não verificado
+- **Privacidade:** não avaliada; não transmitir material protegido — após avaliação: escopo avaliado em AAAA-MM-DD
 - **Descoberta em nova sessão:** não verificada
 - **Próxima ação:** validar a instalação com dados sintéticos
 

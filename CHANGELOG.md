@@ -35,7 +35,7 @@ Todo registro segue [SemVer](https://semver.org/lang/pt-BR/): **patch** = corre�
 
 - As edições EN/ES são documentos companheiros e não entram no `SHA256SUMS.txt`; a edição 1.2 altera arquivos cobertos pelo manifesto, que será regerado no release da 1.2.0 (25 arquivos).
 - Nenhuma regra de privacidade, portabilidade ou do verificador de citações mudou de comportamento.
-- As edições EN/ES permanecem na versão anterior até a sincronização com a 1.2.0 (passada seguinte).
+- Edições EN/ES sincronizadas com a 1.2.0.
 
 ## [1.1.0] — 2026-11-10
 
