@@ -14,6 +14,7 @@ Se não houver suporte a skills, copie `egma/` para `.egm-academico/skill/` no p
 
 ```markdown
 <!-- MEPA:START -->
+<!-- Marcador canônico. Na leitura, aceite também EGMA:START/EGMA:END (bloco instalado até a 1.3.0); ao atualizar um bloco existente, reescreva o marcador para a forma canônica. -->
 ## Modelo Elefante–Peixe-Dourado Acadêmico
 Em tarefas acadêmicas, leia `.egm-academico/skill/SKILL.md` e os recursos
 pertinentes, e consulte `.egm-academico/ESTADO.md` se existir. Preserve

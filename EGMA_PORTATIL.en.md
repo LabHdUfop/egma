@@ -167,7 +167,7 @@ The paths cited in the core correspond to the same-named sections below. In a Go
 
 # Note on this edition
 
-This is the English edition of the MEPA single-document version. The canonical package — `egma/`, `EGMA_PORTATIL.md` and every file name cited throughout — remains in Brazilian Portuguese, and this translation is a companion document: the protocol is identical, and only the language of exposition changes. This edition is synced with version 1.3.0.
+This is the English edition of the MEPA single-document version. The canonical package — `egma/`, `EGMA_PORTATIL.md` and every file name cited throughout — remains in Brazilian Portuguese, and this translation is a companion document: the protocol is identical, and only the language of exposition changes. This edition is synced with version 1.3.1.
 
 **Fidelity convention.** Explanatory prose is translated. Everything that must be typed, copied or matched stays exactly as shipped in the Portuguese package: file names (`ESTADO.md`, `ANCORAS.md`, `references/…`), commands, record and report schemas and templates (including the `templates/ESTADO.md` appendix), the script's source code, and the literal states below. When the text shows a Portuguese token in backticks, that is the token to use.
 
@@ -896,7 +896,7 @@ Minimum Elephant index, without protected data or hypotheses:
 
 ```markdown
 # Estado do projeto acadêmico
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:**
 - **Escopo autorizado:**
@@ -1665,7 +1665,7 @@ If it depends on a missing file, use `Certeza: indeterminado` and identify the f
 
 # Estado do projeto acadêmico
 
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido

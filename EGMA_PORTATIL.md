@@ -3,7 +3,7 @@ name: egma
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Modelo Elefante–Peixe-Dourado Acadêmico — MEPA 1.3.0
+# Modelo Elefante–Peixe-Dourado Acadêmico — MEPA 1.3.1
 
 Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A MEPA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 
@@ -868,7 +868,7 @@ Cobertura do percurso (tipologia do audit trail): os registros cobrem o contextu
 
 ```markdown
 # Estado do projeto acadêmico
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:**
 - **Escopo autorizado:**
@@ -1637,7 +1637,7 @@ Se depender de arquivo ausente, use `Certeza: indeterminado` e identifique o arq
 
 # Estado do projeto acadêmico
 
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido

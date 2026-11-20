@@ -2,6 +2,22 @@
 
 Todo registro segue [SemVer](https://semver.org/lang/pt-BR/): **patch** = correção sem mudar comportamento; **minor** = regra ou recurso novo retrocompatível; **major** = mudança que invalida estado ou checklist anterior.
 
+## [1.3.1] — 2026-11-20
+
+**Adicionado**
+
+- Alias de nome declarado uma vez: nos três READMEs e no glossário, `MEPA` e `EGMA` designam o mesmo protocolo, com `EGMA` marcado como forma legada (até a 1.3.0).
+- Leitura tolerante, escrita canônica: o campo de versão do `ESTADO.md` aceita `MEPA:` e `EGMA:` (`registros.md` §1); os marcadores de bloco aceitam `MEPA:START/END` e `EGMA:START/END`, com `MEPA` como forma gravada (`portabilidade.md`).
+
+**Corrigido**
+
+- O marcador de bloco era citado sem dizer que a forma legada continua válida — origem de verificação quebrada em projeto instalado antes da 1.3.0.
+
+**Notas**
+
+- Patch de compatibilidade: nenhuma regra do protocolo muda, nenhum estado ou checklist é invalidado.
+- Edições EN/ES acompanham e seguem fora do `SHA256SUMS.txt`.
+
 ## [1.3.0] — 2026-11-20
 
 **Alterado**

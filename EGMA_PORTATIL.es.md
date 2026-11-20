@@ -3,7 +3,7 @@ name: mepa
 description: Encuadra, planifica y audita investigación académica con revisión en contextos aislados.
 ---
 
-# Modelo Elefante–Pez Dorado Académico — MEPA 1.3.0
+# Modelo Elefante–Pez Dorado Académico — MEPA 1.3.1
 
 Protocolo autoral inspirado en la separación de contextos del Elephant–Goldfish Model, sin vínculo oficial con sus autores. La MEPA organiza el trabajo y las verificaciones; no garantiza validez científica, privacidad, ausencia de error ni aprobación editorial. Responda en el idioma del usuario.
 
@@ -167,7 +167,7 @@ Las rutas citadas en el núcleo corresponden a las secciones homónimas de abajo
 
 # Nota sobre esta edición
 
-Esta es la edición española de la versión de documento único de MEPA. El paquete canónico — `egma/`, `EGMA_PORTATIL.md` y todos los nombres de archivo citados — permanece en portugués brasileño, y esta traducción es un documento complementario: el protocolo es idéntico y solo cambia el idioma de exposición. Esta edición está sincronizada con la versión 1.3.0.
+Esta es la edición española de la versión de documento único de MEPA. El paquete canónico — `egma/`, `EGMA_PORTATIL.md` y todos los nombres de archivo citados — permanece en portugués brasileño, y esta traducción es un documento complementario: el protocolo es idéntico y solo cambia el idioma de exposición. Esta edición está sincronizada con la versión 1.3.1.
 
 **Convención de fidelidad.** La prosa explicativa está traducida. Todo lo que debe escribirse, copiarse o coincidir queda exactamente como se distribuye en el paquete portugués: nombres de archivo (`ESTADO.md`, `ANCORAS.md`, `references/…`), comandos, esquemas de registro e informe y plantillas (incluido el apéndice `templates/ESTADO.md`), el código del script y los estados literales de abajo. Cuando el texto muestra un token en portugués entre backticks, ese es el token que debe usarse.
 
@@ -896,7 +896,7 @@ Cobertura del recorrido (tipología del audit trail): los registros cubren lo co
 
 ```markdown
 # Estado do projeto acadêmico
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:**
 - **Escopo autorizado:**
@@ -1665,7 +1665,7 @@ Si depende de un archivo ausente, use `Certeza: indeterminado` e identifique el 
 
 # Estado do projeto acadêmico
 
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido

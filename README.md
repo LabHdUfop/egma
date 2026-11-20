@@ -2,7 +2,9 @@
 
 **Protocolo aberto, neutro quanto a agente, modelo e provedor, para enquadrar, planejar e auditar pesquisa acadêmica com apoio de IA.**
 
-Versão 1.3.0 · Licença MIT · LABHD UFOP
+Versão 1.3.1 · Licença MIT · LABHD UFOP
+
+> **Nome anterior:** EGMA — Elefante–Goldfish Acadêmico, até a 1.3.0. É o mesmo protocolo; registros anteriores mantêm EGMA onde descrevem o que foi executado.
 
 **Idiomas:** **Português** · [English](README.en.md) · [Español](README.es.md)
 
@@ -78,7 +80,7 @@ egma/
 EGMA_PORTATIL.md                   versão monolítica para ambientes sem pastas
 EGMA_PORTATIL.en.md                edição inglesa do documento único
 EGMA_PORTATIL.es.md                edição espanhola do documento único
-SHA256SUMS.txt                     hashes de integridade do pacote 1.3.0
+SHA256SUMS.txt                     hashes de integridade do pacote 1.3.1
 tests/                             suíte de aceitação do script (11 casos sintéticos)
 ```
 
@@ -88,7 +90,7 @@ tests/                             suíte de aceitação do script (11 casos sin
 sha256sum -c SHA256SUMS.txt      # Linux/macOS/git-bash
 ```
 
-Os hashes cobrem os 25 arquivos do pacote 1.3.0. Se algum falhar, o pacote foi alterado — não use.
+Os hashes cobrem os 25 arquivos do pacote 1.3.1. Se algum falhar, o pacote foi alterado — não use.
 
 ## Testes
 
@@ -101,7 +103,7 @@ sintética (os PDFs são gerados por PyMuPDF; nenhum dado de pesquisa é usado).
 ocorrência única, repetição em páginas diferentes e na mesma página, ausência de texto,
 citação entre páginas, PDFs homônimos, caminho explícito, fonte ausente, folha impressa
 observada, offset declarado e identidade da fonte por SHA-256. Todos os 11 passam na
-1.3.0 (como na 1.2.0 e na 1.1.0); na 1.0.0 apenas 4 passavam.
+1.3.1 (como na 1.3.0, 1.2.0 e 1.1.0); na 1.0.0 apenas 4 passavam.
 
 ## Limites — leia antes de usar
 
@@ -117,7 +119,7 @@ Veja [`CITATION.cff`](CITATION.cff). Formato sugerido:
 
 ABNT (NBR 6023:2025):
 
-> FREIRE, Marcelo. **MEPA — Modelo Elefante–Peixe-Dourado Acadêmico: protocolo para enquadrar, planejar e auditar pesquisa acadêmica com agentes de IA**. Versão 1.3.0. Ouro Preto: Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto, 2026. Disponível em: https://github.com/LabHdUfop/mepa. Acesso em: 20 nov. 2026.
+> FREIRE, Marcelo. **MEPA — Modelo Elefante–Peixe-Dourado Acadêmico: protocolo para enquadrar, planejar e auditar pesquisa acadêmica com agentes de IA**. Versão 1.3.1. Ouro Preto: Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto, 2026. Disponível em: https://github.com/LabHdUfop/mepa. Acesso em: 20 nov. 2026.
 
 No texto: `(Freire, 2026)`.
 

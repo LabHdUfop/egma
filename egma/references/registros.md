@@ -6,11 +6,11 @@ Cobertura do percurso (tipologia do audit trail): os registros cobrem o contextu
 
 ## 1. `ESTADO.md`
 
-Índice mínimo do Elefante, sem dados ou hipóteses protegidas:
+Índice mínimo do Elefante, sem dados ou hipóteses protegidas. O campo de versão aceita **`MEPA:` e `EGMA:`** na leitura — `EGMA:` é o rótulo legado (até a 1.3.0) e não deve ser reescrito em registro existente; gravação nova usa `MEPA:`.
 
 ```markdown
 # Estado do projeto acadêmico
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:**
 - **Escopo autorizado:**

@@ -6,6 +6,7 @@ Termos do protocolo, em uma linha cada. Onde há definição completa, o arquivo
 
 | Termo | Definição |
 |---|---|
+| **MEPA (EGMA até 1.3.0)** | Nome do protocolo: Modelo Elefante–Peixe-Dourado Acadêmico. `EGMA` e `Elefante–Goldfish Acadêmico` são formas legadas válidas: designam o mesmo protocolo e não devem ser reescritas em registros anteriores. |
 | **Elefante** | O agente que mantém a continuidade do projeto e produz o material; o contexto de elaboração. |
 | **Peixe-Dourado** | Revisor em contexto separado, sem histórico de elaboração; revisão do próprio Elefante não é independente. |
 | **Contexto novo** | Execução de revisão sem histórico de elaboração, resposta desejada ou pareceres alheios; estados: `comprovado`, `limitado`, `não verificado` (`revisao.md` §1). |

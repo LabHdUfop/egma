@@ -1,6 +1,6 @@
 # Estado do projeto acadêmico
 
-- **MEPA:** 1.3.0
+- **MEPA:** 1.3.1
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido

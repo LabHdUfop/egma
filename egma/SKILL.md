@@ -3,7 +3,7 @@ name: mepa
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Modelo Elefante–Peixe-Dourado Acadêmico — MEPA 1.3.0
+# Modelo Elefante–Peixe-Dourado Acadêmico — MEPA 1.3.1
 
 Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A MEPA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 

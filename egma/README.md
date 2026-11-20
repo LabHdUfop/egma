@@ -1,4 +1,4 @@
-# MEPA portátil 1.3.0
+# MEPA portátil 1.3.1
 
 **MEPA (Modelo Elefante–Peixe-Dourado Acadêmico)** é uma skill neutra quanto a harness, modelo e provedor para enquadrar, planejar e auditar pesquisa acadêmica com memória do Elefante e revisão Peixe-Dourado em contextos separados.
 
@@ -22,6 +22,7 @@ Apresentação, instalação passo a passo e licença: [`../README.md`](../READM
 
 ## O que mudou nesta edição
 
+- **1.3.1** — compatibilidade de nome: `MEPA` e `EGMA` designam o mesmo protocolo; o campo de versão do `ESTADO.md` e os marcadores de bloco aceitam as duas formas na leitura e gravam a forma canônica. Sem mudança de regra.
 - **1.3.0** — nome do protocolo passa de EGMA para **MEPA (Modelo Elefante–Peixe-Dourado Acadêmico)**, com "Goldfish" traduzido como "Peixe-Dourado" na edição pt-BR; sem mudança de regra e sem caminho novo.
 - **1.2.0** — glossário de termos e estados (`references/glossario.md`); fundamentos (de onde vem cada componente) e conformidade (relato e declaração de uso de IA) como referências novas; critérios de decisão dos estados de contexto/isolamento, com evidência mínima; portão da paráfrase (o veredito não fica com o autor); família do modelo no manifesto, com diversidade de famílias como critério de força da rodada; higiene do congelamento; sonda de rota antes de rodadas longas; registro de estado único por artefato; ferramenta e escolha de modelo registradas; análise separada antes da síntese; antipadrões de análise assistida como checklist (catálogo provisório); trilha de execução e consultabilidade (não retém o raciocínio da elaboração); campo de versão dos templates corrigido.
 - **Base consolidada** — leitor ingênuo, DRIFT, BOOTSTRAP, artifact-first, contestação, lastro contínuo, medidas computacionais, validação humana e corpus cedido; neutro quanto a harness, modelo e provedor; sem recomendações de modelos/provedores nem roteamento de inferência; rubricas bibliográficas separadas para identidade, sustentação e cobertura.
