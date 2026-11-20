@@ -1,6 +1,6 @@
-# EGMA portátil 1.2.0
+# MEPA portátil 1.3.0
 
-**EGMA (Elefante–Goldfish Acadêmico)** é uma skill neutra quanto a harness, modelo e provedor para enquadrar, planejar e auditar pesquisa acadêmica com memória do Elefante e revisão Goldfish em contextos separados.
+**MEPA (Modelo Elefante–Peixe-Dourado Acadêmico)** é uma skill neutra quanto a harness, modelo e provedor para enquadrar, planejar e auditar pesquisa acadêmica com memória do Elefante e revisão Peixe-Dourado em contextos separados.
 
 Apresentação, instalação passo a passo e licença: [`../README.md`](../README.md).
 
@@ -22,10 +22,11 @@ Apresentação, instalação passo a passo e licença: [`../README.md`](../READM
 
 ## O que mudou nesta edição
 
+- **1.3.0** — nome do protocolo passa de EGMA para **MEPA (Modelo Elefante–Peixe-Dourado Acadêmico)**, com "Goldfish" traduzido como "Peixe-Dourado" na edição pt-BR; sem mudança de regra e sem caminho novo.
 - **1.2.0** — glossário de termos e estados (`references/glossario.md`); fundamentos (de onde vem cada componente) e conformidade (relato e declaração de uso de IA) como referências novas; critérios de decisão dos estados de contexto/isolamento, com evidência mínima; portão da paráfrase (o veredito não fica com o autor); família do modelo no manifesto, com diversidade de famílias como critério de força da rodada; higiene do congelamento; sonda de rota antes de rodadas longas; registro de estado único por artefato; ferramenta e escolha de modelo registradas; análise separada antes da síntese; antipadrões de análise assistida como checklist (catálogo provisório); trilha de execução e consultabilidade (não retém o raciocínio da elaboração); campo de versão dos templates corrigido.
 - **Base consolidada** — leitor ingênuo, DRIFT, BOOTSTRAP, artifact-first, contestação, lastro contínuo, medidas computacionais, validação humana e corpus cedido; neutro quanto a harness, modelo e provedor; sem recomendações de modelos/provedores nem roteamento de inferência; rubricas bibliográficas separadas para identidade, sustentação e cobertura.
 
-## O que a EGMA não é
+## O que a MEPA não é
 
 - **Não é automação da pesquisa**: as decisões são do pesquisador; o protocolo organiza, registra e verifica.
 - **Não é taxonomia nem método de análise**: disciplina o processo, sem substituir o desenho do estudo.
@@ -34,7 +35,7 @@ Apresentação, instalação passo a passo e licença: [`../README.md`](../READM
 
 ## Limites
 
-A EGMA não é um modelo, não garante validade científica ou privacidade e não certifica revisão independente. A política de dados precisa ser verificada no ambiente real. Consulte `references/privacidade.md` antes de usar material inédito ou protegido.
+A MEPA não é um modelo, não garante validade científica ou privacidade e não certifica revisão independente. A política de dados precisa ser verificada no ambiente real. Consulte `references/privacidade.md` antes de usar material inédito ou protegido.
 
 ## Frentes abertas
 

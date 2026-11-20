@@ -54,7 +54,7 @@ Avalie **não treinamento**, **retenção** e **autorização** em colunas separ
 
 Se uma rota estiver bloqueada, suspenda apenas a transferência afetada. Continue trabalho legítimo com materiais públicos sem detalhes protegidos, consultas genéricas, exemplos sintéticos ou processamento local previamente autorizado e avaliado. Não apague originais ou backups para “cumprir” a política sem autorização específica.
 
-## 5. Memória e Goldfish
+## 5. Memória e Peixe-Dourado
 
 A memória do Elefante é armazenamento intencional, separado da retenção pelo serviço de inferência. Mantenha-a apenas em local autorizado, com minimização, controle de acesso e política de preservação/descarte. Resumos e índices também podem ser confidenciais.
 

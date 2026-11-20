@@ -3,9 +3,9 @@ name: egma
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Elefante–Goldfish Acadêmico — EGMA 1.2.0
+# Modelo Elefante–Peixe-Dourado Acadêmico — MEPA 1.3.0
 
-Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A EGMA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
+Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A MEPA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 
 ## 1. Recursos e leitura sob demanda
 
@@ -15,7 +15,7 @@ Leia somente os arquivos pertinentes, além deste:
 |---|---|
 | Antes de transmitir material protegido ou mudar produto, conta, ferramenta ou destino | `references/privacidade.md` |
 | Enquadrar ideia, planejar projeto, dimensionar corpus ou tratar acervo cedido | `references/projeto.md` |
-| Preparar, executar, verificar e consolidar revisão Goldfish | `references/revisao.md` |
+| Preparar, executar, verificar e consolidar revisão Peixe-Dourado | `references/revisao.md` |
 | Buscar literatura, verificar identidade e conferir sustentação | `references/bibliografia.md` |
 | Justificar e testar medidas computacionais | `references/medidas-computacionais.md` |
 | Preparar validação humana cega de medidas interpretativas | `references/validacao-humana-cega.md` |
@@ -28,11 +28,11 @@ Leia somente os arquivos pertinentes, além deste:
 | Distribuir critérios aos revisores | `references/papeis/` |
 | Verificar citações literais em PDFs | `scripts/verifica_citacoes.py` |
 
-Não carregue toda a pasta em cada tarefa. Goldfish recebe apenas o papel, o pacote autorizado e os critérios necessários — nunca o índice do Elefante, sua conversa ou pareceres alheios na primeira rodada.
+Não carregue toda a pasta em cada tarefa. Peixe-Dourado recebe apenas o papel, o pacote autorizado e os critérios necessários — nunca o índice do Elefante, sua conversa ou pareceres alheios na primeira rodada.
 
 ## 2. Princípios obrigatórios
 
-1. **Elefante mantém continuidade; Goldfish revisa sem a conversa de elaboração.** Revisão do próprio Elefante não é independente.
+1. **Elefante mantém continuidade; Peixe-Dourado revisa sem a conversa de elaboração.** Revisão do próprio Elefante não é independente.
 2. **A orientação epistemológica precede o critério de rigor.** Distinga incoerência interna, informação ausente e divergência entre tradições. Não imponha causalidade, representatividade ou concordância a toda pesquisa.
 3. Preserve a cadeia pergunta → conceitos → materiais → procedimentos → evidências → interpretação → contribuição.
 4. Não invente referências, dados, coleta, participantes, páginas, citações, resultados, métricas, acessos ou verificações. Marque exemplos e dados sintéticos e mantenha-os fora das evidências empíricas.
@@ -57,7 +57,7 @@ Antes de agir:
 | **Planejamento** | Explorar uma ideia ou possibilidades sem elaborar projeto | `references/projeto.md` |
 | **Projeto novo** | Elaborar pergunta, literatura, protocolo, piloto, análise ou manuscrito | `references/projeto.md`; demais conforme a etapa |
 | **Objeto pronto** | Auditar projeto, protocolo, análise ou manuscrito existente | `references/revisao.md`; bibliografia e medidas quando pertinentes |
-| **Manutenção** | Diagnosticar deriva ou criar estado para projeto anterior à EGMA | `references/manutencao.md` |
+| **Manutenção** | Diagnosticar deriva ou criar estado para projeto anterior à MEPA | `references/manutencao.md` |
 | **Pontual** | Buscar, conferir referências, recalcular ou responder sem ciclo completo | Apenas o recurso necessário |
 
 Escolha a profundidade:
@@ -65,13 +65,13 @@ Escolha a profundidade:
 - **Compacta:** Elefante + epistemologia/contribuição + método/dados + argumentação/evidências; acrescente leitor ingênuo em protocolo ou manuscrito.
 - **Completa:** compacta + três funções bibliográficas separadas no manuscrito — identidade, sustentação e cobertura — e verificações específicas adicionais exigidas pelo objeto, sem combiná-las num mesmo revisor.
 
-Se não houver contexto novo ou isolamento verificável, não é uma profundidade: use **revisão assistida** — preparação, verificação por execução e crítica possível, com **revisão independente pendente** declarada. Não a denomine Goldfish concluída.
+Se não houver contexto novo ou isolamento verificável, não é uma profundidade: use **revisão assistida** — preparação, verificação por execução e crítica possível, com **revisão independente pendente** declarada. Não a denomine Peixe-Dourado concluída.
 
 ## 4. Continuidade e artefatos
 
 Em projeto com arquivos e autorização para criar registros, mantenha `.egm-academico/ESTADO.md` como índice, não como repositório do conteúdo da pesquisa. Use os modelos de `references/registros.md`. Não zere ou reinicialize estado existente.
 
-O índice registra versão da EGMA, etapa, artefatos e versões, decisões, pendências, limitações de revisão e próxima ação. Dados, hipóteses inéditas, transcrições, credenciais e pareceres completos ficam apenas em destinos autorizados, quando necessários.
+O índice registra versão da MEPA, etapa, artefatos e versões, decisões, pendências, limitações de revisão e próxima ação. Dados, hipóteses inéditas, transcrições, credenciais e pareceres completos ficam apenas em destinos autorizados, quando necessários.
 
 **Artifact-first:** entregáveis longos, tabelas e decisões vão para arquivos quando houver sistema de arquivos. No chat, informe caminho, escopo, dois ou três pontos decisivos e pendências. Sem persistência disponível, entregue no formato possível e declare que a continuidade não foi verificada.
 
@@ -79,7 +79,7 @@ O índice registra versão da EGMA, etapa, artefatos e versões, decisões, pend
 
 Leia `references/projeto.md` antes de criar o protocolo.
 
-- **G0 — exploração do pitch, antes da ficha:** fazer clarificação aberta, sem múltipla escolha: problema, destinatário, restrição inegociável, fora de escopo, sucesso e alternativa atual. Fechar uma hipótese em duas ou três frases com confirmação do pesquisador antes de revisão. Usar Goldfish curto sobre o pitch com cinco lentes: viabilidade do corpus, novidade/sobreposição, operacionalização, ética/privacidade e contribuição/método. Registrar em `CONCEITO.md` o escopo, o que fica fora, alternativas rejeitadas com motivo e decisões para a ficha. Exploração não autoriza coleta nem cronograma.
+- **G0 — exploração do pitch, antes da ficha:** fazer clarificação aberta, sem múltipla escolha: problema, destinatário, restrição inegociável, fora de escopo, sucesso e alternativa atual. Fechar uma hipótese em duas ou três frases com confirmação do pesquisador antes de revisão. Usar Peixe-Dourado curto sobre o pitch com cinco lentes: viabilidade do corpus, novidade/sobreposição, operacionalização, ética/privacidade e contribuição/método. Registrar em `CONCEITO.md` o escopo, o que fica fora, alternativas rejeitadas com motivo e decisões para a ficha. Exploração não autoriza coleta nem cronograma.
 - **G1 — enquadramento:** pergunta respondível, abordagem, contribuição provisória, conceitos, universo/unidade, materiais, acesso, ética e restrições. Medir o universo antes de decidir censo ou amostra. O G0 testa a ideia; o G1 testa o enquadramento contra a literatura e não o substitui.
 - **G2 — protocolo:** plano de análise completo, procedimentos e critérios de desvio; toda escolha tem linha em `ANCORAS.md`, com slot `fechada`, `pendente` ou `inédita a confirmar` e, quando resolvida, estado `ancorada`, `análoga` ou `inédita`. O plano pode orientar a busca, mas não afirma nada sobre literatura enquanto o slot estiver aberto. Slot crítico aberto bloqueia coleta; demais prazos precisam estar explícitos. Procedimento inédito é risco metodológico declarado antes da coleta, não defeito automático. Exige aprovação explícita antes de coleta/anotação real.
 - **G3 — piloto e análise:** testar operações críticas, registrar medidas e limites, abrir linha de âncora antes de qualquer procedimento novo e versionar mudanças. Aprovação explícita separa plano de execução substancial.
@@ -87,7 +87,7 @@ Leia `references/projeto.md` antes de criar o protocolo.
 
 Não execute G2/G3 implicitamente por aprovação genérica de uma conversa anterior. Em projeto já autorizado, recupere a decisão registrada e o escopo exato.
 
-## 6. Revisão Goldfish cega ao histórico
+## 6. Revisão Peixe-Dourado cega ao histórico
 
 Antes da rodada, congele versão e escopo. Leia `references/revisao.md` e os papéis aplicáveis.
 
@@ -159,7 +159,7 @@ Em manutenção, relate somente divergências quando o modo DRIFT for solicitado
 
 # Como ler este documento único
 
-Os caminhos citados no núcleo correspondem às seções homônimas abaixo. Em uma rodada Goldfish, forneça apenas o papel aplicável, o pacote autorizado e os critérios necessários; não envie automaticamente o documento inteiro nem o histórico do Elefante.
+Os caminhos citados no núcleo correspondem às seções homônimas abaixo. Em uma rodada Peixe-Dourado, forneça apenas o papel aplicável, o pacote autorizado e os critérios necessários; não envie automaticamente o documento inteiro nem o histórico do Elefante.
 
 ---
 
@@ -221,7 +221,7 @@ Avalie **não treinamento**, **retenção** e **autorização** em colunas separ
 
 Se uma rota estiver bloqueada, suspenda apenas a transferência afetada. Continue trabalho legítimo com materiais públicos sem detalhes protegidos, consultas genéricas, exemplos sintéticos ou processamento local previamente autorizado e avaliado. Não apague originais ou backups para “cumprir” a política sem autorização específica.
 
-## 5. Memória e Goldfish
+## 5. Memória e Peixe-Dourado
 
 A memória do Elefante é armazenamento intencional, separado da retenção pelo serviço de inferência. Mantenha-a apenas em local autorizado, com minimização, controle de acesso e política de preservação/descarte. Resumos e índices também podem ser confidenciais.
 
@@ -241,7 +241,7 @@ No relatório, declare que a skill apenas avalia e orienta: ela não muda termos
 
 # Portabilidade, instalação e verificação
 
-A EGMA separa quatro coisas: protocolo, harness, modelo e provedor/produto. Trocar uma delas não instala as outras. Não presuma compatibilidade, descoberta automática, isolamento ou mesma política de dados.
+A MEPA separa quatro coisas: protocolo, harness, modelo e provedor/produto. Trocar uma delas não instala as outras. Não presuma compatibilidade, descoberta automática, isolamento ou mesma política de dados.
 
 ## 1. Formas de uso
 
@@ -254,15 +254,15 @@ Instale a pasta `egma/` inteira no mecanismo de skills documentado pelo harness 
 Se não houver suporte a skills, copie `egma/` para `.egm-academico/skill/` no projeto. Crie `.egm-academico/ESTADO.md` a partir de `templates/ESTADO.md` somente se ainda não existir. No arquivo de instruções efetivamente carregado, acrescente um único bloco, sem apagar o restante:
 
 ```markdown
-<!-- EGMA:START -->
-## Elefante–Goldfish Acadêmico
+<!-- MEPA:START -->
+## Modelo Elefante–Peixe-Dourado Acadêmico
 Em tarefas acadêmicas, leia `.egm-academico/skill/SKILL.md` e os recursos
 pertinentes, e consulte `.egm-academico/ESTADO.md` se existir. Preserve
 artefatos, decisões e pendências. Não execute planos ainda não aprovados.
 Antes de transmitir material protegido, aplique a referência de privacidade.
-Goldfish recebe apenas papel, pacote e critérios explicitamente fornecidos;
+Peixe-Dourado recebe apenas papel, pacote e critérios explicitamente fornecidos;
 não herda automaticamente índice, conversa, memória ou pareceres do Elefante.
-<!-- EGMA:END -->
+<!-- MEPA:END -->
 ```
 
 Ajuste os caminhos à localização real do arquivo de instruções. Esse bloco orienta leitura; não é controle de acesso nem comprova carregamento automático de links.
@@ -290,8 +290,8 @@ Documentação: Codex (`https://learn.chatgpt.com/docs/agent-configuration/agent
 1. Confirme pasta autorizada, sistema, harness/versão e arquivo efetivo; não exiba credenciais.
 2. Preserve regras anteriores e configurações globais. Não crie override que esconda instruções existentes.
 3. Não sobrescreva protocolo/estado anterior. Compare versões, preserve decisões e resolva conflitos explicitamente.
-4. Mantenha um bloco EGMA único e idempotente. Marcadores duplicados ou malformados exigem relatório, não exclusão em massa.
-5. Não altere modelo, provedor, assinatura, endpoint, roteamento, credenciais ou serviços para instalar a EGMA.
+4. Mantenha um bloco MEPA único e idempotente. Marcadores duplicados ou malformados exigem relatório, não exclusão em massa.
+5. Não altere modelo, provedor, assinatura, endpoint, roteamento, credenciais ou serviços para instalar a MEPA.
 6. Não use importação automática de toda a pasta de pesquisa em revisores. Restrinja arquivos e memória conforme o papel.
 7. Teste apenas com material sintético.
 
@@ -303,7 +303,7 @@ Documentação: Codex (`https://learn.chatgpt.com/docs/agent-configuration/agent
 | Preservação | Conteúdo fora do bloco permanece intacto | Reverter somente a alteração defeituosa |
 | Idempotência | Segunda aplicação não duplica nem zera estado | Corrigir instalação |
 | Descoberta | Nova sessão demonstra carregamento/leitura sem novo caminho fornecido | Marcar não verificada; usar leitura explícita |
-| Goldfish | Pacote do contexto contém só o autorizado; memória/herança conhecidas | Marcar revisão independente pendente |
+| Peixe-Dourado | Pacote do contexto contém só o autorizado; memória/herança conhecidas | Marcar revisão independente pendente |
 | Privacidade | Produto, conta, plano, configuração, ferramentas e destinos avaliados | Não transmitir material protegido |
 
 Um “li” do agente não comprova carregamento ou isolamento. Se o harness não expuser evidência, registre o limite. Não use pesquisa real para testar integração.
@@ -443,7 +443,7 @@ Se o pedido envolver voz/estilo, descreva características mensuráveis do corpu
 
 # APÊNDICE — `references/revisao.md`
 
-# Revisão Goldfish e consolidação adversarial
+# Revisão Peixe-Dourado e consolidação adversarial
 
 Leia antes de preparar ou consolidar qualquer rodada. A revisão examina uma versão congelada; não substitui julgamento do pesquisador nem verificação por execução.
 
@@ -868,7 +868,7 @@ Cobertura do percurso (tipologia do audit trail): os registros cobrem o contextu
 
 ```markdown
 # Estado do projeto acadêmico
-- **EGMA:** 1.2.0
+- **MEPA:** 1.3.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:**
 - **Escopo autorizado:**
@@ -963,7 +963,7 @@ Não apague a linha anterior nem dissolva correção decisiva em prosa.
 | rodada/papel | versão/hash | arquivos + conteúdo esperado | busca/operações | contexto novo | isolamento (arquivos/memória) | modelo/família/produto sem segredos | destino | limites |
 |---|---|---|---|---|---|---|---|
 
-Preserve um parecer original por revisor. Confira `ARQUIVOS LIDOS` contra o manifesto. Não importe automaticamente esses manifestos para outros Goldfish.
+Preserve um parecer original por revisor. Confira `ARQUIVOS LIDOS` contra o manifesto. Não importe automaticamente esses manifestos para outros Peixe-Dourado.
 
 Registre a família do modelo quando conhecida (linhagem/pesos): diversidade de famílias entre elaboração e verificação é critério de força da rodada; papéis da mesma família podem compartilhar erros correlacionados — declare a hipótese no consolidado. Registre também o resultado da sonda de rota por revisor.
 
@@ -1024,7 +1024,7 @@ Este exemplo é sintético e não constitui evidência empírica nem recomendaç
 
 # Manutenção — DRIFT e BOOTSTRAP
 
-Dois modos para projetos existentes. Nenhum emite parecer Goldfish nem corrige automaticamente conteúdo acadêmico.
+Dois modos para projetos existentes. Nenhum emite parecer Peixe-Dourado nem corrige automaticamente conteúdo acadêmico.
 
 ## DRIFT — deriva documental e empírica
 
@@ -1051,14 +1051,14 @@ Regras:
 
 Use no fechamento de etapas e na retomada de projeto parado; periodicidade adicional é decisão do projeto, não regra universal.
 
-## BOOTSTRAP — projeto anterior à EGMA
+## BOOTSTRAP — projeto anterior à MEPA
 
 Quando há artefatos, mas não `.egm-academico/ESTADO.md` ou registros confiáveis:
 
 1. **Inventarie** apenas o que existe: entregáveis, dados, scripts, handoffs, relatórios e versões.
 2. **Reconstrua o evidenciado:** pergunta, unidade, corpus, decisões e execução somente quando houver fonte datada/verificável.
 3. **Não retroaja:** o que não tem evidência fica `desconhecido — anterior ao registro`; não preencha com narrativa plausível.
-4. **Declare o início do registro:** `ESTADO.md criado em AAAA-MM-DD; etapas anteriores não possuem índice EGMA contínuo`.
+4. **Declare o início do registro:** `ESTADO.md criado em AAAA-MM-DD; etapas anteriores não possuem índice MEPA contínuo`.
 5. **Ligue artefatos reais:** caminho, versão/data e relação com a etapa; não copie conteúdo protegido ao índice.
 6. **Marque o que não fecha:** ausências, inconsistências e verificações necessárias, sem forçar checklist.
 7. **Não reexecute nem corrija** pesquisa durante o inventário salvo autorização separada.
@@ -1071,12 +1071,12 @@ Resultado esperado: índice verdadeiro e incompleto, não índice completo inven
 
 # Fundamentos — de onde vem cada componente
 
-A EGMA adapta tradições consolidadas ao trabalho com agentes de IA. Para cada componente: a tradição que o precede, o que ela já formulava (com localizador) e o que a EGMA adapta. As referências seguem o mapeamento do projeto de origem, conferido por leitura contra as edições consultadas (2026); **não houve nova conferência integral para esta edição** — use os localizadores como pistas verificáveis e confira na edição consultada. Referências em forma localizável ao final do arquivo.
+A MEPA adapta tradições consolidadas ao trabalho com agentes de IA. Para cada componente: a tradição que o precede, o que ela já formulava (com localizador) e o que a MEPA adapta. As referências seguem o mapeamento do projeto de origem, conferido por leitura contra as edições consultadas (2026); **não houve nova conferência integral para esta edição** — use os localizadores como pistas verificáveis e confira na edição consultada. Referências em forma localizável ao final do arquivo.
 
-| # | Componente | Tradição | O que a tradição formulava | O que a EGMA adapta |
+| # | Componente | Tradição | O que a tradição formulava | O que a MEPA adapta |
 |---|---|---|---|---|
 | C1 | Elefante — sessão longa com continuidade | Método como processo do pesquisador | Vigilância epistemológica e fases da pesquisa (Lopes, 2003, pp. 119, 136); memos como registro (Fragoso et al., 2011, p. 94); diário como memória material (Moura, p. 185); reflexão sobre cada operação (Bonin, 2008, p. 122) | o agente mantém a continuidade da elaboração; decisões viram registro versionado |
-| C2 | Goldfish — contexto novo, sem memória da elaboração | Independência de codificação, triangulação e trustworthiness; EGM (*Elephant–Goldfish Model*) | Independência dos codificadores (Krippendorff, 1990, p. 196); limiar pelos custos de conclusões equivocadas (p. 217); relato sistemático (Lombard et al., 2002, pp. 596-600); analisar separadamente e só então sintetizar (Carter et al., 2014, p. 546); a verificação no máximo persuade (Lincoln; Guba, 1985, p. 329); goldfish lê sem memória da elaboração (Rensin, 2026) | independência por construção de contexto; isolamento declarado (comprovado, limitado ou não verificado) |
+| C2 | Peixe-Dourado — contexto novo, sem memória da elaboração | Independência de codificação, triangulação e trustworthiness; EGM (*Elephant–Goldfish Model*) | Independência dos codificadores (Krippendorff, 1990, p. 196); limiar pelos custos de conclusões equivocadas (p. 217); relato sistemático (Lombard et al., 2002, pp. 596-600); analisar separadamente e só então sintetizar (Carter et al., 2014, p. 546); a verificação no máximo persuade (Lincoln; Guba, 1985, p. 329); peixe-dourado lê sem memória da elaboração (Rensin, 2026) | independência por construção de contexto; isolamento declarado (comprovado, limitado ou não verificado) |
 | C3 | Papéis de revisão, um por revisor | Divisão do trabalho crítico | Número de codificadores como item de relato (Tong et al., 2007, p. 352; Lombard et al., 2002, pp. 596-597) | papéis fixos, um por revisor, distribuídos a contextos separados |
 | C4 | Leitor ingênuo — paráfrase obrigatória | Comunicabilidade do relato; teste de compreensão do EGM | Reproduzir os métodos a partir do relato (Tong et al., 2007, p. 356); trail dos dados aos achados (Frohwirth; Karch, 2023, p. 7); teste de compreensão como portão (Rensin, 2026) | o documento só avança se um contexto limpo o entende; paráfrases obrigatórias |
 | C5 | Portões G0–G4 | Fases e decisões do projeto | Fases e instâncias da pesquisa (Lopes, 2003, pp. 119, 136); itens canônicos do projeto (Santaella, p. 152); o método não substitui o problema (Marques, 2018, p. 115) | gates entre etapas; slot crítico aberto bloqueia execução |
@@ -1086,13 +1086,13 @@ A EGMA adapta tradições consolidadas ao trabalho com agentes de IA. Para cada 
 | C9 | Matriz de privacidade | Ética de pesquisa e proteção de dados | O risco depende do que se faz com os dados depois (Metcalf; Crawford, 2016, p. 7); proteção de privacidade (UNESCO, 2023, p. 3); compartilhamento como processo formal; retenção/eliminação (ANPD, 2022, pp. 5, 8) | triagem antes de transmitir material a provedores de IA |
 | C10 | Princípios epistemológicos | Tradição qualitativa interpretativa | "At best persuade" (Lincoln; Guba, 1985, p. 329); critérios operacionalizados (Shenton, 2004, p. 63); não há análise melhor ou pior fora do desenho (Caregnato, 2006, p. 684) | disciplina de estados; epistemologia antes do rigor |
 | C11 | Origem e declaração | EGM — *Elephant–Goldfish Model* (Rensin; Apache-2.0) | mecanismo completo: documento de desenho antes da execução, contexto novo, teste de compreensão, julgamento humano final | transposição à pesquisa acadêmica; crédito e escopo declarados |
-| C12 | Contraste com o campo | Vizinhos: sistemas multiagente, avaliação de IAG, simulação, normas de relato | taxonomia, normas de relato e simulação ocupam o espaço em volta | a EGMA é protocolo de processo do pesquisador — o que ela não é está delimitado no `README` |
+| C12 | Contraste com o campo | Vizinhos: sistemas multiagente, avaliação de IAG, simulação, normas de relato | taxonomia, normas de relato e simulação ocupam o espaço em volta | a MEPA é protocolo de processo do pesquisador — o que ela não é está delimitado no `README` |
 
 ## Notas transversais
 
-- A verificação **persuade, não compele** (Lincoln; Guba, 1985, p. 329); a EGMA não promete garantia — promete disciplina.
-- O parentesco mais próximo e a diferença: Koolen et al. (2018) propõem reflexão e documentação sobre a própria ferramenta; a EGMA produz independência por construção de contexto. O confronto adversarial entre sistemas de análise, proposto como trabalho futuro por Sankaranarayanan et al. (2025, p. 6), é o mecanismo central aqui.
-- A EGMA deve se apresentar como disciplina flexível, não como receituário (Lopes, 2003, p. 98).
+- A verificação **persuade, não compele** (Lincoln; Guba, 1985, p. 329); a MEPA não promete garantia — promete disciplina.
+- O parentesco mais próximo e a diferença: Koolen et al. (2018) propõem reflexão e documentação sobre a própria ferramenta; a MEPA produz independência por construção de contexto. O confronto adversarial entre sistemas de análise, proposto como trabalho futuro por Sankaranarayanan et al. (2025, p. 6), é o mecanismo central aqui.
+- A MEPA deve se apresentar como disciplina flexível, não como receituário (Lopes, 2003, p. 98).
 - O checklist de antipadrões de análise assistida (`medidas-computacionais.md` §7) vem de Hoda et al. (2026) — catálogo conceitual e provisório, preprint (arXiv:2608.27927v1).
 
 ## Referências
@@ -1164,11 +1164,11 @@ Termos do protocolo, em uma linha cada. Onde há definição completa, o arquivo
 | Termo | Definição |
 |---|---|
 | **Elefante** | O agente que mantém a continuidade do projeto e produz o material; o contexto de elaboração. |
-| **Goldfish** | Revisor em contexto separado, sem histórico de elaboração; revisão do próprio Elefante não é independente. |
+| **Peixe-Dourado** | Revisor em contexto separado, sem histórico de elaboração; revisão do próprio Elefante não é independente. |
 | **Contexto novo** | Execução de revisão sem histórico de elaboração, resposta desejada ou pareceres alheios; estados: `comprovado`, `limitado`, `não verificado` (`revisao.md` §1). |
 | **Isolamento de arquivos/memória** | Controle real do que o revisor acessa; mesma escala do contexto novo. |
 | **Família de modelo** | Linhagem/pesos do modelo — dois provedores servindo os mesmos pesos são a mesma família. Papéis da mesma família **podem** compartilhar erros correlacionados (hipótese a declarar, não medida); diversidade de famílias entre elaboração e verificação é critério de força da rodada. |
-| **Revisão assistida** | Preparação e verificação sem contexto novo verificável; não se denomina Goldfish concluída e deixa `revisão independente pendente`. |
+| **Revisão assistida** | Preparação e verificação sem contexto novo verificável; não se denomina Peixe-Dourado concluída e deixa `revisão independente pendente`. |
 | **Sonda de rota** | Verificação prévia da rota do revisor (identificação + leitura de arquivo sintético com linha devolvida sem variação), feita pelo Elefante antes de rodada longa; resultado por revisor no manifesto. |
 | **Rodada** | Revisores e papéis sobre uma versão congelada; profundidades compacta e completa; tipos completa ou focal. |
 | **Parecer** | Produto do revisor no esquema do seu papel; o achado é sua unidade. |
@@ -1196,7 +1196,7 @@ Termos do protocolo, em uma linha cada. Onde há definição completa, o arquivo
 | **Âncora / slot** | Linha de `ANCORAS.md` por escolha ou procedimento; slot `fechada`, `pendente` ou `inédita a confirmar`; resolvido como `ancorada`, `análoga` ou `inédita`. |
 | **Matriz afirmação–fonte** | Uma linha por afirmação: o que a fonte sustenta e o que não sustenta (`registros.md` §8). |
 | **DRIFT** | Diagnóstico de divergência entre estado, plano, texto, referências e rotas reais (`manutencao.md`). |
-| **BOOTSTRAP** | Reconstrução de estado para projeto anterior à EGMA, sem retroagir nem inventar. |
+| **BOOTSTRAP** | Reconstrução de estado para projeto anterior à MEPA, sem retroagir nem inventar. |
 | **Artifact-first** | Entregável longo vai para arquivo; no chat, caminho e pontos decisivos. |
 | **Registro de estado** | Único por artefato: versão, pendências e data no mesmo lugar. |
 | **Trilha de execução e versões** | O que o protocolo retém por rodada: objeto, briefings, manifesto, pareceres, hashes e logs; não inclui o raciocínio interno da elaboração (`registros.md` §14). |
@@ -1265,7 +1265,7 @@ Declaração de uso de inteligência artificial generativa
 
 # Papel — argumentação e evidências
 
-Você é revisor Goldfish em contexto separado. Leia apenas o pacote autorizado e examine a cadeia pergunta → conceitos → materiais → procedimentos → evidências → interpretação → contribuição.
+Você é revisor Peixe-Dourado em contexto separado. Leia apenas o pacote autorizado e examine a cadeia pergunta → conceitos → materiais → procedimentos → evidências → interpretação → contribuição.
 
 ## Julgue
 
@@ -1455,7 +1455,7 @@ Se o pacote não contém a fonte necessária, não avalie por memória: marque n
 
 # Papel — epistemologia e contribuição
 
-Você é revisor Goldfish em contexto separado. Não viu a conversa de elaboração e não deve tentar recuperá-la. Leia apenas o pacote autorizado e entregue o esquema abaixo.
+Você é revisor Peixe-Dourado em contexto separado. Não viu a conversa de elaboração e não deve tentar recuperá-la. Leia apenas o pacote autorizado e entregue o esquema abaixo.
 
 ## Julgue
 
@@ -1579,7 +1579,7 @@ Se o documento se explica sozinho no escopo recebido, escreva `SEM ACHADOS` e de
 
 # Papel — método e dados
 
-Você é revisor Goldfish em contexto separado. Leia apenas o pacote autorizado. Não presuma conteúdo de artefato que não recebeu.
+Você é revisor Peixe-Dourado em contexto separado. Leia apenas o pacote autorizado. Não presuma conteúdo de artefato que não recebeu.
 
 ## Julgue
 
@@ -1637,7 +1637,7 @@ Se depender de arquivo ausente, use `Certeza: indeterminado` e identifique o arq
 
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.2.0
+- **MEPA:** 1.3.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
@@ -1649,7 +1649,7 @@ Se depender de arquivo ausente, use `Certeza: indeterminado` e identifique o arq
 - **Descoberta em nova sessão:** não verificada
 - **Próxima ação:** validar a instalação com dados sintéticos
 
-> Se este arquivo tiver sido criado para projeto anterior à EGMA, registre: “Etapas anteriores não possuem índice EGMA contínuo” e marque o passado não documentado como `desconhecido — anterior ao registro`.
+> Se este arquivo tiver sido criado para projeto anterior à MEPA, registre: “Etapas anteriores não possuem índice MEPA contínuo” e marque o passado não documentado como `desconhecido — anterior ao registro`.
 
 ---
 

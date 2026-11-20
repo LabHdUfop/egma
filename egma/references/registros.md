@@ -10,7 +10,7 @@ Cobertura do percurso (tipologia do audit trail): os registros cobrem o contextu
 
 ```markdown
 # Estado do projeto acadêmico
-- **EGMA:** 1.2.0
+- **MEPA:** 1.3.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:**
 - **Escopo autorizado:**
@@ -105,7 +105,7 @@ Não apague a linha anterior nem dissolva correção decisiva em prosa.
 | rodada/papel | versão/hash | arquivos + conteúdo esperado | busca/operações | contexto novo | isolamento (arquivos/memória) | modelo/família/produto sem segredos | destino | limites |
 |---|---|---|---|---|---|---|---|
 
-Preserve um parecer original por revisor. Confira `ARQUIVOS LIDOS` contra o manifesto. Não importe automaticamente esses manifestos para outros Goldfish.
+Preserve um parecer original por revisor. Confira `ARQUIVOS LIDOS` contra o manifesto. Não importe automaticamente esses manifestos para outros Peixe-Dourado.
 
 Registre a família do modelo quando conhecida (linhagem/pesos): diversidade de famílias entre elaboração e verificação é critério de força da rodada; papéis da mesma família podem compartilhar erros correlacionados — declare a hipótese no consolidado. Registre também o resultado da sonda de rota por revisor.
 

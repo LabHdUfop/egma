@@ -1,10 +1,10 @@
 # Contribuindo
 
-Obrigado pelo interesse. A EGMA é um protocolo, não um software convencional: o que se contribui aqui é **regra operacional**, e regra sem lastro é ruído.
+Obrigado pelo interesse. A MEPA é um protocolo, não um software convencional: o que se contribui aqui é **regra operacional**, e regra sem lastro é ruído.
 
 ## O que esperamos de uma mudança
 
-1. **O defeito que a mudança corrige.** Toda regra nova na EGMA nasceu de um caso real em que a ausência dela produziu erro, retrabalho ou alegação indevida. Descreva o caso — pode ser anonimizado, mas precisa ser real.
+1. **O defeito que a mudança corrige.** Toda regra nova na MEPA nasceu de um caso real em que a ausência dela produziu erro, retrabalho ou alegação indevida. Descreva o caso — pode ser anonimizado, mas precisa ser real.
 2. **Evidência de uso.** Se a regra já foi aplicada, diga onde e com que resultado. Se não foi, marque como **proposta não verificada** no texto; não a apresente como validada.
 3. **Neutralidade de harness, modelo e provedor.** Não entram comandos, caminhos pessoais, nomes de produtos como requisito, recomendações de roteamento de inferência ou telemetria de um ambiente específico.
 4. **Linguagem e formato.** Português (pt-BR), markdown, arquivos com menos de 300 linhas. Ao atingir o limite, divida em sub-arquivo com link relativo.
@@ -25,7 +25,7 @@ Obrigado pelo interesse. A EGMA é um protocolo, não um software convencional: 
 
 ## Versionamento
 
-Seguimos SemVer: **patch** (correção sem mudar comportamento), **minor** (regra ou recurso novo, retrocompatível), **major** (mudança de comportamento que invalida estado ou checklist anterior). Toda release atualiza `CHANGELOG.md`, regera `SHA256SUMS.txt` e confere os campos de versão declarados (`SKILL.md`, `README.md` do pacote, `templates/`, `CITATION.cff`) — o campo `EGMA:` dos templates já ficou defasado uma vez.
+Seguimos SemVer: **patch** (correção sem mudar comportamento), **minor** (regra ou recurso novo, retrocompatível), **major** (mudança de comportamento que invalida estado ou checklist anterior). Toda release atualiza `CHANGELOG.md`, regera `SHA256SUMS.txt` e confere os campos de versão declarados (`SKILL.md`, `README.md` do pacote, `templates/`, `CITATION.cff`) — o campo `MEPA:` dos templates já ficou defasado uma vez. Instalações anteriores usam o rótulo `EGMA:` no `ESTADO.md` e continuam válidas; o rótulo mudou com o nome, em 1.3.0.
 
 ## Licença
 

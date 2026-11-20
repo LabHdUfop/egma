@@ -1,6 +1,6 @@
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.2.0
+- **MEPA:** 1.3.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
@@ -12,4 +12,4 @@
 - **Descoberta em nova sessão:** não verificada
 - **Próxima ação:** validar a instalação com dados sintéticos
 
-> Se este arquivo tiver sido criado para projeto anterior à EGMA, registre: “Etapas anteriores não possuem índice EGMA contínuo” e marque o passado não documentado como `desconhecido — anterior ao registro`.
+> Se este arquivo tiver sido criado para projeto anterior à MEPA, registre: “Etapas anteriores não possuem índice MEPA contínuo” e marque o passado não documentado como `desconhecido — anterior ao registro`.

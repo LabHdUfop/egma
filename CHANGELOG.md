@@ -2,6 +2,24 @@
 
 Todo registro segue [SemVer](https://semver.org/lang/pt-BR/): **patch** = correção sem mudar comportamento; **minor** = regra ou recurso novo retrocompatível; **major** = mudança que invalida estado ou checklist anterior.
 
+## [1.3.0] — 2026-11-20
+
+**Alterado**
+
+- Nome do protocolo: **EGMA (Elefante–Goldfish Acadêmico)** passa a **MEPA (Modelo Elefante–Peixe-Dourado Acadêmico)**. Na edição pt-BR, "Goldfish" vira "Peixe-Dourado"; a edição EN usa "Elephant–Goldfish Academic Model" e a ES "Modelo Elefante–Pez Dorado Académico". O modelo upstream continua citado como *Elephant–Goldfish Model*, com crédito a Rensin.
+- Mudança de nome, sem mudança de regra: nenhum estado, checklist, leitura obrigatória ou caminho de instalação é invalidado. `egma/`, `EGMA_PORTATIL.md` e `.egm-academico/` mantêm o nome por compatibilidade.
+- Campo de versão dos templates e dos monolitos passa a `MEPA:`; `ESTADO.md` de instalações anteriores com `EGMA:` continua válido e é lido como campo legado.
+- Repositório renomeado de `LabHdUfop/egma` para `LabHdUfop/mepa`; o endereço antigo redireciona no GitHub.
+- Rótulo do identificador da skill no `SKILL.md` passa a `mepa` (a pasta instalada continua `egma/`).
+
+**Fora do manifesto de integridade**
+
+- As edições EN/ES (`README.{en,es}.md`, `EGMA_PORTATIL.{en,es}.md`) acompanham a renomeação nesta mesma edição, mas continuam fora do `SHA256SUMS.txt`, como na 1.2.0.
+
+**Preservado por decisão**
+
+- Registros anteriores a esta versão mantêm o nome EGMA onde descrevem o que foi executado: entradas deste CHANGELOG, rodadas e auditorias arquivadas em `.egm-academico/`. Reescrevê-los faria uma auditoria feita sob a EGMA parecer feita sob a MEPA.
+
 ## [1.2.0] — 2026-11-16
 
 **Adicionado**

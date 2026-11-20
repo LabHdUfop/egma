@@ -1,6 +1,6 @@
 # Portabilidade, instalação e verificação
 
-A EGMA separa quatro coisas: protocolo, harness, modelo e provedor/produto. Trocar uma delas não instala as outras. Não presuma compatibilidade, descoberta automática, isolamento ou mesma política de dados.
+A MEPA separa quatro coisas: protocolo, harness, modelo e provedor/produto. Trocar uma delas não instala as outras. Não presuma compatibilidade, descoberta automática, isolamento ou mesma política de dados.
 
 ## 1. Formas de uso
 
@@ -13,15 +13,15 @@ Instale a pasta `egma/` inteira no mecanismo de skills documentado pelo harness 
 Se não houver suporte a skills, copie `egma/` para `.egm-academico/skill/` no projeto. Crie `.egm-academico/ESTADO.md` a partir de `templates/ESTADO.md` somente se ainda não existir. No arquivo de instruções efetivamente carregado, acrescente um único bloco, sem apagar o restante:
 
 ```markdown
-<!-- EGMA:START -->
-## Elefante–Goldfish Acadêmico
+<!-- MEPA:START -->
+## Modelo Elefante–Peixe-Dourado Acadêmico
 Em tarefas acadêmicas, leia `.egm-academico/skill/SKILL.md` e os recursos
 pertinentes, e consulte `.egm-academico/ESTADO.md` se existir. Preserve
 artefatos, decisões e pendências. Não execute planos ainda não aprovados.
 Antes de transmitir material protegido, aplique a referência de privacidade.
-Goldfish recebe apenas papel, pacote e critérios explicitamente fornecidos;
+Peixe-Dourado recebe apenas papel, pacote e critérios explicitamente fornecidos;
 não herda automaticamente índice, conversa, memória ou pareceres do Elefante.
-<!-- EGMA:END -->
+<!-- MEPA:END -->
 ```
 
 Ajuste os caminhos à localização real do arquivo de instruções. Esse bloco orienta leitura; não é controle de acesso nem comprova carregamento automático de links.
@@ -49,8 +49,8 @@ Documentação: Codex (`https://learn.chatgpt.com/docs/agent-configuration/agent
 1. Confirme pasta autorizada, sistema, harness/versão e arquivo efetivo; não exiba credenciais.
 2. Preserve regras anteriores e configurações globais. Não crie override que esconda instruções existentes.
 3. Não sobrescreva protocolo/estado anterior. Compare versões, preserve decisões e resolva conflitos explicitamente.
-4. Mantenha um bloco EGMA único e idempotente. Marcadores duplicados ou malformados exigem relatório, não exclusão em massa.
-5. Não altere modelo, provedor, assinatura, endpoint, roteamento, credenciais ou serviços para instalar a EGMA.
+4. Mantenha um bloco MEPA único e idempotente. Marcadores duplicados ou malformados exigem relatório, não exclusão em massa.
+5. Não altere modelo, provedor, assinatura, endpoint, roteamento, credenciais ou serviços para instalar a MEPA.
 6. Não use importação automática de toda a pasta de pesquisa em revisores. Restrinja arquivos e memória conforme o papel.
 7. Teste apenas com material sintético.
 
@@ -62,7 +62,7 @@ Documentação: Codex (`https://learn.chatgpt.com/docs/agent-configuration/agent
 | Preservação | Conteúdo fora do bloco permanece intacto | Reverter somente a alteração defeituosa |
 | Idempotência | Segunda aplicação não duplica nem zera estado | Corrigir instalação |
 | Descoberta | Nova sessão demonstra carregamento/leitura sem novo caminho fornecido | Marcar não verificada; usar leitura explícita |
-| Goldfish | Pacote do contexto contém só o autorizado; memória/herança conhecidas | Marcar revisão independente pendente |
+| Peixe-Dourado | Pacote do contexto contém só o autorizado; memória/herança conhecidas | Marcar revisão independente pendente |
 | Privacidade | Produto, conta, plano, configuração, ferramentas e destinos avaliados | Não transmitir material protegido |
 
 Um “li” do agente não comprova carregamento ou isolamento. Se o harness não expuser evidência, registre o limite. Não use pesquisa real para testar integração.

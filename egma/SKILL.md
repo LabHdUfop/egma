@@ -1,11 +1,11 @@
 ---
-name: egma
+name: mepa
 description: Enquadra, planeja e audita pesquisa acadêmica com revisão em contextos isolados.
 ---
 
-# Elefante–Goldfish Acadêmico — EGMA 1.2.0
+# Modelo Elefante–Peixe-Dourado Acadêmico — MEPA 1.3.0
 
-Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A EGMA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
+Protocolo autoral inspirado na separação de contextos do Elephant–Goldfish Model, sem vínculo oficial com seus autores. A MEPA organiza trabalho e verificações; não garante validade científica, privacidade, ausência de erro ou aprovação editorial. Responda no idioma do usuário.
 
 ## 1. Recursos e leitura sob demanda
 
@@ -15,7 +15,7 @@ Leia somente os arquivos pertinentes, além deste:
 |---|---|
 | Antes de transmitir material protegido ou mudar produto, conta, ferramenta ou destino | `references/privacidade.md` |
 | Enquadrar ideia, planejar projeto, dimensionar corpus ou tratar acervo cedido | `references/projeto.md` |
-| Preparar, executar, verificar e consolidar revisão Goldfish | `references/revisao.md` |
+| Preparar, executar, verificar e consolidar revisão Peixe-Dourado | `references/revisao.md` |
 | Buscar literatura, verificar identidade e conferir sustentação | `references/bibliografia.md` |
 | Justificar e testar medidas computacionais | `references/medidas-computacionais.md` |
 | Preparar validação humana cega de medidas interpretativas | `references/validacao-humana-cega.md` |
@@ -28,11 +28,11 @@ Leia somente os arquivos pertinentes, além deste:
 | Distribuir critérios aos revisores | `references/papeis/` |
 | Verificar citações literais em PDFs | `scripts/verifica_citacoes.py` |
 
-Não carregue toda a pasta em cada tarefa. Goldfish recebe apenas o papel, o pacote autorizado e os critérios necessários — nunca o índice do Elefante, sua conversa ou pareceres alheios na primeira rodada.
+Não carregue toda a pasta em cada tarefa. Peixe-Dourado recebe apenas o papel, o pacote autorizado e os critérios necessários — nunca o índice do Elefante, sua conversa ou pareceres alheios na primeira rodada.
 
 ## 2. Princípios obrigatórios
 
-1. **Elefante mantém continuidade; Goldfish revisa sem a conversa de elaboração.** Revisão do próprio Elefante não é independente.
+1. **Elefante mantém continuidade; Peixe-Dourado revisa sem a conversa de elaboração.** Revisão do próprio Elefante não é independente.
 2. **A orientação epistemológica precede o critério de rigor.** Distinga incoerência interna, informação ausente e divergência entre tradições. Não imponha causalidade, representatividade ou concordância a toda pesquisa.
 3. Preserve a cadeia pergunta → conceitos → materiais → procedimentos → evidências → interpretação → contribuição.
 4. Não invente referências, dados, coleta, participantes, páginas, citações, resultados, métricas, acessos ou verificações. Marque exemplos e dados sintéticos e mantenha-os fora das evidências empíricas.
@@ -57,7 +57,7 @@ Antes de agir:
 | **Planejamento** | Explorar uma ideia ou possibilidades sem elaborar projeto | `references/projeto.md` |
 | **Projeto novo** | Elaborar pergunta, literatura, protocolo, piloto, análise ou manuscrito | `references/projeto.md`; demais conforme a etapa |
 | **Objeto pronto** | Auditar projeto, protocolo, análise ou manuscrito existente | `references/revisao.md`; bibliografia e medidas quando pertinentes |
-| **Manutenção** | Diagnosticar deriva ou criar estado para projeto anterior à EGMA | `references/manutencao.md` |
+| **Manutenção** | Diagnosticar deriva ou criar estado para projeto anterior à MEPA | `references/manutencao.md` |
 | **Pontual** | Buscar, conferir referências, recalcular ou responder sem ciclo completo | Apenas o recurso necessário |
 
 Escolha a profundidade:
@@ -65,13 +65,13 @@ Escolha a profundidade:
 - **Compacta:** Elefante + epistemologia/contribuição + método/dados + argumentação/evidências; acrescente leitor ingênuo em protocolo ou manuscrito.
 - **Completa:** compacta + três funções bibliográficas separadas no manuscrito — identidade, sustentação e cobertura — e verificações específicas adicionais exigidas pelo objeto, sem combiná-las num mesmo revisor.
 
-Se não houver contexto novo ou isolamento verificável, não é uma profundidade: use **revisão assistida** — preparação, verificação por execução e crítica possível, com **revisão independente pendente** declarada. Não a denomine Goldfish concluída.
+Se não houver contexto novo ou isolamento verificável, não é uma profundidade: use **revisão assistida** — preparação, verificação por execução e crítica possível, com **revisão independente pendente** declarada. Não a denomine Peixe-Dourado concluída.
 
 ## 4. Continuidade e artefatos
 
 Em projeto com arquivos e autorização para criar registros, mantenha `.egm-academico/ESTADO.md` como índice, não como repositório do conteúdo da pesquisa. Use os modelos de `references/registros.md`. Não zere ou reinicialize estado existente.
 
-O índice registra versão da EGMA, etapa, artefatos e versões, decisões, pendências, limitações de revisão e próxima ação. Dados, hipóteses inéditas, transcrições, credenciais e pareceres completos ficam apenas em destinos autorizados, quando necessários.
+O índice registra versão da MEPA, etapa, artefatos e versões, decisões, pendências, limitações de revisão e próxima ação. Dados, hipóteses inéditas, transcrições, credenciais e pareceres completos ficam apenas em destinos autorizados, quando necessários.
 
 **Artifact-first:** entregáveis longos, tabelas e decisões vão para arquivos quando houver sistema de arquivos. No chat, informe caminho, escopo, dois ou três pontos decisivos e pendências. Sem persistência disponível, entregue no formato possível e declare que a continuidade não foi verificada.
 
@@ -79,7 +79,7 @@ O índice registra versão da EGMA, etapa, artefatos e versões, decisões, pend
 
 Leia `references/projeto.md` antes de criar o protocolo.
 
-- **G0 — exploração do pitch, antes da ficha:** fazer clarificação aberta, sem múltipla escolha: problema, destinatário, restrição inegociável, fora de escopo, sucesso e alternativa atual. Fechar uma hipótese em duas ou três frases com confirmação do pesquisador antes de revisão. Usar Goldfish curto sobre o pitch com cinco lentes: viabilidade do corpus, novidade/sobreposição, operacionalização, ética/privacidade e contribuição/método. Registrar em `CONCEITO.md` o escopo, o que fica fora, alternativas rejeitadas com motivo e decisões para a ficha. Exploração não autoriza coleta nem cronograma.
+- **G0 — exploração do pitch, antes da ficha:** fazer clarificação aberta, sem múltipla escolha: problema, destinatário, restrição inegociável, fora de escopo, sucesso e alternativa atual. Fechar uma hipótese em duas ou três frases com confirmação do pesquisador antes de revisão. Usar Peixe-Dourado curto sobre o pitch com cinco lentes: viabilidade do corpus, novidade/sobreposição, operacionalização, ética/privacidade e contribuição/método. Registrar em `CONCEITO.md` o escopo, o que fica fora, alternativas rejeitadas com motivo e decisões para a ficha. Exploração não autoriza coleta nem cronograma.
 - **G1 — enquadramento:** pergunta respondível, abordagem, contribuição provisória, conceitos, universo/unidade, materiais, acesso, ética e restrições. Medir o universo antes de decidir censo ou amostra. O G0 testa a ideia; o G1 testa o enquadramento contra a literatura e não o substitui.
 - **G2 — protocolo:** plano de análise completo, procedimentos e critérios de desvio; toda escolha tem linha em `ANCORAS.md`, com slot `fechada`, `pendente` ou `inédita a confirmar` e, quando resolvida, estado `ancorada`, `análoga` ou `inédita`. O plano pode orientar a busca, mas não afirma nada sobre literatura enquanto o slot estiver aberto. Slot crítico aberto bloqueia coleta; demais prazos precisam estar explícitos. Procedimento inédito é risco metodológico declarado antes da coleta, não defeito automático. Exige aprovação explícita antes de coleta/anotação real.
 - **G3 — piloto e análise:** testar operações críticas, registrar medidas e limites, abrir linha de âncora antes de qualquer procedimento novo e versionar mudanças. Aprovação explícita separa plano de execução substancial.
@@ -87,7 +87,7 @@ Leia `references/projeto.md` antes de criar o protocolo.
 
 Não execute G2/G3 implicitamente por aprovação genérica de uma conversa anterior. Em projeto já autorizado, recupere a decisão registrada e o escopo exato.
 
-## 6. Revisão Goldfish cega ao histórico
+## 6. Revisão Peixe-Dourado cega ao histórico
 
 Antes da rodada, congele versão e escopo. Leia `references/revisao.md` e os papéis aplicáveis.
 

@@ -1,11 +1,11 @@
 ---
-name: egma
+name: mepa
 description: Frames, plans and audits academic research with review in isolated contexts.
 ---
 
-# Elephant–Goldfish Academic — EGMA 1.2.0
+# MEPA — Elephant–Goldfish Academic Model
 
-Authorial protocol inspired by the context separation of the Elephant–Goldfish Model, with no official affiliation with its authors. EGMA organizes work and verifications; it does not guarantee scientific validity, privacy, absence of error or editorial approval. Respond in the user's language.
+Authorial protocol inspired by the context separation of the Elephant–Goldfish Model, with no official affiliation with its authors. MEPA organizes work and verifications; it does not guarantee scientific validity, privacy, absence of error or editorial approval. Respond in the user's language.
 
 **English edition** · [Português](EGMA_PORTATIL.md) · [Español](EGMA_PORTATIL.es.md)
 
@@ -59,7 +59,7 @@ Before acting:
 | **Planning** | Exploring an idea or possibilities without elaborating a project | `references/projeto.md` |
 | **New project** | Elaborating question, literature, protocol, pilot, analysis or manuscript | `references/projeto.md`; the rest according to the stage |
 | **Existing object** | Auditing an existing project, protocol, analysis or manuscript | `references/revisao.md`; bibliography and measures when pertinent |
-| **Maintenance** | Diagnosing drift or creating state for a project prior to EGMA | `references/manutencao.md` |
+| **Maintenance** | Diagnosing drift or creating state for a project prior to MEPA | `references/manutencao.md` |
 | **One-off** | Searching, checking references, recalculating or answering without the full cycle | Only the necessary resource |
 
 Choose the depth:
@@ -73,7 +73,7 @@ If there is no fresh context or verifiable isolation, it is not a depth: use **a
 
 In a project with files and authorization to create records, keep `.egm-academico/ESTADO.md` as an index, not as a repository of the research content. Use the templates in `references/registros.md`. Do not zero out or reinitialize existing state.
 
-The index records the EGMA version, stage, artifacts and versions, decisions, open items, review limitations and next action. Data, unpublished hypotheses, transcripts, credentials and complete review reports stay only in authorized destinations, when necessary.
+The index records the MEPA version, stage, artifacts and versions, decisions, open items, review limitations and next action. Data, unpublished hypotheses, transcripts, credentials and complete review reports stay only in authorized destinations, when necessary.
 
 **Artifact-first:** long deliverables, tables and decisions go into files when a file system is available. In chat, report the path, scope, two or three decisive points and open items. With no persistence available, deliver in the possible format and state that continuity was not verified.
 
@@ -167,7 +167,7 @@ The paths cited in the core correspond to the same-named sections below. In a Go
 
 # Note on this edition
 
-This is the English edition of the EGMA single-document version. The canonical package — `egma/`, `EGMA_PORTATIL.md` and every file name cited throughout — remains in Brazilian Portuguese, and this translation is a companion document: the protocol is identical, and only the language of exposition changes. This edition is synced with version 1.2.0.
+This is the English edition of the MEPA single-document version. The canonical package — `egma/`, `EGMA_PORTATIL.md` and every file name cited throughout — remains in Brazilian Portuguese, and this translation is a companion document: the protocol is identical, and only the language of exposition changes. This edition is synced with version 1.3.0.
 
 **Fidelity convention.** Explanatory prose is translated. Everything that must be typed, copied or matched stays exactly as shipped in the Portuguese package: file names (`ESTADO.md`, `ANCORAS.md`, `references/…`), commands, record and report schemas and templates (including the `templates/ESTADO.md` appendix), the script's source code, and the literal states below. When the text shows a Portuguese token in backticks, that is the token to use.
 
@@ -269,7 +269,7 @@ In the report, state that the skill only assesses and guides: it does not change
 
 # Portability, installation and verification
 
-EGMA separates four things: protocol, harness, model and provider/product. Replacing one of them does not install the others. Do not assume compatibility, automatic discovery, isolation or the same data policy.
+MEPA separates four things: protocol, harness, model and provider/product. Replacing one of them does not install the others. Do not assume compatibility, automatic discovery, isolation or the same data policy.
 
 ## 1. Forms of use
 
@@ -282,7 +282,7 @@ Install the entire `egma/` folder into the skills mechanism documented by the de
 If there is no skills support, copy `egma/` to `.egm-academico/skill/` in the project. Create `.egm-academico/ESTADO.md` from `templates/ESTADO.md` only if it does not yet exist. In the instruction file actually loaded, add a single block, without deleting the rest:
 
 ```markdown
-<!-- EGMA:START -->
+<!-- MEPA:START -->
 ## Elefante–Goldfish Acadêmico
 Em tarefas acadêmicas, leia `.egm-academico/skill/SKILL.md` e os recursos
 pertinentes, e consulte `.egm-academico/ESTADO.md` se existir. Preserve
@@ -290,7 +290,7 @@ artefatos, decisões e pendências. Não execute planos ainda não aprovados.
 Antes de transmitir material protegido, aplique a referência de privacidade.
 Goldfish recebe apenas papel, pacote e critérios explicitamente fornecidos;
 não herda automaticamente índice, conversa, memória ou pareceres do Elefante.
-<!-- EGMA:END -->
+<!-- MEPA:END -->
 ```
 
 Adjust the paths to the actual location of the instruction file. This block guides reading; it is not access control and does not prove automatic loading of links.
@@ -318,8 +318,8 @@ Documentation: Codex (`https://learn.chatgpt.com/docs/agent-configuration/agents
 1. Confirm the authorized folder, system, harness/version and actual file; do not display credentials.
 2. Preserve previous rules and global configurations. Do not create an override that hides existing instructions.
 3. Do not overwrite a previous protocol/state. Compare versions, preserve decisions and resolve conflicts explicitly.
-4. Keep a single, idempotent EGMA block. Duplicate or malformed markers require a report, not mass deletion.
-5. Do not change model, provider, subscription, endpoint, routing, credentials or services to install EGMA.
+4. Keep a single, idempotent MEPA block. Duplicate or malformed markers require a report, not mass deletion.
+5. Do not change model, provider, subscription, endpoint, routing, credentials or services to install MEPA.
 6. Do not use automatic import of the entire research folder into reviewers. Restrict files and memory according to the role.
 7. Test only with synthetic material.
 
@@ -896,7 +896,7 @@ Minimum Elephant index, without protected data or hypotheses:
 
 ```markdown
 # Estado do projeto acadêmico
-- **EGMA:** 1.2.0
+- **MEPA:** 1.3.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:**
 - **Escopo autorizado:**
@@ -1079,14 +1079,14 @@ Rules:
 
 Use at the closure of stages and when resuming a stalled project; additional periodicity is a project decision, not a universal rule.
 
-## BOOTSTRAP — project prior to EGMA
+## BOOTSTRAP — project prior to MEPA
 
 When there are artifacts, but not `.egm-academico/ESTADO.md` or reliable records:
 
 1. **Inventory** only what exists: deliverables, data, scripts, handoffs, reports and versions.
 2. **Reconstruct what is evidenced:** question, unit, corpus, decisions and execution only when there is a dated/verifiable source.
 3. **Do not retroact:** what has no evidence remains `desconhecido — anterior ao registro`; do not fill in with a plausible narrative.
-4. **Declare the start of the record:** `ESTADO.md criado em AAAA-MM-DD; etapas anteriores não possuem índice EGMA contínuo`.
+4. **Declare the start of the record:** `ESTADO.md criado em AAAA-MM-DD; etapas anteriores não possuem índice MEPA contínuo`.
 5. **Link real artifacts:** path, version/date and relation to the stage; do not copy protected content into the index.
 6. **Flag what does not add up:** absences, inconsistencies and necessary verifications, without forcing a checklist.
 7. **Do not re-execute or correct** research during the inventory unless separately authorized.
@@ -1099,9 +1099,9 @@ Expected result: a true and incomplete index, not a complete invented index. If 
 
 # Fundamentals — where each component comes from
 
-EGMA adapts consolidated traditions to work with AI agents. For each component: the tradition that precedes it, what that tradition already formulated (with locator) and what EGMA adapts. The references follow the mapping of the originating project, checked by reading against the editions consulted (2026); **there was no new full check for this edition** — use the locators as verifiable leads and check in the edition consulted. References in locatable form at the end of the file.
+MEPA adapts consolidated traditions to work with AI agents. For each component: the tradition that precedes it, what that tradition already formulated (with locator) and what MEPA adapts. The references follow the mapping of the originating project, checked by reading against the editions consulted (2026); **there was no new full check for this edition** — use the locators as verifiable leads and check in the edition consulted. References in locatable form at the end of the file.
 
-| # | Component | Tradition | What the tradition formulated | What EGMA adapts |
+| # | Component | Tradition | What the tradition formulated | What MEPA adapts |
 |---|---|---|---|---|
 | C1 | Elephant — long session with continuity | Method as the researcher's process | Epistemological vigilance and phases of research (Lopes, 2003, pp. 119, 136); memos as record (Fragoso et al., 2011, p. 94); diary as material memory (Moura, p. 185); reflection on each operation (Bonin, 2008, p. 122) | the agent maintains the continuity of the elaboration; decisions become a versioned record |
 | C2 | Goldfish — fresh context, without memory of the elaboration | Coding independence, triangulation and trustworthiness; EGM (*Elephant–Goldfish Model*) | Coder independence (Krippendorff, 1990, p. 196); threshold by the costs of mistaken conclusions (p. 217); systematic reporting (Lombard et al., 2002, pp. 596-600); analyze separately and only then synthesize (Carter et al., 2014, p. 546); verification at most persuades (Lincoln; Guba, 1985, p. 329); the goldfish reads without memory of the elaboration (Rensin, 2026) | independence by construction of context; declared isolation (proven, limited or not verified) |
@@ -1114,13 +1114,13 @@ EGMA adapts consolidated traditions to work with AI agents. For each component: 
 | C9 | Privacy matrix | Research ethics and data protection | The risk depends on what is done with the data afterwards (Metcalf; Crawford, 2016, p. 7); privacy protection (UNESCO, 2023, p. 3); sharing as a formal process; retention/deletion (ANPD, 2022, pp. 5, 8) | triage before transmitting material to AI providers |
 | C10 | Epistemological principles | Interpretive qualitative tradition | "At best persuade" (Lincoln; Guba, 1985, p. 329); operationalized criteria (Shenton, 2004, p. 63); there is no better or worse analysis outside the design (Caregnato, 2006, p. 684) | discipline of states; epistemology before rigor |
 | C11 | Origin and declaration | EGM — *Elephant–Goldfish Model* (Rensin; Apache-2.0) | complete mechanism: design document before execution, fresh context, comprehension test, final human judgment | transposition to academic research; credit and scope declared |
-| C12 | Contrast with the field | Neighbors: multi-agent systems, generative AI evaluation, simulation, reporting norms | taxonomy, reporting norms and simulation occupy the surrounding space | EGMA is a process protocol for the researcher — what it is not is delimited in the `README` |
+| C12 | Contrast with the field | Neighbors: multi-agent systems, generative AI evaluation, simulation, reporting norms | taxonomy, reporting norms and simulation occupy the surrounding space | MEPA is a process protocol for the researcher — what it is not is delimited in the `README` |
 
 ## Cross-cutting notes
 
-- Verification **persuades, it does not compel** (Lincoln; Guba, 1985, p. 329); EGMA does not promise a guarantee — it promises discipline.
-- The closest kinship and the difference: Koolen et al. (2018) propose reflection on and documentation of the tool itself; EGMA produces independence by construction of context. The adversarial confrontation between analysis systems, proposed as future work by Sankaranarayanan et al. (2025, p. 6), is the central mechanism here.
-- EGMA must present itself as a flexible discipline, not as a recipe (Lopes, 2003, p. 98).
+- Verification **persuades, it does not compel** (Lincoln; Guba, 1985, p. 329); MEPA does not promise a guarantee — it promises discipline.
+- The closest kinship and the difference: Koolen et al. (2018) propose reflection on and documentation of the tool itself; MEPA produces independence by construction of context. The adversarial confrontation between analysis systems, proposed as future work by Sankaranarayanan et al. (2025, p. 6), is the central mechanism here.
+- MEPA must present itself as a flexible discipline, not as a recipe (Lopes, 2003, p. 98).
 - The checklist of antipatterns of assisted analysis (`medidas-computacionais.md` §7) comes from Hoda et al. (2026) — a conceptual and provisional catalog, preprint (arXiv:2608.27927v1).
 
 ## Referências
@@ -1224,7 +1224,7 @@ Protocol terms, one line each. Where there is a complete definition, the indicat
 | **Anchor / slot** | A row of `ANCORAS.md` per choice or procedure; slot `fechada`, `pendente` or `inédita a confirmar`; resolved as `ancorada`, `análoga` or `inédita`. |
 | **Claim–source matrix** | One row per claim: what the source supports and what it does not support (`registros.md` §8). |
 | **DRIFT** | Diagnosis of divergence between state, plan, text, references and actual routes (`manutencao.md`). |
-| **BOOTSTRAP** | State reconstruction for a project prior to EGMA, without retroacting or inventing. |
+| **BOOTSTRAP** | State reconstruction for a project prior to MEPA, without retroacting or inventing. |
 | **Artifact-first** | A long deliverable goes into a file; in chat, the path and the decisive points. |
 | **State record** | One per artifact: version, open items and date in the same place. |
 | **Execution and version trail** | What the protocol retains per round: object, briefings, manifest, review reports, hashes and logs; it does not include the internal reasoning of the elaboration (`registros.md` §14). |
@@ -1665,7 +1665,7 @@ If it depends on a missing file, use `Certeza: indeterminado` and identify the f
 
 # Estado do projeto acadêmico
 
-- **EGMA:** 1.2.0
+- **MEPA:** 1.3.0
 - **Criação do registro:** AAAA-MM-DD
 - **Etapa/modo:** implantação; nenhum material de pesquisa carregado
 - **Escopo autorizado:** não definido
@@ -1677,7 +1677,7 @@ If it depends on a missing file, use `Certeza: indeterminado` and identify the f
 - **Descoberta em nova sessão:** não verificada
 - **Próxima ação:** validar a instalação com dados sintéticos
 
-> Se este arquivo tiver sido criado para projeto anterior à EGMA, registre: “Etapas anteriores não possuem índice EGMA contínuo” e marque o passado não documentado como `desconhecido — anterior ao registro`.
+> Se este arquivo tiver sido criado para projeto anterior à MEPA, registre: “Etapas anteriores não possuem índice MEPA contínuo” e marque o passado não documentado como `desconhecido — anterior ao registro`.
 
 ---
 

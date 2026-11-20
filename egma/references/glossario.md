@@ -7,11 +7,11 @@ Termos do protocolo, em uma linha cada. Onde há definição completa, o arquivo
 | Termo | Definição |
 |---|---|
 | **Elefante** | O agente que mantém a continuidade do projeto e produz o material; o contexto de elaboração. |
-| **Goldfish** | Revisor em contexto separado, sem histórico de elaboração; revisão do próprio Elefante não é independente. |
+| **Peixe-Dourado** | Revisor em contexto separado, sem histórico de elaboração; revisão do próprio Elefante não é independente. |
 | **Contexto novo** | Execução de revisão sem histórico de elaboração, resposta desejada ou pareceres alheios; estados: `comprovado`, `limitado`, `não verificado` (`revisao.md` §1). |
 | **Isolamento de arquivos/memória** | Controle real do que o revisor acessa; mesma escala do contexto novo. |
 | **Família de modelo** | Linhagem/pesos do modelo — dois provedores servindo os mesmos pesos são a mesma família. Papéis da mesma família **podem** compartilhar erros correlacionados (hipótese a declarar, não medida); diversidade de famílias entre elaboração e verificação é critério de força da rodada. |
-| **Revisão assistida** | Preparação e verificação sem contexto novo verificável; não se denomina Goldfish concluída e deixa `revisão independente pendente`. |
+| **Revisão assistida** | Preparação e verificação sem contexto novo verificável; não se denomina Peixe-Dourado concluída e deixa `revisão independente pendente`. |
 | **Sonda de rota** | Verificação prévia da rota do revisor (identificação + leitura de arquivo sintético com linha devolvida sem variação), feita pelo Elefante antes de rodada longa; resultado por revisor no manifesto. |
 | **Rodada** | Revisores e papéis sobre uma versão congelada; profundidades compacta e completa; tipos completa ou focal. |
 | **Parecer** | Produto do revisor no esquema do seu papel; o achado é sua unidade. |
@@ -39,7 +39,7 @@ Termos do protocolo, em uma linha cada. Onde há definição completa, o arquivo
 | **Âncora / slot** | Linha de `ANCORAS.md` por escolha ou procedimento; slot `fechada`, `pendente` ou `inédita a confirmar`; resolvido como `ancorada`, `análoga` ou `inédita`. |
 | **Matriz afirmação–fonte** | Uma linha por afirmação: o que a fonte sustenta e o que não sustenta (`registros.md` §8). |
 | **DRIFT** | Diagnóstico de divergência entre estado, plano, texto, referências e rotas reais (`manutencao.md`). |
-| **BOOTSTRAP** | Reconstrução de estado para projeto anterior à EGMA, sem retroagir nem inventar. |
+| **BOOTSTRAP** | Reconstrução de estado para projeto anterior à MEPA, sem retroagir nem inventar. |
 | **Artifact-first** | Entregável longo vai para arquivo; no chat, caminho e pontos decisivos. |
 | **Registro de estado** | Único por artefato: versão, pendências e data no mesmo lugar. |
 | **Trilha de execução e versões** | O que o protocolo retém por rodada: objeto, briefings, manifesto, pareceres, hashes e logs; não inclui o raciocínio interno da elaboração (`registros.md` §14). |

@@ -1,4 +1,4 @@
-# Revisão Goldfish e consolidação adversarial
+# Revisão Peixe-Dourado e consolidação adversarial
 
 Leia antes de preparar ou consolidar qualquer rodada. A revisão examina uma versão congelada; não substitui julgamento do pesquisador nem verificação por execução.
 

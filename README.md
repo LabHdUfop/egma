@@ -1,25 +1,25 @@
-# EGMA — Elefante–Goldfish Acadêmico
+# MEPA — Modelo Elefante–Peixe-Dourado Acadêmico
 
 **Protocolo aberto, neutro quanto a agente, modelo e provedor, para enquadrar, planejar e auditar pesquisa acadêmica com apoio de IA.**
 
-Versão 1.2.0 · Licença MIT · LABHD UFOP
+Versão 1.3.0 · Licença MIT · LABHD UFOP
 
 **Idiomas:** **Português** · [English](README.en.md) · [Español](README.es.md)
 
-> **Abstract (EN).** EGMA is an authorial protocol for framing, planning and auditing academic research with AI agents. It splits the work into a continuity context (Elephant, which holds the question, decisions, artifacts and state) and one or more isolated review contexts (Goldfish, which see only the assigned role, the authorized package and the criteria — never the elaboration conversation). It is harness-, model- and vendor-neutral, and it does not certify scientific validity, privacy or editorial approval.
+> **Abstract (EN).** MEPA is an authorial protocol for framing, planning and auditing academic research with AI agents. It splits the work into a continuity context (Elephant, which holds the question, decisions, artifacts and state) and one or more isolated review contexts (Peixe-Dourado, which see only the assigned role, the authorized package and the criteria — never the elaboration conversation). It is harness-, model- and vendor-neutral, and it does not certify scientific validity, privacy or editorial approval.
 
 ---
 
-## O problema que a EGMA ataca
+## O problema que a MEPA ataca
 
-Um agente que elabora um objeto e depois o revisa no mesmo contexto não produz revisão independente: revisa à luz da própria conversa, dos próprios atalhos e das próprias justificativas. A EGMA separa esses papéis em contextos distintos e exige que cada verificação deixe evidência observável. O resultado é um rastro auditável de *proposto / executado / verificado / pendente*.
+Um agente que elabora um objeto e depois o revisa no mesmo contexto não produz revisão independente: revisa à luz da própria conversa, dos próprios atalhos e das próprias justificativas. A MEPA separa esses papéis em contextos distintos e exige que cada verificação deixe evidência observável. O resultado é um rastro auditável de *proposto / executado / verificado / pendente*.
 
 ## Os dois contextos
 
 | Contexto | Papel | O que vê |
 |---|---|---|
 | **Elefante** | Continuidade: pergunta, decisões, artefatos, estado do projeto | Todo o projeto, inclusive o que ainda não foi aprovado |
-| **Goldfish** | Revisão em contexto isolado, por papel fixo | Apenas o papel, o pacote autorizado e os critérios — nunca a conversa de elaboração nem pareceres alheios na primeira rodada |
+| **Peixe-Dourado** | Revisão em contexto isolado, por papel fixo | Apenas o papel, o pacote autorizado e os critérios — nunca a conversa de elaboração nem pareceres alheios na primeira rodada |
 
 Revisão feita pelo próprio Elefante é registrada como **revisão assistida**, não como independente.
 
@@ -48,7 +48,7 @@ Forneça [`EGMA_PORTATIL.md`](EGMA_PORTATIL.md) — ou a edição traduzida, [`E
 | **Planejamento** | Explorar uma ideia ou possibilidades sem elaborar projeto |
 | **Projeto novo** | Elaborar pergunta, literatura, protocolo, piloto, análise ou manuscrito |
 | **Objeto pronto** | Auditar projeto, protocolo, análise ou manuscrito existente |
-| **Manutenção** | Diagnosticar deriva ou criar estado para projeto anterior à EGMA |
+| **Manutenção** | Diagnosticar deriva ou criar estado para projeto anterior à MEPA |
 | **Pontual** | Buscar, conferir referências, recalcular ou responder sem ciclo completo |
 
 ## Estrutura do repositório
@@ -59,7 +59,7 @@ egma/
 ├── references/
 │   ├── privacidade.md             triagem antes de transmitir material protegido
 │   ├── projeto.md                 enquadramento, corpus, acervo cedido
-│   ├── revisao.md                 preparar, executar, verificar e consolidar revisão Goldfish
+│   ├── revisao.md                 preparar, executar, verificar e consolidar revisão Peixe-Dourado
 │   ├── bibliografia.md            busca, identidade e sustentação de referências
 │   ├── medidas-computacionais.md  justificar e testar medidas computacionais
 │   ├── validacao-humana-cega.md   validação humana cega de medidas interpretativas
@@ -78,7 +78,7 @@ egma/
 EGMA_PORTATIL.md                   versão monolítica para ambientes sem pastas
 EGMA_PORTATIL.en.md                edição inglesa do documento único
 EGMA_PORTATIL.es.md                edição espanhola do documento único
-SHA256SUMS.txt                     hashes de integridade do pacote 1.2.0
+SHA256SUMS.txt                     hashes de integridade do pacote 1.3.0
 tests/                             suíte de aceitação do script (11 casos sintéticos)
 ```
 
@@ -88,7 +88,7 @@ tests/                             suíte de aceitação do script (11 casos sin
 sha256sum -c SHA256SUMS.txt      # Linux/macOS/git-bash
 ```
 
-Os hashes cobrem os 25 arquivos do pacote 1.2.0. Se algum falhar, o pacote foi alterado — não use.
+Os hashes cobrem os 25 arquivos do pacote 1.3.0. Se algum falhar, o pacote foi alterado — não use.
 
 ## Testes
 
@@ -101,12 +101,12 @@ sintética (os PDFs são gerados por PyMuPDF; nenhum dado de pesquisa é usado).
 ocorrência única, repetição em páginas diferentes e na mesma página, ausência de texto,
 citação entre páginas, PDFs homônimos, caminho explícito, fonte ausente, folha impressa
 observada, offset declarado e identidade da fonte por SHA-256. Todos os 11 passam na
-1.2.0 (como na 1.1.0); na 1.0.0 apenas 4 passavam.
+1.3.0 (como na 1.2.0 e na 1.1.0); na 1.0.0 apenas 4 passavam.
 
 ## Limites — leia antes de usar
 
-- A EGMA **não é um modelo** e **não garante** validade científica, privacidade, ausência de erro ou aprovação editorial.
-- A EGMA **não certifica** revisão independente. O isolamento depende de como o ambiente realmente opera contexto, memória e herança — verifique no seu ambiente.
+- A MEPA **não é um modelo** e **não garante** validade científica, privacidade, ausência de erro ou aprovação editorial.
+- A MEPA **não certifica** revisão independente. O isolamento depende de como o ambiente realmente opera contexto, memória e herança — verifique no seu ambiente.
 - A política de dados é do **produto, conta, plano e configuração** que você usa. Consulte [`egma/references/privacidade.md`](egma/references/privacidade.md) **antes** de enviar material inédito, protegido ou sob consentimento.
 - O script `verifica_citacoes.py` localiza trechos em PDF; não substitui a leitura da fonte nem a validação editorial. O estado `entre_paginas` indica localização na junção de duas páginas e **exige conferência visual**: o trecho foi encontrado, mas não está verificado.
 - Protocolo inspirado na separação de contextos do Elephant–Goldfish Model, **sem vínculo oficial com seus autores**.
@@ -115,7 +115,11 @@ observada, offset declarado e identidade da fonte por SHA-256. Todos os 11 passa
 
 Veja [`CITATION.cff`](CITATION.cff). Formato sugerido:
 
-> Freire, M. (2026). *EGMA — Elefante–Goldfish Acadêmico, v1.2.0*. Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto. https://github.com/LabHdUfop/egma
+ABNT (NBR 6023:2025):
+
+> FREIRE, Marcelo. **MEPA — Modelo Elefante–Peixe-Dourado Acadêmico: protocolo para enquadrar, planejar e auditar pesquisa acadêmica com agentes de IA**. Versão 1.3.0. Ouro Preto: Laboratório de Humanidades Digitais, Universidade Federal de Ouro Preto, 2026. Disponível em: https://github.com/LabHdUfop/mepa. Acesso em: 20 nov. 2026.
+
+No texto: `(Freire, 2026)`.
 
 ## Contribuições
 

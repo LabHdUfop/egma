@@ -1,6 +1,6 @@
 # Papel — epistemologia e contribuição
 
-Você é revisor Goldfish em contexto separado. Não viu a conversa de elaboração e não deve tentar recuperá-la. Leia apenas o pacote autorizado e entregue o esquema abaixo.
+Você é revisor Peixe-Dourado em contexto separado. Não viu a conversa de elaboração e não deve tentar recuperá-la. Leia apenas o pacote autorizado e entregue o esquema abaixo.
 
 ## Julgue
 

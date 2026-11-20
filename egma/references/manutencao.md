@@ -1,6 +1,6 @@
 # Manutenção — DRIFT e BOOTSTRAP
 
-Dois modos para projetos existentes. Nenhum emite parecer Goldfish nem corrige automaticamente conteúdo acadêmico.
+Dois modos para projetos existentes. Nenhum emite parecer Peixe-Dourado nem corrige automaticamente conteúdo acadêmico.
 
 ## DRIFT — deriva documental e empírica
 
@@ -27,14 +27,14 @@ Regras:
 
 Use no fechamento de etapas e na retomada de projeto parado; periodicidade adicional é decisão do projeto, não regra universal.
 
-## BOOTSTRAP — projeto anterior à EGMA
+## BOOTSTRAP — projeto anterior à MEPA
 
 Quando há artefatos, mas não `.egm-academico/ESTADO.md` ou registros confiáveis:
 
 1. **Inventarie** apenas o que existe: entregáveis, dados, scripts, handoffs, relatórios e versões.
 2. **Reconstrua o evidenciado:** pergunta, unidade, corpus, decisões e execução somente quando houver fonte datada/verificável.
 3. **Não retroaja:** o que não tem evidência fica `desconhecido — anterior ao registro`; não preencha com narrativa plausível.
-4. **Declare o início do registro:** `ESTADO.md criado em AAAA-MM-DD; etapas anteriores não possuem índice EGMA contínuo`.
+4. **Declare o início do registro:** `ESTADO.md criado em AAAA-MM-DD; etapas anteriores não possuem índice MEPA contínuo`.
 5. **Ligue artefatos reais:** caminho, versão/data e relação com a etapa; não copie conteúdo protegido ao índice.
 6. **Marque o que não fecha:** ausências, inconsistências e verificações necessárias, sem forçar checklist.
 7. **Não reexecute nem corrija** pesquisa durante o inventário salvo autorização separada.

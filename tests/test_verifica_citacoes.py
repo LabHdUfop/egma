@@ -1,4 +1,4 @@
-"""Suite de aceitacao do verificador de citacoes da EGMA.
+"""Suite de aceitacao do verificador de citacoes da MEPA.
 
 Gera uma fixture inteiramente sintetica (PDFs criados com PyMuPDF, nenhum
 dado de pesquisa envolvido), roda `verifica_citacoes.py` como subprocasso e
@@ -41,7 +41,7 @@ def pdf(path: Path, paginas):
 
 def montar_fixture(base: Path):
     """Cria os PDFs, o quotes.json e o offsets.json da rodada."""
-    pdf(base / "unico.pdf", [["A separacao de contextos e o nucleo do protocolo EGMA."]])
+    pdf(base / "unico.pdf", [["A separacao de contextos e o nucleo do protocolo MEPA."]])
     # Repeticao em paginas diferentes do mesmo PDF.
     pdf(base / "repetido.pdf", [["Trecho repetido aqui.", "Outra coisa."],
                                 ["Trecho repetido aqui.", "Fim."]])
@@ -53,7 +53,7 @@ def montar_fixture(base: Path):
     # rodape no meio. Concatenacao ingenua incorporaria "CAPITULO 3" e "40".
     pdf(base / "quebra.pdf", [
         ["CAPITULO 3", "A revisao exige que o nucleo do protocolo", "", "40"],
-        ["CAPITULO 3", "EGMA seja lido em contexto isolado.", "", "41"],
+        ["CAPITULO 3", "MEPA seja lido em contexto isolado.", "", "41"],
     ])
     (base / "v1").mkdir()
     (base / "v2").mkdir()
@@ -67,7 +67,7 @@ def montar_fixture(base: Path):
         {"id": "Q02", "trecho": "Trecho repetido aqui", "arquivo": "repetido.pdf"},
         {"id": "Q02B", "trecho": "Trecho repetido aqui", "arquivo": "repetido_mesma_pagina.pdf"},
         {"id": "Q03", "trecho": "frase que nao existe em lugar nenhum"},
-        {"id": "Q04", "trecho": "o nucleo do protocolo EGMA seja lido"},
+        {"id": "Q04", "trecho": "o nucleo do protocolo MEPA seja lido"},
         {"id": "Q05A", "trecho": "versao um com marcador alfa"},
         {"id": "Q05B", "trecho": "versao dois com marcador beta"},
         {"id": "Q06", "trecho": "versao um com marcador alfa", "arquivo": "v1/mesmo.pdf"},
